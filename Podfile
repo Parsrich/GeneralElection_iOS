@@ -16,8 +16,13 @@ target 'GeneralElection' do
   pod 'NSObject+Rx'
 
   # Firebase
-#  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
 #  pod 'Firebase/AdMob'
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
   
   # Others
 #  pod 'Alamofire'
