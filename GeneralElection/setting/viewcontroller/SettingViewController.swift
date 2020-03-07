@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingViewController.swift
 //  GeneralElection
 //
 //  Created by Minki on 2020/03/07.
@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
 
-class ViewController: UIViewController {
+class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
