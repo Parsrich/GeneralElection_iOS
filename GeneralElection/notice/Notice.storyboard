@@ -11,13 +11,14 @@
         <!--Notice View Controller-->
         <scene sceneID="JCd-8D-aD5">
             <objects>
-                <viewController id="8Sn-pt-9xc" customClass="NoticeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y3f-vq-rOe">
+                <viewController id="8Sn-pt-9xc" customClass="NoticeViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y3f-vq-rOe" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_notice" selectedImage="tab_notice_select" id="N6X-as-CdL"/>
                     <navigationItem key="navigationItem" id="RBt-Dp-Aky"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -45,4 +46,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_notice" width="50" height="50"/>
+        <image name="tab_notice_select" width="50" height="50"/>
+    </resources>
 </document>

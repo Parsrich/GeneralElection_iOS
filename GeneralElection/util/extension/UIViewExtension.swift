@@ -20,17 +20,45 @@ extension UIView {
         }
     }
     
+    
+//    @IBInspectable
+//    var shadow: CGFloat {
+//        get {
+//            return layer.shadowRadius
+//        }
+//        set {
+//            layer.shadowColor = UIColor.black.cgColor
+//            layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//            layer.shadowOpacity = 0.5
+//            layer.shadowRadius = newValue
+////            let rect = CGRect(x: bounds.minX, y: bounds.minY, width: bounds.maxX, height: bounds.maxY)
+//            
+//            layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+//            
+////            layer.masksToBounds = false
+////            layer.shadowColor = UIColor.black.cgColor
+////            layer.shadowOpacity = 0.5
+////            layer.shadowOffset = .zero //CGSize(width: -1, height: 1)
+////            layer.shadowRadius = newValue
+////
+////            let rect = CGRect(x: bounds.minX, y: bounds.minY, width: bounds.maxX, height: bounds.maxY)
+////            layer.shadowPath = UIBezierPath(rect: rect).cgPath
+////            layer.shouldRasterize = true
+//////            layer.rasterizationScale = UIScreen.main.scale
+//        }
+//    }
+    
     func addSubViewWithFullAutoLayout(subview: UIView,
-                                      leading: CGFloat = 0,
-                                      trailing: CGFloat = 0,
-                                      top: CGFloat = 0,
-                                      bottom: CGFloat = 0) {
+                                      leading: CGFloat? = 0,
+                                      trailing: CGFloat? = 0,
+                                      top: CGFloat? = 0,
+                                      bottom: CGFloat? = 0) {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        subview.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-        subview.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
-        subview.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-        subview.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        subview.topAnchor.constraint(equalTo: self.topAnchor, constant: top ?? 0).isActive = top != nil
+        subview.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: bottom ?? 0).isActive = bottom != nil
+        subview.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leading ?? 0).isActive = leading != nil
+        subview.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailing ?? 0).isActive = trailing != nil
     }
     
     func endAfterView(to view: UIView) {
@@ -61,5 +89,16 @@ extension UIView {
         animation.duration = 0.6
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
+    }
+    
+    func makeShadow(shadowRadius: CGFloat) {
+
+        // set the shadow of the view's layer
+//        layer.backgroundColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = shadowRadius
+        layer.masksToBounds = false
     }
 }
