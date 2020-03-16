@@ -17,7 +17,7 @@
         <scene sceneID="zs5-Eb-nfc">
             <objects>
                 <viewController id="bSK-wO-p9p" customClass="HomeViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Ui-2v-hcn" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="4Ui-2v-hcn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -37,20 +37,20 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총선 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총선 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
                                                 <rect key="frame" x="58.5" y="145.5" width="70.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
-                                                <color key="textColor" red="0.38823529411764707" green="0.34509803921568627" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="u4f-ih-ZSM" firstAttribute="centerY" secondItem="KQA-kS-XkT" secondAttribute="centerY" id="020-ya-DxJ"/>
+                                            <constraint firstItem="9R0-PY-emQ" firstAttribute="top" secondItem="u4f-ih-ZSM" secondAttribute="bottom" constant="10" id="0GG-vi-N5o"/>
                                             <constraint firstItem="u4f-ih-ZSM" firstAttribute="centerX" secondItem="KQA-kS-XkT" secondAttribute="centerX" id="6kQ-KV-3dX"/>
-                                            <constraint firstItem="3Qb-lO-94E" firstAttribute="centerX" secondItem="KQA-kS-XkT" secondAttribute="centerX" id="I80-rL-sJ1"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3Qb-lO-94E" secondAttribute="bottom" constant="10" id="SKH-hK-Bai"/>
-                                            <constraint firstItem="3Qb-lO-94E" firstAttribute="top" secondItem="u4f-ih-ZSM" secondAttribute="bottom" constant="10" id="WXn-vt-P1s"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9R0-PY-emQ" secondAttribute="bottom" constant="10" id="bds-ge-lON"/>
+                                            <constraint firstItem="9R0-PY-emQ" firstAttribute="centerX" secondItem="KQA-kS-XkT" secondAttribute="centerX" id="y2p-nO-35T"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nto-31-UoF">
@@ -76,7 +76,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="d5Q-8z-Mhw" firstAttribute="centerY" secondItem="Nto-31-UoF" secondAttribute="centerY" id="9Xp-63-8dt"/>
                                             <constraint firstItem="d5Q-8z-Mhw" firstAttribute="centerX" secondItem="Nto-31-UoF" secondAttribute="centerX" id="N9s-g8-qdn"/>
@@ -108,7 +108,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Bw3-GJ-FF2" firstAttribute="top" secondItem="hAm-vR-WyC" secondAttribute="bottom" constant="10" id="8Ke-9M-c7R"/>
                                             <constraint firstItem="hAm-vR-WyC" firstAttribute="centerY" secondItem="NXa-lI-q3i" secondAttribute="centerY" id="Bfn-sx-yMF"/>
@@ -140,7 +140,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="esK-oi-chj" firstAttribute="centerX" secondItem="o8m-3L-Zm0" secondAttribute="centerX" id="4Ev-GX-Njn"/>
                                             <constraint firstItem="1iD-nb-T3M" firstAttribute="centerY" secondItem="o8m-3L-Zm0" secondAttribute="centerY" id="FuA-W4-uHe"/>
@@ -171,12 +171,31 @@
                                     <constraint firstItem="o8m-3L-Zm0" firstAttribute="height" secondItem="NXa-lI-q3i" secondAttribute="height" id="wgY-PA-zdu"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한민국 총선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PHV-2g-iEH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R8d-Cg-dHK" firstAttribute="bottom" secondItem="jbp-Ru-Ll0" secondAttribute="bottom" constant="100" id="5qc-eP-TSC"/>
+                            <constraint firstItem="OUB-L9-Pxk" firstAttribute="top" secondItem="4Ui-2v-hcn" secondAttribute="top" id="8x0-TK-k0t"/>
+                            <constraint firstItem="3Qb-lO-94E" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" id="BJr-La-h9W"/>
                             <constraint firstItem="jbp-Ru-Ll0" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" constant="20" id="KeS-FO-1iY"/>
+                            <constraint firstItem="3Qb-lO-94E" firstAttribute="top" secondItem="R8d-Cg-dHK" secondAttribute="top" id="MOJ-7f-e7m"/>
                             <constraint firstItem="R8d-Cg-dHK" firstAttribute="trailing" secondItem="jbp-Ru-Ll0" secondAttribute="trailing" constant="20" id="Pf5-4h-GE5"/>
+                            <constraint firstItem="OUB-L9-Pxk" firstAttribute="trailing" secondItem="R8d-Cg-dHK" secondAttribute="trailing" id="YgR-xU-XMs"/>
+                            <constraint firstItem="R8d-Cg-dHK" firstAttribute="trailing" secondItem="3Qb-lO-94E" secondAttribute="trailing" id="pJo-EM-AIL"/>
+                            <constraint firstItem="OUB-L9-Pxk" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" id="vFL-Yy-WWz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R8d-Cg-dHK"/>
                     </view>
@@ -196,10 +215,10 @@
         <!--Navigation Controller-->
         <scene sceneID="M5u-Jg-AOc">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="oV9-Bb-B8h" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oV9-Bb-B8h" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u2i-2g-Dpx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -248,6 +267,7 @@
         <image name="ic_home_district" width="48" height="48"/>
         <image name="ic_home_notice" width="48" height="48"/>
         <image name="ic_home_party" width="48" height="48"/>
+        <image name="img_background" width="375" height="375"/>
         <image name="tab_home" width="48" height="48"/>
         <image name="tab_home_select" width="48" height="48"/>
     </resources>
