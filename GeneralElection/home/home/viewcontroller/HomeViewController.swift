@@ -63,6 +63,7 @@ class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
     }
     
     func setup() {
+        setTransparentBackground()
         /// 파베 불러오기 예제
 //        db.collection("users").getDocuments() { (querySnapshot, err) in
 //            if let err = err {
