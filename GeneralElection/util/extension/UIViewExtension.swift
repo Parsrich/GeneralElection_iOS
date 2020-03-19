@@ -101,4 +101,23 @@ extension UIView {
         layer.shadowRadius = shadowRadius
         layer.masksToBounds = false
     }
+    
+    var className: String {
+        return String.init(describing: self).components(separatedBy: ".").last!
+    }
+    
+    class var className: String {
+        return String.init(describing: self).components(separatedBy: ".").last!
+    }
+    
+    var topSafeAreaInset:CGFloat {
+        let fixedInset:CGFloat = 20.0
+        var topSafeInset:CGFloat = 0
+        if let window = self.appDelegate?.window {
+            topSafeInset = window.safeAreaInsets.top
+        } else {
+            topSafeInset = self.safeAreaInsets.top
+        }
+        return  topSafeInset != 0 ? topSafeInset : fixedInset
+    }
 }

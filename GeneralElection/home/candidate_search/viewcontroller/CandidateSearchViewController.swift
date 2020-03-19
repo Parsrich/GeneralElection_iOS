@@ -14,5 +14,11 @@ import NSObject_Rx
 class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    func setupUI() {
+        setShadowViewUnderNavigationController()
     }
 }
