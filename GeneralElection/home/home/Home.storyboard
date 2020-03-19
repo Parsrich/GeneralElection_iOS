@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!-- -->
         <scene sceneID="zs5-Eb-nfc">
             <objects>
                 <viewController id="bSK-wO-p9p" customClass="HomeViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,7 +200,7 @@
                         <viewLayoutGuide key="safeArea" id="R8d-Cg-dHK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_home" selectedImage="tab_home_select" id="1qi-GV-b0c"/>
-                    <navigationItem key="navigationItem" id="R9M-g4-CeW"/>
+                    <navigationItem key="navigationItem" title=" " id="R9M-g4-CeW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="candidateSearchButton" destination="1iD-nb-T3M" id="Xdh-bW-kjJ"/>
@@ -221,6 +221,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -40,19 +40,34 @@ class BaseViewModel: NSObject {
         return self.db.collection(collectionName.rawValue)
     }
     
-    func getDocuments(in collectionName: FirestoreCollectionName, errorHandler: @escaping (Error) -> Void, completionHandler: @escaping (QuerySnapshot?) -> Void) {
-        collectionReference(collectionName: collectionName)
-            .whereField("Si", in: ["서울특별시"])
-            .getDocuments { querySnapshot, error in
-                if let error = error {
-                    errorHandler(error)
-                } else {
-                    completionHandler(querySnapshot)
-                }
+    func getDocuments(in collectionName: FirestoreCollectionName,
+                      whereFields: [(field: String, conditions: [Any])],
+                      errorHandler: @escaping (Error) -> Void,
+                      completionHandler: @escaping (QuerySnapshot?) -> Void) {
+        
+        let reference = collectionReference(collectionName: collectionName)
+        
+        var query: Query?
+        for field in whereFields.enumerated() {
+            if field.offset == 0 {
+                query = reference
+                    .whereField(field.element.field,
+                                in: field.element.conditions)
+                continue
+            }
+            query?.whereField(field.element.field, in: field.element.conditions)
+        }
+                
+        query?.getDocuments { querySnapshot, error in
+            if let error = error {
+                errorHandler(error)
+            } else {
+                completionHandler(querySnapshot)
+            }
         }
     }
     
-    func whereField(reference: CollectionReference, _ field: String, in values: [Any]) -> Query {
-        return reference.whereField(field, in: values)
+    func whereField(reference: CollectionReference, _ field: String, in conditions: [Any]) -> Query {
+        return reference.whereField(field, in: conditions)
     }
 }
