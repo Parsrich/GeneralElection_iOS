@@ -11,10 +11,23 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
+
+enum StoryboardName: String {
+    case main = "main"
+    case notice = "Notice"
+    case home = "home"
+    case setting = "Setting"
+    case homeDetail = "HomeDetail"
+}
+
 class BaseViewController: UIViewController {
     
+    var activityIndicator: UIActivityIndicatorView!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeAcitivityIndicator()
     }
     
     func setTransparentNavigationController() {
@@ -30,5 +43,39 @@ class BaseViewController: UIViewController {
         shadowView.heightAnchor.constraint(equalToConstant: 10).isActive = true
         
         view.addSubViewWithFullAutoLayout(subview: shadowView, top: view.topSafeAreaInset + 44, bottom: nil)
+    }
+    
+    func selectViewController(_ storyboardName: StoryboardName, viewControllerName vcName: String? = nil) -> UIViewController? {
+        
+        let storyboard = UIStoryboard(name: storyboardName.rawValue,
+                                      bundle: nil)
+        
+        if let name = vcName {
+            return storyboard.instantiateViewController(withIdentifier: name)
+        }
+        
+        return storyboard.instantiateInitialViewController()
+    }
+
+    func presentActionSheet(title: String? = nil, message: String? = nil, actions: [UIAlertAction]) {
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        for action in actions {
+            actionSheet.addAction(action)
+        }
+        actionSheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+
+    }
+    
+    func makeAcitivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(frame: view.frame)
+        
+        let color = UIColor(red: 127.toRgb, green: 111.toRgb, blue: 237.toRgb, alpha: 1.0)
+        activityIndicator.color = color
+        activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
     }
 }
