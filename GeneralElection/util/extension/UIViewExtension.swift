@@ -20,6 +20,20 @@ extension UIView {
         }
     }
     
+    @IBInspectable
+    var shadow: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowColor = UIColor.black.cgColor
+            layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            layer.shadowOpacity = 0.2
+            layer.shadowRadius = newValue
+            layer.masksToBounds = false
+        }
+    }
+    
     
 //    @IBInspectable
 //    var shadow: CGFloat {
@@ -91,16 +105,15 @@ extension UIView {
         layer.add(animation, forKey: "shake")
     }
     
-    func makeShadow(shadowRadius: CGFloat) {
-
-        // set the shadow of the view's layer
-//        layer.backgroundColor = UIColor.black.cgColor
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        layer.shadowOpacity = 0.2
-        layer.shadowRadius = shadowRadius
-        layer.masksToBounds = false
-    }
+//    func makeShadow(shadowRadius: CGFloat) {
+//
+//        // set the shadow of the view's layer
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//        layer.shadowOpacity = 0.2
+//        layer.shadowRadius = shadowRadius
+//        layer.masksToBounds = false
+//    }
     
     var className: String {
         return String.init(describing: self).components(separatedBy: ".").last!
