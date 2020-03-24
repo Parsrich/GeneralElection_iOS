@@ -16,16 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSplash" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-Tb-XzN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-Tb-XzN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vgf-Tb-XzN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eyx-OB-hOm"/>
-                            <constraint firstItem="vgf-Tb-XzN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="jNZ-gt-azr"/>
-                            <constraint firstItem="vgf-Tb-XzN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mn1-4S-8TO"/>
-                            <constraint firstAttribute="bottom" secondItem="vgf-Tb-XzN" secondAttribute="bottom" id="oRe-KQ-tyW"/>
+                            <constraint firstAttribute="trailing" secondItem="vgf-Tb-XzN" secondAttribute="trailing" id="JQd-KN-moK"/>
+                            <constraint firstAttribute="bottom" secondItem="vgf-Tb-XzN" secondAttribute="bottom" id="W1w-4d-CLZ"/>
+                            <constraint firstItem="vgf-Tb-XzN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="WZO-Kf-fxe"/>
+                            <constraint firstItem="vgf-Tb-XzN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dvy-IR-9LR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tempSplash" width="1512" height="2016"/>
+        <image name="img_splash" width="414.5" height="896.5"/>
     </resources>
 </document>
