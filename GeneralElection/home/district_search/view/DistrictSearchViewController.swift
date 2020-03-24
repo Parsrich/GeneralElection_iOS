@@ -52,54 +52,16 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
                 guard let `self` = self else { return }
                 self.presentActionSheet(title: "정당선택", actions: self.getActions())
             }).disposed(by: rx.disposeBag)
-            
-        viewModel!.siListObservable
-            .bind(to: siTableView.rx.items(dataSource: viewModel!.siDataSource))
-            .disposed(by: rx.disposeBag)
-                
-        viewModel!.guListObservable
-            .bind(to: guTableView.rx.items(dataSource: viewModel!.guDataSource))
-            .disposed(by: rx.disposeBag)
-            
-        viewModel!.dongListObservable
-            .bind(to: dongTableView.rx.items(dataSource: viewModel!.dongDataSource))
-            .disposed(by: rx.disposeBag)
-        
-        siTableView.rx.itemSelected
-            .asDriver()
-            .drive(onNext: { [weak self] indexPath in
-                guard let `self` = self else { return }
-                self.viewModel!.setLocationGuList(selectedIndex: indexPath.row)
-                self.switchTableView(nextTableView: self.guTableView)
-            }).disposed(by: rx.disposeBag)
-
-        guTableView.rx.itemSelected
-            .asDriver()
-            .drive(onNext: { [weak self] indexPath in
-                guard let `self` = self else { return }
-                self.viewModel!.setLocationDongList(selectedIndex: indexPath.row)
-                self.switchTableView(nextTableView: self.dongTableView)
-            }).disposed(by: rx.disposeBag)
-
-        dongTableView.rx.itemSelected
-            .asDriver()
-            .drive(onNext: { [weak self] indexPath in
-                guard let `self` = self else { return }
-                self.viewModel!.setCongress(selectedIndex: indexPath.row)
-                UIView.animate(withDuration: 0.3) {
-                    self.dongTableView.isHidden = false
-                }
-            }).disposed(by: rx.disposeBag)
     }
     
     func switchTableView(nextTableView: UITableView) {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
-            self?.siTableView.isHidden = true
-            self?.guTableView.isHidden = true
-            self?.dongTableView.isHidden = true
+            self?.siTableView.alpha = 0.0
+            self?.guTableView.alpha = 0.0
+            self?.dongTableView.alpha = 0.0
         }) { _ in
             UIView.animate(withDuration: 0.3) {
-                nextTableView.isHidden = false
+                nextTableView.alpha = 1.0
             }
         }
     }
@@ -156,7 +118,23 @@ extension DistrictSearchViewController: UITableViewDataSource {
 extension DistrictSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         viewModel!.switchLocationType()
+        
+        switch tableView {
+        case siTableView:
+            self.viewModel!.setLocationGuList(selectedIndex: indexPath.row)
+            self.switchTableView(nextTableView: self.guTableView)
+        case guTableView:
+            self.viewModel!.setLocationDongList(selectedIndex: indexPath.row)
+            self.switchTableView(nextTableView: self.dongTableView)
+        case dongTableView:
+            self.viewModel!.setCongress(selectedIndex: indexPath.row)
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.dongTableView.alpha = 1.0
+            }
+        default:
+            break
+        }
     }
 }
