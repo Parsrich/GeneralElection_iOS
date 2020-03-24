@@ -73,6 +73,10 @@
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="n0z-uF-jTs" id="bVC-DC-mED"/>
+                                                    <outlet property="delegate" destination="n0z-uF-jTs" id="Uiw-UE-0Wp"/>
+                                                </connections>
                                             </tableView>
                                             <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Ea-Mg-nTD">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="540"/>
@@ -116,8 +120,12 @@
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="n0z-uF-jTs" id="C4j-JI-vjL"/>
+                                                    <outlet property="delegate" destination="n0z-uF-jTs" id="0Q8-AA-1ib"/>
+                                                </connections>
                                             </tableView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-cR-u80">
+                                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-cR-u80">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="540"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +154,7 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="9no-2C-ry6" firstAttribute="leading" secondItem="0wu-ye-ZRD" secondAttribute="leading" constant="30" id="3cL-TO-wCf"/>
-                                                                <constraint firstItem="nNo-SO-vOo" firstAttribute="centerX" secondItem="0wu-ye-ZRD" secondAttribute="centerX" id="GvU-ud-osN"/>
+                                                                <constraint firstItem="nNo-SO-vOo" firstAttribute="centerX" secondItem="0wu-ye-ZRD" secondAttribute="centerX" id="4Z5-fE-1Id"/>
                                                                 <constraint firstAttribute="trailing" secondItem="9no-2C-ry6" secondAttribute="trailing" constant="30" id="NrP-yN-e8R"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="nNo-SO-vOo" secondAttribute="trailing" constant="10" id="aBE-z5-9Y6"/>
                                                                 <constraint firstAttribute="bottom" secondItem="9no-2C-ry6" secondAttribute="bottom" id="dnt-31-DvH"/>
@@ -160,6 +168,10 @@
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="n0z-uF-jTs" id="v6T-kb-42I"/>
+                                                    <outlet property="delegate" destination="n0z-uF-jTs" id="fz7-SE-jdE"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -419,7 +431,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="TbO-NF-rgD">
-                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="300.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-cO-cdc">
@@ -469,7 +481,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* 검색창에 후보자 이름을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-AA-uVf">
-                                        <rect key="frame" x="10" y="150" width="354" height="14.5"/>
+                                        <rect key="frame" x="10" y="150" width="354" height="16.5"/>
                                         <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

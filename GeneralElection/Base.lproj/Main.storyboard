@@ -21,16 +21,16 @@
         <!--Splash View Controller-->
         <scene sceneID="OeT-Ci-Il9">
             <objects>
-                <viewController id="VdG-os-3EQ" customClass="SplashViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VdG-os-3EQ" customClass="SplashViewController" customModule="총선" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rqD-C9-bVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSplash" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-qn-sZX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-qn-sZX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3GZ-qn-sZX" secondAttribute="bottom" id="GQf-dh-Yqm"/>
                             <constraint firstItem="3GZ-qn-sZX" firstAttribute="leading" secondItem="gVW-ov-5Ea" secondAttribute="leading" id="U0T-9M-VPs"/>
@@ -40,7 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="gVW-ov-5Ea"/>
                     </view>
                     <connections>
-                        <segue destination="dvm-7O-w9f" kind="presentation" identifier="main" customClass="SplashSegue" customModule="GeneralElection" customModuleProvider="target" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oSJ-RM-jYf"/>
+                        <segue destination="dvm-7O-w9f" kind="presentation" identifier="main" customClass="SplashSegue" customModule="총선" customModuleProvider="target" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oSJ-RM-jYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdA-xc-Bnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,7 +50,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="Gtj-GU-0CE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dvm-7O-w9f" customClass="MainTabBarController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dvm-7O-w9f" customClass="MainTabBarController" customModule="총선" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgM-5Q-mxi">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -89,12 +89,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_home" width="50" height="50"/>
-        <image name="tab_home_select" width="50" height="50"/>
-        <image name="tab_notice" width="50" height="50"/>
-        <image name="tab_notice_select" width="50" height="50"/>
-        <image name="tab_setting" width="50" height="50"/>
-        <image name="tab_setting_select" width="50" height="50"/>
-        <image name="tempSplash" width="1512" height="2016"/>
+        <image name="img_splash" width="414.5" height="896.5"/>
+        <image name="tab_home" width="48" height="48"/>
+        <image name="tab_home_select" width="48" height="48"/>
+        <image name="tab_notice" width="48" height="48"/>
+        <image name="tab_notice_select" width="48" height="48"/>
+        <image name="tab_setting" width="48" height="48"/>
+        <image name="tab_setting_select" width="48" height="48"/>
     </resources>
 </document>
