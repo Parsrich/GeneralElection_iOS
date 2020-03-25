@@ -29,6 +29,7 @@ target 'GeneralElection' do
   # Others
 #  pod 'Alamofire'
   pod 'Carte'
+  pod 'Kingfisher'
   
 end
 

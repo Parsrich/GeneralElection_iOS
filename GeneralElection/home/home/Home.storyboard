@@ -16,7 +16,7 @@
         <!-- -->
         <scene sceneID="zs5-Eb-nfc">
             <objects>
-                <viewController id="bSK-wO-p9p" customClass="HomeViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bSK-wO-p9p" customClass="HomeViewController" customModule="총선" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ui-2v-hcn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총선 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
-                                                <rect key="frame" x="58.5" y="145.5" width="70.5" height="17"/>
+                                                <rect key="frame" x="61.5" y="145.5" width="64" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정당 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb0-Fg-4nM">
-                                                <rect key="frame" x="58" y="145.5" width="71" height="17"/>
+                                                <rect key="frame" x="61.5" y="145.5" width="64" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역구 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-GJ-FF2">
-                                                <rect key="frame" x="50" y="145.5" width="87" height="17"/>
+                                                <rect key="frame" x="54.5" y="145.5" width="78.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후보자 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esK-oi-chj">
-                                                <rect key="frame" x="50" y="145.5" width="87" height="17"/>
+                                                <rect key="frame" x="54.5" y="145.5" width="78.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -163,7 +163,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한민국 총선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">
@@ -227,10 +227,10 @@
     </scenes>
     <resources>
         <image name="ic_home_candidate" width="48" height="48"/>
-        <image name="ic_home_district" width="48" height="48"/>
-        <image name="ic_home_notice" width="48" height="48"/>
-        <image name="ic_home_party" width="48" height="48"/>
-        <image name="img_background" width="375" height="375"/>
+        <image name="ic_home_district" width="93" height="97"/>
+        <image name="ic_home_notice" width="97" height="99"/>
+        <image name="ic_home_party" width="97" height="90"/>
+        <image name="img_background" width="414.5" height="300.5"/>
         <image name="tab_home" width="48" height="48"/>
         <image name="tab_home_select" width="48" height="48"/>
     </resources>

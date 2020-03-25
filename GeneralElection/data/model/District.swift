@@ -118,4 +118,20 @@ class LocationElectionName {
         self.siCouncil = electionName.siCouncil
         self.guCouncil = electionName.guCouncil
     }
+    
+    func getElectionName(electionType: ElectionType) ->  String{
+        switch electionType {
+        case .nationalAssembly:
+            return self.congress
+        case .siMayor:
+            break
+        case .guMayor:
+            return self.guMayor
+        case .siCouncil:
+            return self.siCouncil
+        case .guCouncil:
+            return self.guCouncil
+        }
+        return ""
+    }
 }

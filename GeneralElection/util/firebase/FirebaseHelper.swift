@@ -11,21 +11,24 @@ import FirebaseDatabase
 
 class FirebaseHelper: NSObject {
     
-    static func fetchDatas(path: DatabasePath, location: String? = nil) -> Observable<NSDictionary> {
+    static func fetchDatas(path: DatabasePath, key: String? = nil) -> Observable<NSDictionary> {
         return Observable.create { emitter -> Disposable in
             
             var dbReference = FirebaseManager.share.firebaseDB(path: path)
             
-            if let location = location {
+            if let location = key {
                 dbReference = dbReference.child(location)
             }
             
             dbReference.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let dict = snapshot.value as? NSDictionary else { return }
-                
-                emitter.onNext(dict)
-                
-                emitter.onCompleted()
+                if let dict = snapshot.value as? NSDictionary {
+                    emitter.onNext(dict)
+                    emitter.onCompleted()
+                }
+                if let dicts = snapshot.value as? [NSDictionary] {
+                    dicts.forEach { emitter.onNext($0) }
+                    emitter.onCompleted()
+                }
             }) { error in
                 print(error.localizedDescription)
             }
