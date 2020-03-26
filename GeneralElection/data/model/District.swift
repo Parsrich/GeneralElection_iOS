@@ -119,7 +119,7 @@ class LocationElectionName {
         self.guCouncil = electionName.guCouncil
     }
     
-    func getElectionName(electionType: ElectionType) ->  String{
+    func getElectionName(electionType: ElectionType) -> String {
         switch electionType {
         case .nationalAssembly:
             return self.congress

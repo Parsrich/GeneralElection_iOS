@@ -18,7 +18,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     @IBOutlet weak var candidateTableView: UITableView!
     
     var electionType: ElectionType?
-    var electionName: String?
+    var electionName: LocationElectionName?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     func setupUI() {
         setShadowViewUnderNavigationController()
         categoryButton.setTitle(viewModel!.electionType.rawValue, for: .normal)
-        locationLabel.text = viewModel!.electionName
+        locationLabel.text = viewModel!.electionName.getElectionName(electionType: viewModel!.electionType)
     }
     
     func bindRx() {

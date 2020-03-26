@@ -40,7 +40,6 @@
 		CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */; };
 		CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C42413886400C76E2E /* HomeViewModel.swift */; };
 		CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C62413887000C76E2E /* SettingViewModel.swift */; };
-		CA46F9CA2413923F00C76E2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */; };
 		CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */; };
 		CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */; };
 		CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472469242B2026000A3C10 /* CandidateCell.swift */; };
@@ -57,6 +56,8 @@
 		CA9AEAD2241B0FA20022A2C8 /* PartySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */; };
 		CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */; };
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
+		CAB2E507242C513E00095502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2E506242C513E00095502 /* GoogleService-Info.plist */; };
+		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CAF613322421E7C200D26D31 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613312421E7C200D26D31 /* Party.swift */; };
 		CAF613342421E99B00D26D31 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613332421E99B00D26D31 /* CityCell.swift */; };
 /* End PBXBuildFile section */
@@ -98,7 +99,6 @@
 		CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C42413886400C76E2E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C62413887000C76E2E /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
-		CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchListResultViewController.swift; sourceTree = "<group>"; };
 		CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultListViewModel.swift; sourceTree = "<group>"; };
 		CA472469242B2026000A3C10 /* CandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewModel.swift; sourceTree = "<group>"; };
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
+		CAB2E506242C513E00095502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CAF613312421E7C200D26D31 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		CAF613332421E99B00D26D31 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneralElection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,7 @@
 				CA46F9A22413741000C76E2E /* CodableExtension.swift */,
 				CA46F9A42413742500C76E2E /* ArrayExtension.swift */,
 				CA2811B92424937800DCF8AA /* IntExtension.swift */,
+				CAB2E508242C84EB00095502 /* UIColorExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -315,10 +318,10 @@
 		CA46F9C82413921000C76E2E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAB2E506242C513E00095502 /* GoogleService-Info.plist */,
 				CA2DCE22241DF084006A304D /* GmarketSansBold.otf */,
 				CA2DCE23241DF085006A304D /* GmarketSansLight.otf */,
 				CA2DCE21241DF084006A304D /* GmarketSansMedium.otf */,
-				CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */,
 				CA46F98D24136A0000C76E2E /* LaunchScreen.storyboard */,
 				CA46F98B24136A0000C76E2E /* Assets.xcassets */,
 			);
@@ -504,9 +507,9 @@
 				CA46F9A72413778D00C76E2E /* Home.storyboard in Resources */,
 				CA2DCE24241DF085006A304D /* GmarketSansMedium.otf in Resources */,
 				CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */,
+				CAB2E507242C513E00095502 /* GoogleService-Info.plist in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
 				CA2DCE26241DF085006A304D /* GmarketSansLight.otf in Resources */,
-				CA46F9CA2413923F00C76E2E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +625,7 @@
 				CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */,
 				CAF613322421E7C200D26D31 /* Party.swift in Sources */,
 				CA46F9C1241387F500C76E2E /* BaseViewControllerWithViewModel.swift in Sources */,
+				CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */,
 				CAF613342421E99B00D26D31 /* CityCell.swift in Sources */,
 				CA2811BA2424937800DCF8AA /* IntExtension.swift in Sources */,
 				CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */,
