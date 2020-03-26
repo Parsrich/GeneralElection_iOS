@@ -159,7 +159,7 @@ extension DistrictSearchViewController: UITableViewDelegate {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
                 
                 vc.electionType = self.viewModel!.electionType
-                vc.electionName = self.viewModel!.electionName.getElectionName(electionType: self.viewModel!.electionType)
+                vc.electionName = self.viewModel!.electionName//.getElectionName(electionType: self.viewModel!.electionType)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         default:

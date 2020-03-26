@@ -26,7 +26,7 @@ class CandidateCell: UITableViewCell {
                 .setImage(with: url,
                           placeholder: UIImage(named: "ic_user_empty"))
         }
-//        partyColorView.backgroundColor = UIColor.red
+        partyColorView.backgroundColor = PartyColor.getPartyColor(party: candidateInfo.party ?? "")
         partyNameLabel.text = candidateInfo.party
         candidateNameLabel.text = candidateInfo.name
         birthLabel.text = "(\(candidateInfo.age ?? "")/\(candidateInfo.gender ?? ""))"
