@@ -23,6 +23,8 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        reset()
+        
         if let type = electionType, let name = electionName {
             viewModel!.electionType = type
             viewModel!.electionName = name
@@ -31,6 +33,10 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         setupUI()
         bindRx()
         setup()
+    }
+    
+    func reset() {
+        Congress.reset()
     }
     
     func setup() {
