@@ -46,6 +46,7 @@
 		CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3B24235EA700FECFCD /* SettingCell.swift */; };
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
+		CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */; };
 		CA89034B242B2619006D7F42 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034A242B2619006D7F42 /* Candidate.swift */; };
 		CA89034D242B30A0006D7F42 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034C242B30A0006D7F42 /* Congress.swift */; };
 		CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */; };
@@ -105,6 +106,7 @@
 		CA59EF3B24235EA700FECFCD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
 		CA89034A242B2619006D7F42 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		CA89034C242B30A0006D7F42 /* Congress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
 		CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			children = (
 				CA59EF402423947500FECFCD /* FirebaseHelper.swift */,
 				CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */,
+				CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
 				CA89034B242B2619006D7F42 /* Candidate.swift in Sources */,
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
+				CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */,
 				CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */,
 				CA9AEACA241A20280022A2C8 /* CandidateSearchViewModel.swift in Sources */,
 				CA89034D242B30A0006D7F42 /* Congress.swift in Sources */,
