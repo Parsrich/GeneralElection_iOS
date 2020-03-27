@@ -13,4 +13,11 @@ struct Congress {
     static var guMayorDict: NSDictionary?
     static var siCouncilDict: NSDictionary?
     static var guCouncilDict: NSDictionary?
+    
+    static func reset() {
+        congressDict = nil
+        guMayorDict = nil
+        siCouncilDict = nil
+        guCouncilDict = nil
+    }
 }

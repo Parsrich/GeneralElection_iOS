@@ -37,7 +37,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총선 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
                                                 <rect key="frame" x="61.5" y="145.5" width="64" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,8 +66,8 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정당 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb0-Fg-4nM">
-                                                <rect key="frame" x="61.5" y="145.5" width="64" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비례대표 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb0-Fg-4nM">
+                                                <rect key="frame" x="47" y="145.5" width="93" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -163,11 +163,12 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
-                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="300.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한민국 총선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PHV-2g-iEH"/>
                                 </constraints>
@@ -180,6 +181,7 @@
                         <constraints>
                             <constraint firstItem="OUB-L9-Pxk" firstAttribute="top" secondItem="4Ui-2v-hcn" secondAttribute="top" id="8x0-TK-k0t"/>
                             <constraint firstItem="3Qb-lO-94E" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" id="BJr-La-h9W"/>
+                            <constraint firstItem="OUB-L9-Pxk" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3Qb-lO-94E" secondAttribute="bottom" constant="100" id="Fha-LU-DtA"/>
                             <constraint firstItem="jbp-Ru-Ll0" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" constant="20" id="KeS-FO-1iY"/>
                             <constraint firstItem="3Qb-lO-94E" firstAttribute="top" secondItem="R8d-Cg-dHK" secondAttribute="top" id="MOJ-7f-e7m"/>
                             <constraint firstItem="R8d-Cg-dHK" firstAttribute="trailing" secondItem="jbp-Ru-Ll0" secondAttribute="trailing" constant="20" id="Pf5-4h-GE5"/>
