@@ -324,6 +324,7 @@ PODS:
   - RxWebKit (1.0.2):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Action
@@ -341,6 +342,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - RxWebKit
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC REPOS:
   trunk:
@@ -383,6 +385,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxWebKit
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -424,7 +427,8 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: dd26dea86477cd614d8f66f578ad928246c94f25
+PODFILE CHECKSUM: 10a5c487139c4cafd211f730c012931f68987f18
 
 COCOAPODS: 1.8.4
