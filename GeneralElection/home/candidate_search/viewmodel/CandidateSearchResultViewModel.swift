@@ -10,4 +10,11 @@ import RxSwift
 
 class CandidateSearchResultViewModel: BaseViewModel {
     
+    var candidate: Candidate?
+    var districtString: String?
+    
+    required init() {
+        super.init()
+        
+    }
 }
