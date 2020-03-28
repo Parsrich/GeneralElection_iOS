@@ -51,11 +51,24 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
         setShadowViewUnderNavigationController()
         setLocationBackgroundColor()
         
+        siButton.titleLabel?.numberOfLines = 1
+        guButton.titleLabel?.numberOfLines = 1
+        dongButton.titleLabel?.numberOfLines = 1
+        siButton.titleLabel?.minimumScaleFactor = 0.5
+        guButton.titleLabel?.minimumScaleFactor = 0.5
+        dongButton.titleLabel?.minimumScaleFactor = 0.5
+        
         siButton.titleLabel?.adjustsFontSizeToFitWidth = true
         guButton.titleLabel?.adjustsFontSizeToFitWidth = true
         dongButton.titleLabel?.adjustsFontSizeToFitWidth = true
-//        categoryButton.titleLabel?.lineBreakMode = .byWordWrapping
-//        categoryButton.setTitle(ElectionType.nationalAssembly.rawValue, for: .normal)
+    
+        siButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        guButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        dongButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        
+        siButton.titleLabel?.allowsDefaultTighteningForTruncation = true
+        guButton.titleLabel?.allowsDefaultTighteningForTruncation = true
+        dongButton.titleLabel?.allowsDefaultTighteningForTruncation = true
     }
     
     func bindRx() {
