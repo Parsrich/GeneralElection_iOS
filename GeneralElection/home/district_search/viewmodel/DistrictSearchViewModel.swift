@@ -28,6 +28,8 @@ enum LocationType: String {
 
 class DistrictSearchViewModel: BaseViewModel {
         
+    var currentDistrict: [String]
+    
     var locationSiList: [LocationSi]
     var locationGuList: [LocationGu]
     var locationDongList: [LocationDong]
@@ -37,6 +39,7 @@ class DistrictSearchViewModel: BaseViewModel {
     var electionType: ElectionType = .nationalAssembly
             
     required init() {
+        currentDistrict = [String]()
         locationSiList = [LocationSi]()
         locationGuList = [LocationGu]()
         locationDongList = [LocationDong]()
@@ -85,6 +88,7 @@ class DistrictSearchViewModel: BaseViewModel {
     func setLocationGuList(selectedIndex: Int) {
         if locationType != .si { return }
         guard let guList = locationSiList[selectedIndex].siValues.first else { return }
+        currentDistrict.append(locationSiList[selectedIndex].key)
         locationGuList.removeAll()
         locationGuList.append(contentsOf: guList.value)
         locationGuList.sort { $0.key < $1.key }
@@ -93,6 +97,7 @@ class DistrictSearchViewModel: BaseViewModel {
     func setLocationDongList(selectedIndex: Int) {
         if locationType != .gu { return }
         guard let dongList = locationGuList[selectedIndex].guValues.first else { return }
+        currentDistrict.append(locationGuList[selectedIndex].key)
         locationDongList.removeAll()
         locationDongList.append(contentsOf: dongList.value)
         locationDongList.sort { $0.key < $1.key }
@@ -101,36 +106,14 @@ class DistrictSearchViewModel: BaseViewModel {
     func setCongress(selectedIndex: Int) {
         if locationType != .dong { return }
         guard let congress = locationDongList[selectedIndex].dongValues.first else { return }
-        
-        electionName.setValue(electionName: congress.value)
+        if currentDistrict.count > 0 {
+            electionName.setValue(electionName: congress.value, siName: currentDistrict[0])
+        }
     }
     
     /// # 지역 누르면 현재 보여지는 TableView의 지역 단위를 설정해줌
-    /// ## Parameters
-    /// - isBack: 상위 지역을 선택해야할 경우 true, 하위로 가면 false
     func switchLocationType(_ locationType: LocationType) {
         self.locationType = locationType
-//        switch self.locationType {
-//        case .si:
-//            if isBack { break }
-//            locationType = .gu
-//        case .gu:
-//            if isBack {
-//                locationType = .si
-//                break
-//            }
-//            locationType = .dong
-//        case .dong:
-//            if isBack {
-//                locationType = .gu
-//                break
-//            }
-//            locationType = .selectedDone
-//        case .selectedDone:
-//            if isBack {
-//                locationType = .dong
-//            }
-//        }
     }
     
     func switchElectionType(electionType: ElectionType) {

@@ -19,11 +19,18 @@ struct Candidate: Decodable {
     var id: String?
     var imageUrl: String?
     var job: String?
+    var military: String?
     var name: String?
+    var nameFull: String?
+    var number: String?
     var party: String?
-    var regDate: String?
+    var property: String?
+    var regCount: String?
     var si: String?
     var status: String?
+    var taxArrears: String?
+    var taxArrears5: String?
+    var taxPayment: String?
     
     private enum CodingKeys: String, CodingKey {
         case address = "Address"
@@ -36,10 +43,17 @@ struct Candidate: Decodable {
         case id = "Id"
         case imageUrl = "ImageUrl"
         case job = "Job"
+        case military = "Military"
         case name = "Name"
+        case nameFull = "NameFull"
+        case number = "Number"
         case party = "Party"
-        case regDate = "RegDate"
+        case property = "Property"
+        case regCount = "RegCount"
         case si = "Si"
         case status = "Status"
+        case taxArrears = "TaxArrears"
+        case taxArrears5 = "TaxArrears5"
+        case taxPayment = "TaxPayment"
     }
 }

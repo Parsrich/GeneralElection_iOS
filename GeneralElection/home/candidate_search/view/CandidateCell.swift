@@ -17,11 +17,14 @@ class CandidateCell: UITableViewCell {
             self.thumbnailImageView.layer.borderWidth = 1.0
         }
     }
+    @IBOutlet weak var numberColorView: UIView!
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var partyColorView: UIView!
     @IBOutlet weak var partyNameLabel: UILabel!
     @IBOutlet weak var candidateNameLabel: UILabel!
     @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    
     
     func setCandidate(candidateInfo: Candidate) {
         if let imgUrl = candidateInfo.imageUrl {
@@ -31,11 +34,12 @@ class CandidateCell: UITableViewCell {
                 .setImage(with: url,
                           placeholder: UIImage(named: "ic_user_empty"))
         }
+        numberColorView.backgroundColor = PartyColor.getPartyColor(party: candidateInfo.party ?? "")
+        numberLabel.text = "기호\(candidateInfo.number ?? "")"
         partyColorView.backgroundColor = PartyColor.getPartyColor(party: candidateInfo.party ?? "")
         partyNameLabel.text = candidateInfo.party
         candidateNameLabel.text = candidateInfo.name
-        birthLabel.text = "(\(candidateInfo.age ?? "")/\(candidateInfo.gender ?? ""))"
+        birthLabel.text = "\(candidateInfo.age ?? "")/\(candidateInfo.gender ?? "")"
         addressLabel.text = candidateInfo.address
-        
     }
 }
