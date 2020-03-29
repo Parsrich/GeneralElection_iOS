@@ -34,5 +34,18 @@ class SplashViewController: UIViewController {
         settings.minimumFetchInterval = 3000
         #endif
         remoteConfig.configSettings = settings
+        
+        FirebaseManager.share.fetch { isComplete in
+            if !isComplete { return }
+            
+            /// 새로운 버전 체크
+            let fetchedAppVersion = FirebaseManager.share.stringValue(key: .appVersion)
+            if fetchedAppVersion != Config.appVersion {
+                /// Go To Appstore
+                if let url = URL(string: FirebaseManager.share.stringValue(key: .appStoreUrl)) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }
     }
 }
