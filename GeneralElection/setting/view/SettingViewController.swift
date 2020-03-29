@@ -37,14 +37,7 @@ class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
     }
     
     func setup() {
-        viewModel!.firebaseFetchSubject
-            .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] appVersion in
-                guard let `self` = self else { return }
-                self.viewModel!.appVersion = appVersion
-                self.viewModel!.settingList[3] = "앱 버전: \(appVersion)"
-                self.tableView.reloadData()
-            }).disposed(by: rx.disposeBag)
+        
     }
 }
 
@@ -70,7 +63,10 @@ extension SettingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
+            
+            performSegue(withIdentifier: "SponsorSegue", sender: self)
+        } else if indexPath.row == 1 {
 //            UIApplication.shared.open(URL(string: "mailto:cmk330@naver.com")!, options: [:])
 
             if MFMailComposeViewController.canSendMail() {

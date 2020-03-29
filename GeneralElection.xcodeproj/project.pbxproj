@@ -47,6 +47,8 @@
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
 		CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */; };
+		CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */; };
+		CA7BCE12243052DC00BE9778 /* SponsorItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */; };
 		CA89034B242B2619006D7F42 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034A242B2619006D7F42 /* Candidate.swift */; };
 		CA89034D242B30A0006D7F42 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034C242B30A0006D7F42 /* Congress.swift */; };
 		CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */; };
@@ -59,6 +61,7 @@
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
 		CAB2E507242C513E00095502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2E506242C513E00095502 /* GoogleService-Info.plist */; };
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
+		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
 		CAF613322421E7C200D26D31 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613312421E7C200D26D31 /* Party.swift */; };
 		CAF613342421E99B00D26D31 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613332421E99B00D26D31 /* CityCell.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +110,8 @@
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
+		CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
+		CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorItemCell.swift; sourceTree = "<group>"; };
 		CA89034A242B2619006D7F42 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		CA89034C242B30A0006D7F42 /* Congress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
 		CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		CAB2E506242C513E00095502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAF613312421E7C200D26D31 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		CAF613332421E99B00D26D31 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneralElection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +166,7 @@
 				CA3D865C2425E38D00872223 /* District.swift */,
 				CA89034A242B2619006D7F42 /* Candidate.swift */,
 				CA89034C242B30A0006D7F42 /* Congress.swift */,
+				CABDCEA7242FAE93003A8EF7 /* Config.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -201,6 +208,8 @@
 		CA46F9962413708D00C76E2E /* home */ = {
 			isa = PBXGroup;
 			children = (
+				CA46F9A62413778D00C76E2E /* Home.storyboard */,
+				CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */,
 				CAA33CC5241CDF120072FCBA /* home */,
 				CA9AEACC241B0F420022A2C8 /* party_search */,
 				CA9AEAC3241A1FD90022A2C8 /* district_search */,
@@ -294,7 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				CA46F9B2241377E500C76E2E /* SettingViewController.swift */,
+				CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */,
 				CA59EF3B24235EA700FECFCD /* SettingCell.swift */,
+				CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -343,7 +354,6 @@
 		CA9AEAC3241A1FD90022A2C8 /* district_search */ = {
 			isa = PBXGroup;
 			children = (
-				CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */,
 				CA9AEAC6241A1FF60022A2C8 /* view */,
 				CA9AEAC5241A1FF20022A2C8 /* viewmodel */,
 			);
@@ -425,7 +435,6 @@
 		CAA33CC5241CDF120072FCBA /* home */ = {
 			isa = PBXGroup;
 			children = (
-				CA46F9A62413778D00C76E2E /* Home.storyboard */,
 				CA46F99A2413722900C76E2E /* viewmodel */,
 				CA46F99B2413726A00C76E2E /* view */,
 			);
@@ -614,11 +623,13 @@
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
 				CA89034B242B2619006D7F42 /* Candidate.swift in Sources */,
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
+				CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */,
 				CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */,
 				CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */,
 				CA9AEACA241A20280022A2C8 /* CandidateSearchViewModel.swift in Sources */,
 				CA89034D242B30A0006D7F42 /* Congress.swift in Sources */,
 				CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */,
+				CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */,
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
 				CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */,
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
@@ -633,6 +644,7 @@
 				CAF613342421E99B00D26D31 /* CityCell.swift in Sources */,
 				CA2811BA2424937800DCF8AA /* IntExtension.swift in Sources */,
 				CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */,
+				CA7BCE12243052DC00BE9778 /* SponsorItemCell.swift in Sources */,
 				CA46F9BD2413873800C76E2E /* BaseViewController.swift in Sources */,
 				CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */,
 				CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */,
