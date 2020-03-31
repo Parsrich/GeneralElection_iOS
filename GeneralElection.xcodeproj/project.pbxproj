@@ -47,6 +47,7 @@
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
 		CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */; };
+		CA74EFFC2433929C00775A56 /* PartyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA74EFFB2433929C00775A56 /* PartyItemCell.swift */; };
 		CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */; };
 		CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */; };
 		CA7BCE12243052DC00BE9778 /* SponsorItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */; };
@@ -112,6 +113,7 @@
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailCell.swift; sourceTree = "<group>"; };
+		CA74EFFB2433929C00775A56 /* PartyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyItemCell.swift; sourceTree = "<group>"; };
 		CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
 		CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
 		CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorItemCell.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */,
+				CA74EFFB2433929C00775A56 /* PartyItemCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				CA89034B242B2619006D7F42 /* Candidate.swift in Sources */,
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
 				CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */,
+				CA74EFFC2433929C00775A56 /* PartyItemCell.swift in Sources */,
 				CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */,
 				CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */,
 				CA9AEACA241A20280022A2C8 /* CandidateSearchViewModel.swift in Sources */,
