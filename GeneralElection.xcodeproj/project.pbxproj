@@ -46,6 +46,7 @@
 		CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3B24235EA700FECFCD /* SettingCell.swift */; };
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
+		CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */; };
 		CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */; };
 		CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */; };
 		CA7BCE12243052DC00BE9778 /* SponsorItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */; };
@@ -62,6 +63,7 @@
 		CAB2E507242C513E00095502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2E506242C513E00095502 /* GoogleService-Info.plist */; };
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
+		CAE074DE243375E800174798 /* CandidateDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */; };
 		CAF613322421E7C200D26D31 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613312421E7C200D26D31 /* Party.swift */; };
 		CAF613342421E99B00D26D31 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613332421E99B00D26D31 /* CityCell.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +111,7 @@
 		CA59EF3B24235EA700FECFCD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailCell.swift; sourceTree = "<group>"; };
 		CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
 		CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
 		CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorItemCell.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		CAB2E506242C513E00095502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailWebViewController.swift; sourceTree = "<group>"; };
 		CAF613312421E7C200D26D31 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		CAF613332421E99B00D26D31 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneralElection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,6 +407,8 @@
 				CA2811BB24249FAC00DCF8AA /* CandidateSearchResultViewController.swift */,
 				CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */,
 				CA472469242B2026000A3C10 /* CandidateCell.swift */,
+				CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */,
+				CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -614,6 +620,7 @@
 			files = (
 				CA26666C242295CE003055EC /* NoticeViewController.swift in Sources */,
 				CA26666B242295C4003055EC /* SettingViewController.swift in Sources */,
+				CAE074DE243375E800174798 /* CandidateDetailWebViewController.swift in Sources */,
 				CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */,
 				CA9AEAC0241A1F710022A2C8 /* CandidateSearchViewController.swift in Sources */,
 				CA0DE8CF241CA7C6009FBD03 /* Utilities.swift in Sources */,
@@ -652,6 +659,7 @@
 				CA3D865D2425E38D00872223 /* District.swift in Sources */,
 				CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */,
 				CA46F9B824137DCF00C76E2E /* SplashSegue.swift in Sources */,
+				CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */,
 				CA46F9B624137AD400C76E2E /* SplashViewController.swift in Sources */,
 				CA2811BC24249FAC00DCF8AA /* CandidateSearchResultViewController.swift in Sources */,
 				CA46F9A32413741000C76E2E /* CodableExtension.swift in Sources */,
