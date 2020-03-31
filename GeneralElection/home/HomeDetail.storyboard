@@ -979,7 +979,7 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1g4-Ja-GTm">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="675"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zSr-2B-CP6">
                                             <size key="itemSize" width="164" height="130"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -987,7 +987,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CJt-34-Dov">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PartyItemCell" id="CJt-34-Dov" customClass="PartyItemCell" customModule="총선" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5R-CW-xKU">
@@ -1017,20 +1017,29 @@
                                                         <constraint firstItem="3Z9-l4-MM5" firstAttribute="top" secondItem="S5R-CW-xKU" secondAttribute="top" id="zQP-9M-6em"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="customSize" width="164" height="130"/>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="3Z9-l4-MM5" id="vDs-28-J0z"/>
+                                                    <outlet property="partyLogoImageView" destination="JCp-G1-5p8" id="mxL-lX-Muj"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadow">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="av8-ct-uPU" id="iAx-C0-0U5"/>
+                                            <outlet property="delegate" destination="av8-ct-uPU" id="Zgd-HS-IFv"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1g4-Ja-GTm" secondAttribute="trailing" id="FFD-Pm-0sm"/>
                                     <constraint firstItem="1g4-Ja-GTm" firstAttribute="leading" secondItem="3VY-tC-hB3" secondAttribute="leading" id="WZg-vc-3UT"/>
@@ -1039,6 +1048,9 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadow">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -1075,6 +1087,9 @@
                         </view>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1g4-Ja-GTm" id="Rwi-Gq-euG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGE-oa-YZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
