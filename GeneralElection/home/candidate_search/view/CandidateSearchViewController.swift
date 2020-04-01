@@ -39,9 +39,20 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
             .asDriver()
             .drive(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
-                if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController { self.navigationController?.pushViewController(vc, animated: true)
-                }
+//                self.candidateSearchField.text
+                // 검색 결과가 2이상이면
+                self.nextViewController()
             }).disposed(by: rx.disposeBag)
+    }
+    
+    func nextViewController() {
+        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController {
+
+            vc.source = .candidateSearch
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -50,11 +61,7 @@ extension CandidateSearchViewController: UITextFieldDelegate {
         
         textField.resignFirstResponder()
         
-        
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController {
-
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        self.nextViewController()
         
         return true
     }

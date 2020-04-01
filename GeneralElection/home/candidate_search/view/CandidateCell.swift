@@ -26,7 +26,7 @@ class CandidateCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     
     
-    func setCandidate(candidateInfo: Candidate) {
+    func setCandidate(candidateInfo: Candidate, sourceResult: SourceResult?) {
         if let imgUrl = candidateInfo.imageUrl {
             let url = URL(string: imgUrl)
             thumbnailImageView
@@ -35,7 +35,14 @@ class CandidateCell: UITableViewCell {
                           placeholder: UIImage(named: "ic_user_empty"))
         }
         numberColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
-        numberLabel.text = "기호\(candidateInfo.number ?? "")"
+        if let sourceResult = sourceResult {
+            switch sourceResult {
+            case .candidateSearch, .districtSearch:
+                numberLabel.text = "기호\(candidateInfo.number ?? "")"
+            case .partySearch:
+                numberLabel.text = candidateInfo.recommend
+            }
+        }
         partyColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
         partyNameLabel.text = candidateInfo.party
         candidateNameLabel.text = candidateInfo.name

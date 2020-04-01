@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-wS-NBg">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="20" y="118" width="374" height="675"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pb-xW-WCu">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="750"/>
@@ -134,7 +134,7 @@
                         <constraints>
                             <constraint firstItem="vIb-BC-MP0" firstAttribute="trailing" secondItem="Vp7-wS-NBg" secondAttribute="trailing" constant="20" id="5gu-XN-ect"/>
                             <constraint firstItem="vIb-BC-MP0" firstAttribute="bottom" secondItem="Vp7-wS-NBg" secondAttribute="bottom" constant="20" id="HfS-3w-lxX"/>
-                            <constraint firstItem="Vp7-wS-NBg" firstAttribute="top" secondItem="vIb-BC-MP0" secondAttribute="top" constant="20" id="bRh-hg-HeS"/>
+                            <constraint firstItem="Vp7-wS-NBg" firstAttribute="top" secondItem="vIb-BC-MP0" secondAttribute="top" constant="30" id="bRh-hg-HeS"/>
                             <constraint firstItem="Vp7-wS-NBg" firstAttribute="leading" secondItem="vIb-BC-MP0" secondAttribute="leading" constant="20" id="ftS-vw-tIO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>

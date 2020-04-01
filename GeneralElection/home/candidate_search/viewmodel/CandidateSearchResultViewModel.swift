@@ -35,8 +35,8 @@ class CandidateSearchResultViewModel: BaseViewModel {
         detailInfo!.append(DetailInfo(title: "병역\n신고사항(본인)", content: candidate.military))
         detailInfo!.append(DetailInfo(title: "전과\n기록유무(건수)", content: candidate.criminal))
         detailInfo!.append(DetailInfo(title: "입후보횟수", content: candidate.regCount))
-        detailInfo!.append(DetailInfo(title: "세금납부액", content: candidate.taxArrears))
+        detailInfo!.append(DetailInfo(title: "세금납부액", content: candidate.taxPayment))
         detailInfo!.append(DetailInfo(title: "최근 5년간\n체납액", content: candidate.taxArrears5))
-        detailInfo!.append(DetailInfo(title: "현 체납액", content: candidate.taxPayment))
+        detailInfo!.append(DetailInfo(title: "현 체납액", content: candidate.taxArrears))
     }
 }

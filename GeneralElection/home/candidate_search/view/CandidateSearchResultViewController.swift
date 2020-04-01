@@ -15,6 +15,7 @@ import Kingfisher
 enum SourceResult {
     case districtSearch
     case candidateSearch
+    case partySearch
 }
 
 class CandidateSearchResultViewController: BaseViewControllerWithViewModel<CandidateSearchResultViewModel> {
@@ -70,7 +71,14 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
         districtLabel.text = districtString
         
         numberBackView.backgroundColor = PartySource.getPartyColor(party: candidate?.party ?? "")
-        numberLabel.text = "기호\(candidate?.number ?? "")"
+        if let sourceResult = source {
+            switch sourceResult {
+            case .candidateSearch, .districtSearch:
+                numberLabel.text = "기호\(candidate?.number ?? "")"
+            case .partySearch:
+                numberLabel.text = candidate?.recommend
+            }
+        }
         partyBackView.backgroundColor = PartySource.getPartyColor(party: candidate?.party ?? "")
         partyLabel.text = candidate?.party
         nameLabel.text = candidate?.name
