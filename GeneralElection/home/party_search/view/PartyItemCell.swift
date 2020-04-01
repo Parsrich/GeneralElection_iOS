@@ -15,15 +15,26 @@ class PartyItemCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var partyLogoImageView: UIImageView!
     
-    func setup(info: [String: String]) {
-        guard let partyName = info.keys.first else { return }
-        nameLabel.text = partyName
-        if let imgUrl = info[partyName] {
-            let url = URL(string: imgUrl)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        partyLogoImageView.layer.borderColor = UIColor.lightGray.cgColor
+        partyLogoImageView.layer.borderWidth = 2.0
+    }
+    
+    func setData(info: Party) {
+        
+        nameLabel.text = info.name
+        if let url = info.logoImg {
             partyLogoImageView
                 .kf
                 .setImage(with: url,
                           placeholder: UIImage(named: "ic_user_empty"))
+            if info.name?.contains("가자!평화인권당") == true {
+                partyLogoImageView.backgroundColor = UIColor.init(hex: "#65A032")
+            } else {
+                partyLogoImageView.backgroundColor = UIColor.white
+            }
         }
     }
 }

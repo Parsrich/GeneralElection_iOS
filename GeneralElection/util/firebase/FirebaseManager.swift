@@ -17,6 +17,9 @@ enum DatabasePath: String {
     case guCouncil = "/guCouncil"
     case guMayor = "/guMayor"
     case siCouncil = "/siCouncil"
+    case candidateName = "/name"
+    case proportional = "/proportional"
+    case location = "/location"
 }
 
 class FirebaseManager {
