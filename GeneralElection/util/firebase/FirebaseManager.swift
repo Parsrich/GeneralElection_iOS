@@ -29,7 +29,7 @@ class FirebaseManager {
     #if DEBUG
     let expirationDutation:TimeInterval = 0
     #else
-    let expirationDutation:TimeInterval = 3000
+    let expirationDutation:TimeInterval = 43200
     #endif
     
     private init() {
@@ -53,7 +53,8 @@ class FirebaseManager {
         // want to change in the Firebase console. See Best Practices in the README for more
         // information.
         // [START set_default_values]
-        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
+//        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
+        
     }
     
     func setRemoteConfigDefaults(defaults: [String : NSObject]) {
@@ -65,24 +66,37 @@ class FirebaseManager {
     }
 
     func fetch(completion: @escaping ((Bool)->())) {
-        self.remoteConfig.fetchAndActivate { (status, error) in
-            switch status {
-            case .successFetchedFromRemote: fallthrough
-            case .successUsingPreFetchedData:
-                // ReadME!!!!. 항상 firebase 관련 로직은 activateFetched 이후에 진행 할 것.
+        self.remoteConfig.fetch(withExpirationDuration: expirationDutation) { (status, error) in
+            if status == .success {
+              print("Config fetched!")
+              self.remoteConfig.activate(completionHandler: { (error) in
                 completion(true)
-
-            case .error:
-                if let error = (error as NSError?) {
-                    print(error)
-                }
-
-                completion(false)
-
-            @unknown default:
-                completion(false)
+              })
+            } else {
+              print("Config not fetched")
+              print("Error: \(error?.localizedDescription ?? "No error available.")")
+              completion(false)
             }
         }
+        
+//        self.remoteConfig.fetchAndActivate { (status, error) in
+//            switch status {
+//            case .successFetchedFromRemote: fallthrough
+//            case .successUsingPreFetchedData:
+//                // ReadME!!!!. 항상 firebase 관련 로직은 activateFetched 이후에 진행 할 것.
+//                completion(true)
+//
+//            case .error:
+//                if let error = (error as NSError?) {
+//                    print(error)
+//                }
+//
+//                completion(false)
+//
+//            @unknown default:
+//                completion(false)
+//            }
+//        }
     }
 }
 //

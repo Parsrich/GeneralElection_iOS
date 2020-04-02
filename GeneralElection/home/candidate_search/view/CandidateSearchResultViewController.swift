@@ -65,6 +65,8 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hidePopup(_:)))
         
         backgroundShadowView.addGestureRecognizer(tapGesture)
+        bigProfileBackView.addGestureRecognizer(tapGesture)
+        backgroundShadowView.addGestureRecognizer(tapGesture)
         bigProfileImageView.layer.borderColor = UIColor.black.cgColor
         bigProfileImageView.layer.borderWidth = 3.0
 
