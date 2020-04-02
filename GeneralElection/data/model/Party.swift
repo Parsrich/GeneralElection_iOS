@@ -41,7 +41,7 @@ class PartyMemory {
                 partyList.append(party)
             }
         }
-//        partyList.sort { $0.name! < $1.name! }
+        
         return partyList
     }
 }

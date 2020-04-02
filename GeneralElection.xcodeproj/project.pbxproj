@@ -61,6 +61,7 @@
 		CA9AEAD2241B0FA20022A2C8 /* PartySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */; };
 		CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */; };
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
+		CAABF64C2435B1F5000F5172 /* CandidateNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */; };
 		CAB2E507242C513E00095502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2E506242C513E00095502 /* GoogleService-Info.plist */; };
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
@@ -127,6 +128,7 @@
 		CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewModel.swift; sourceTree = "<group>"; };
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
+		CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateNameCell.swift; sourceTree = "<group>"; };
 		CAB2E506242C513E00095502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				CA472469242B2026000A3C10 /* CandidateCell.swift */,
 				CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */,
 				CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */,
+				CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
 				CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */,
 				CA74EFFC2433929C00775A56 /* PartyItemCell.swift in Sources */,
+				CAABF64C2435B1F5000F5172 /* CandidateNameCell.swift in Sources */,
 				CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */,
 				CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */,
 				CA9AEACA241A20280022A2C8 /* CandidateSearchViewModel.swift in Sources */,

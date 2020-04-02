@@ -35,14 +35,16 @@ class CandidateCell: UITableViewCell {
                           placeholder: UIImage(named: "ic_user_empty"))
         }
         numberColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
-        if let sourceResult = sourceResult {
-            switch sourceResult {
-            case .candidateSearch, .districtSearch:
-                numberLabel.text = "기호\(candidateInfo.number ?? "")"
-            case .partySearch:
-                numberLabel.text = candidateInfo.recommend
-            }
-        }
+//        if let sourceResult = sourceResult {
+//            switch sourceResult {
+//            case .candidateSearch, .districtSearch:
+//                numberLabel.text = "기호\(candidateInfo.number ?? "")"
+//            case .partySearch:
+//                numberLabel.text = candidateInfo.recommend
+//            }
+//        }
+        
+        numberLabel.text = candidateInfo.recommend == nil ? "기호\(candidateInfo.number ?? "")" : "번호\(candidateInfo.recommend ?? "")"
         partyColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
         partyNameLabel.text = candidateInfo.party
         candidateNameLabel.text = candidateInfo.name

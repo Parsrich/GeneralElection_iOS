@@ -23,6 +23,7 @@ class BaseBackgroundView: UIView {
     }
     
     func setup() {
+        self.backgroundColor = UIColor.white
         backgroundImageView = UIImageView(frame: self.frame)
         backgroundImageView!.image = UIImage(named: "img_background")
         backgroundImageView!.contentMode = .scaleAspectFill
