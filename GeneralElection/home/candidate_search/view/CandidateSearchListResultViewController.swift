@@ -13,6 +13,7 @@ import NSObject_Rx
 
 class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<CandidateSearchListResultViewModel> {
     
+    @IBOutlet weak var mapIconView: UIImageView!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var candidateTableView: UITableView!
@@ -22,6 +23,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     @IBOutlet weak var categoryView: UIView!
     
     @IBOutlet weak var candidateViewTopContraint: NSLayoutConstraint!
+    @IBOutlet weak var districtLabelLeadingConstraint: NSLayoutConstraint!
     
     var electionType: ElectionType?
     var electionName: LocationElectionName?
@@ -40,9 +42,11 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
             viewModel!.districtString = districtString
         }
         
-        if let candidates = candidates, let districtString = districtString {
+        if let candidates = candidates {
             viewModel!.congressCandidateList.removeAll()
             viewModel!.congressCandidateList = candidates.sorted { Int($0.recommend ?? "0") ?? 0 < Int($1.recommend ?? "0") ?? 0 }
+        }
+        if let districtString = districtString {
             viewModel!.districtString = districtString
         }
         
@@ -54,8 +58,11 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     func setup() {
         guard let source = self.sourceResult else { return }
         switch source {
-        case .candidateSearch, .districtSearch:
+        case .districtSearch:
             fetchCandidates()
+        case .candidateSearch:
+            districtLabel.text = "\(candidates?.first?.name ?? "")에 대한 검색 결과입니다."
+            fallthrough
         case .partySearch:
             candidateViewTopContraint.priority = UILayoutPriority.defaultHigh
             
@@ -74,12 +81,15 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         
         if let source = sourceResult {
             switch source {
-            case .candidateSearch, .districtSearch:
+            case .districtSearch:
                 emptyView.isHidden = !viewModel!.electionName.isEmpty
-            case .partySearch:
+            case .candidateSearch, .partySearch:
+                districtLabelLeadingConstraint.priority = .defaultHigh
                 emptyView.isHidden = candidates?.count != 0
+                mapIconView.isHidden = true
             }
         }
+        
         categoryButton.setTitle(viewModel!.electionType.rawValue, for: .normal)
         
         districtLabel.text = districtString
@@ -167,7 +177,7 @@ extension CandidateSearchListResultViewController: UITableViewDelegate {
             
             vc.candidate = viewModel!.congressCandidateList[indexPath.row]
             vc.districtString = viewModel!.districtString
-            vc.source = sourceResult
+            vc.sourceResult = sourceResult
             navigationController?.pushViewController(vc, animated: true)
         }
     }

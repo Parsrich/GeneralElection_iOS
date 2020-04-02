@@ -67,21 +67,18 @@ struct Candidate: Decodable {
 
 class CandidateMemory {
     static var candidateDict: NSDictionary?
+    static var candidateNameList: [String]? {
+        return candidateDict?.allKeys as? [String]
+    }
 
-//    static var partyDataList: [Candidate] {
-//        guard let partyNames = PartyMemory.partyList else { return [Party]() }
-//        var partyList = [Party]()
-//        for partyName in partyNames {
-//            
-//            guard let candidates = PartyMemory.partyDict?.value(forKey: partyName) as? [NSDictionary],
-//                let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else { continue }
-//            if let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) {
-//                let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, proportional: candidateList)
-//
-//                partyList.append(party)
-//            }
-//        }
-////        partyList.sort { $0.name! < $1.name! }
-//        return partyList
-//    }
+    static func candidateDataList(keyword: String) -> [Candidate] {
+//        guard let candidateNames = CandidateMemory.candidateNameList else { return [Candidate]() }
+//        candidateDict?.allValues
+//        for candidateName in candidateNames {
+        guard let candidatesData = candidateDict?.value(forKeyPath: keyword) as? [NSDictionary],
+            let data = try? JSONSerialization.data(withJSONObject: candidatesData, options: .prettyPrinted),
+            let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) else { return [Candidate]() }
+                
+        return candidateList
+    }
 }

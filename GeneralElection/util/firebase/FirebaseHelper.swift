@@ -31,6 +31,7 @@ class FirebaseHelper: NSObject {
                 }
             }) { error in
                 print(error.localizedDescription)
+                emitter.onError(error)
             }
             return Disposables.create()
         }
