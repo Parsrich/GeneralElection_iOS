@@ -21,6 +21,9 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     @IBOutlet weak var nameResultTableView: UITableView!
     @IBOutlet weak var resultViewBackView: UIView!
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +33,7 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     }
     
     func setupUI() {
+        setTransparentNavigationController(false)
         setShadowViewUnderNavigationController()
         searchFieldBorderView.layer.borderWidth = 2
         searchFieldBorderView.layer.borderColor = UIColor(red: 127.toRgb,
@@ -54,9 +58,15 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
             .drive(onNext: { [weak self] height in
                 guard let `self` = self else { return }
                 UIView.animate(withDuration: 0.3) {
+                    self.topConstraint.constant =
+                    height == 0 ?
+                        height :  (self.view.safeAreaInsets.bottom) - height
                     self.resultToBottomContraint.constant =
                         height == 0 ?
                             height : height - (self.view.safeAreaInsets.bottom)
+                    self.view.layoutIfNeeded()
+                    
+                    self.backgroundImageView.alpha = height == 0 ? 1.0 : 0.0
                 }
             }).disposed(by: rx.disposeBag)
     }
