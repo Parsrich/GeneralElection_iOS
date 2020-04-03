@@ -9,15 +9,7 @@
 import Foundation
 
 class Config {
-    static let appVersion: String = "1.0.0"
-//    static var appVersion: String? {
-//        get {
-//            return UserDefaults.standard.string(forKey: "appVersion")
-//        }
-//        set {
-//            UserDefaults.standard.set(newValue, forKey: "appVersion")
-//        }
-//    }
+    static let appVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
 }
 
 
