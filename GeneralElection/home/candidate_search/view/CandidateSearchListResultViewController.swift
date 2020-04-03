@@ -113,7 +113,12 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     func fetchCandidates() {
         self.activityIndicator.startAnimating()
-        viewModel!.fetchElectionKeys { [weak self] in
+        viewModel!.fetchElectionKeys(errorHandler: { [weak self] error in
+            self?.activityIndicator.stopAnimating()
+            self?.showNetworkErrorView {
+                self?.fetchCandidates()
+            }
+        }) { [weak self] in
             self?.candidateTableView.reloadData()
             self?.activityIndicator.stopAnimating()
         }

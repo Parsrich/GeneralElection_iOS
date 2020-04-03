@@ -34,6 +34,7 @@ class FirebaseHelper: NSObject {
                 emitter.onError(error)
             }
             return Disposables.create()
-        }
+        }.timeout(RxTimeInterval.seconds(10), scheduler: MainScheduler.asyncInstance)
+        
     }
 }

@@ -28,7 +28,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         super.init()
     }
     
-    func fetchElectionKeys(completion: @escaping () -> Void) {
+    func fetchElectionKeys(errorHandler: @escaping (Error) -> Void, completion: @escaping () -> Void) {
         
         var path: DatabasePath = .root
         switch electionType {
@@ -41,6 +41,8 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     .subscribe(onNext: { congressDict in
                         Congress.congressDict = congressDict
                         
+                    }, onError: { error in
+                        errorHandler(error)
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
@@ -56,6 +58,8 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     .subscribe(onNext: { guMayorDict in
                         Congress.guMayorDict = guMayorDict
                         
+                    }, onError: { error in
+                        errorHandler(error)
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
@@ -71,6 +75,8 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     .subscribe(onNext: { siCouncilDict in
                         Congress.siCouncilDict = siCouncilDict
                         
+                    }, onError: { error in
+                        errorHandler(error)
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
@@ -86,6 +92,8 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     .subscribe(onNext: { guCouncilDict in
                         Congress.guCouncilDict = guCouncilDict
                         
+                    }, onError: { error in
+                        errorHandler(error)
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
@@ -158,13 +166,15 @@ class CandidateSearchListResultViewModel: BaseViewModel {
     }
     
     
-    func fetchPartyPromise(location: String? = nil, completion: @escaping () -> Void) {
+    func fetchPartyPromise(location: String? = nil, errorHandler: @escaping (Error) -> Void, completion: @escaping () -> Void) {
         if PartyMemory.partyPromiseDict == nil {
             FirebaseHelper.fetchDatas(path: .partyPromise, key: location) .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.asyncInstance)
                 .subscribe(onNext: { partyPromise in
                     PartyMemory.partyPromiseDict = partyPromise
-                    }, onCompleted: { [weak self] in
+                }, onError: { error in
+                    errorHandler(error)
+                }, onCompleted: { [weak self] in
                         self?.bindPartyPromise()
                         completion()
                 }).disposed(by: rx.disposeBag)

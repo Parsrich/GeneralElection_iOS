@@ -37,7 +37,14 @@ class SplashViewController: BaseViewController {
         
         FirebaseManager.share.fetch {  [weak self] isComplete in
             guard let `self` = self else { return }
-            if !isComplete { return }
+            if !isComplete {
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                    self.performSegue(withIdentifier: "main", sender: self)
+                }
+                return
+                
+            }
             
             /// 새로운 버전 체크
             let fetchedAppVersion = FirebaseManager.share.stringValue(key: .appVersion)
