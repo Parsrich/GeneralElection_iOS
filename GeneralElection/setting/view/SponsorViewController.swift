@@ -26,7 +26,7 @@ class SponsorViewController: BaseViewController {
     }
     
     func setupUI() {
-        setTransparentNavigationController()
+        setTransparentNavigationController(true)
         setShadowViewUnderNavigationController()
     }
     

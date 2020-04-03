@@ -28,17 +28,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-ih-ZSM">
-                                                <rect key="frame" x="45.5" y="39.5" width="96" height="96"/>
+                                                <rect key="frame" x="43.5" y="38" width="100.5" height="99.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="S7T-LZ-7Du"/>
-                                                    <constraint firstAttribute="height" constant="96" id="WcY-Sc-oRD"/>
+                                                    <constraint firstAttribute="width" secondItem="u4f-ih-ZSM" secondAttribute="height" multiplier="1:1" constant="1" id="Phm-aY-Sxx"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="ic_home_notice">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
-                                                <rect key="frame" x="61.5" y="145.5" width="64" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="투표 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R0-PY-emQ">
+                                                <rect key="frame" x="58.5" y="147.5" width="70.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -57,17 +56,16 @@
                                         <rect key="frame" x="187" y="0.0" width="187" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5Q-8z-Mhw">
-                                                <rect key="frame" x="45.5" y="39.5" width="96" height="96"/>
+                                                <rect key="frame" x="45.5" y="40" width="96" height="95"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="96" id="Lpk-sg-J5C"/>
-                                                    <constraint firstAttribute="width" constant="96" id="m28-cx-Qgo"/>
+                                                    <constraint firstAttribute="width" secondItem="d5Q-8z-Mhw" secondAttribute="height" multiplier="1:1" constant="1" id="jST-WS-MAR"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="ic_home_party">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비례대표 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb0-Fg-4nM">
-                                                <rect key="frame" x="47" y="145.5" width="93" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="비례대표 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb0-Fg-4nM">
+                                                <rect key="frame" x="42" y="145" width="103" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -86,17 +84,16 @@
                                         <rect key="frame" x="0.0" y="175" width="187" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-vR-WyC">
-                                                <rect key="frame" x="45.5" y="39.5" width="96" height="96"/>
+                                                <rect key="frame" x="45" y="39.5" width="97.5" height="96.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="3GV-va-vuV"/>
-                                                    <constraint firstAttribute="height" constant="96" id="y1g-NI-BkZ"/>
+                                                    <constraint firstAttribute="width" secondItem="hAm-vR-WyC" secondAttribute="height" multiplier="1:1" constant="1" id="MFj-7r-HFN"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="ic_home_district">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역구 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-GJ-FF2">
-                                                <rect key="frame" x="54.5" y="145.5" width="78.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="지역구 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-GJ-FF2">
+                                                <rect key="frame" x="50" y="146" width="87" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -115,17 +112,16 @@
                                         <rect key="frame" x="187" y="175" width="187" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iD-nb-T3M">
-                                                <rect key="frame" x="45.5" y="39.5" width="96" height="96"/>
+                                                <rect key="frame" x="69.5" y="63.5" width="48" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="96" id="EuE-4r-wb1"/>
-                                                    <constraint firstAttribute="width" constant="96" id="Qss-AD-9ZZ"/>
+                                                    <constraint firstAttribute="width" secondItem="1iD-nb-T3M" secondAttribute="height" multiplier="1:1" id="NUf-rP-DVa"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="ic_home_candidate">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후보자 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esK-oi-chj">
-                                                <rect key="frame" x="54.5" y="145.5" width="78.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="후보자 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esK-oi-chj">
+                                                <rect key="frame" x="50" y="121.5" width="87" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.34509803919999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -162,8 +158,8 @@
                                     <constraint firstItem="o8m-3L-Zm0" firstAttribute="height" secondItem="NXa-lI-q3i" secondAttribute="height" id="wgY-PA-zdu"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="300.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한민국 총선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">

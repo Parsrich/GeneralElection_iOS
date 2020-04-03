@@ -14,6 +14,7 @@ class Party {
     var websiteUrl: String?
     var number: Int?
     var proportional: [Candidate]?
+    var partyPromise: PartyPromise?
     
     init(name: String?, logoImg: URL?, websiteUrl: String?, number: Int?, proportional: [Candidate]?) {
         self.name = name
@@ -25,6 +26,7 @@ class Party {
 }
 
 class PartyMemory {
+    static var partyPromiseDict: NSDictionary?
     static var partyDict: NSDictionary?
     static var partyList: [String]? {
         return partyDict?.allKeys as? [String]
@@ -35,8 +37,16 @@ class PartyMemory {
         var partyList = [Party]()
         for partyName in partyNames {
             
+            if let _ = PartyMemory.partyDict?.value(forKey: partyName) as? String {
+                let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, number: PartySource.getPartyNumber(party: partyName), proportional: nil)
+
+                partyList.append(party)
+                continue
+            }
+            
             guard let candidates = PartyMemory.partyDict?.value(forKey: partyName) as? [NSDictionary],
                 let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else { continue }
+            
             if let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) {
                 let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, number: PartySource.getPartyNumber(party: partyName), proportional: candidateList)
 
@@ -46,6 +56,15 @@ class PartyMemory {
         partyList.sort { ($0.number ?? 99) < ($1.number ?? 99) }
         
         return partyList
+    }
+    
+    static func partyPromiseData(name: String) -> [Promise]? {
+        
+        guard let candidates = PartyMemory.partyPromiseDict?.value(forKey: name) as? NSDictionary,
+            let data = try? JSONSerialization.data(withJSONObject: candidates, options: []),
+            let promise = try? JSONDecoder().decode(PartyPromise.self, from: data) else { return nil }
+            
+        return promise.promiseList
     }
 }
 
