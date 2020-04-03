@@ -55,15 +55,24 @@ extension SettingViewController: UITableViewDelegate {
             
             performSegue(withIdentifier: "SponsorSegue", sender: self)
         } else if indexPath.row == 1 {
-//            UIApplication.shared.open(URL(string: "mailto:cmk330@naver.com")!, options: [:])
+            
+
+//            let mailtoString = "mailto:ohjooyeo.donam@gmail.com?subject=문의사항&body=1. 문의분류\n정보 수정 요청, 기능오류, 제휴/광고문의, 기타문의\n2. 문의 내용\n"
+//            let url = URL(string: mailtoString)
+//            if UIApplication.shared.canOpenURL(url!) {
+//                UIApplication.shared.open(url!, options: [:])
+//            }
 
             if MFMailComposeViewController.canSendMail() {
                 let mail = MFMailComposeViewController()
                 mail.mailComposeDelegate = self
-                mail.setToRecipients(["cmk330@naver.com"])
-                mail.setMessageBody("[문의내용을 사진과 함께 첨부해주시면 더 쉽게 도움을 드릴 수 있습니다.]", isHTML: true)
+                mail.setToRecipients(["ohjooyeo.donam@gmail.com"])
+                mail.setSubject("# 총선 앱 문의")
+                mail.setMessageBody("1. 문의분류\n정보 수정 요청, 기능오류, 제휴/광고문의, 기타문의\n2. 문의 내용\n", isHTML: true)
 
                 present(mail, animated: true)
+            } else {
+                present(showConfirmationAlert(alertTitle: "기본 앱 이메일이 설정되어있지 않습니다.", alertMessage: "Mail앱에서 email을 설정하세요."), animated: true)
             }
         } else if indexPath.row == 2 {
             let carteViewController = CarteViewController()

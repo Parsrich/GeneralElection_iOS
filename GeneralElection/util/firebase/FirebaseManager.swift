@@ -34,6 +34,7 @@ class FirebaseManager {
     #endif
     
     private init() {
+        
         initRemoteConfig()
     }
     
