@@ -31,6 +31,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     var sourceResult: SourceResult?
     var candidates: [Candidate]?
+    var partyName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,9 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         }
         if let districtString = districtString {
             viewModel!.districtString = districtString
+        }
+        if let partyName = partyName {
+            viewModel!.partyName = partyName
         }
         
         setupUI()
@@ -85,7 +89,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
                 emptyView.isHidden = !viewModel!.electionName.isEmpty
             case .candidateSearch, .partySearch:
                 districtLabelLeadingConstraint.priority = .defaultHigh
-                emptyView.isHidden = candidates?.count != 0
+                emptyView.isHidden = (candidates?.count ?? 0) != 0
                 mapIconView.isHidden = true
             }
         }

@@ -29,7 +29,7 @@ class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
     }
     
     func setupUI() {
-        setTransparentNavigationController()
+        setTransparentNavigationController(false)
         setShadowViewUnderNavigationController()
         
         setVoteMethodView()
