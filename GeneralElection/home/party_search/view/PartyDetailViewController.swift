@@ -23,6 +23,20 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
     @IBOutlet weak var promiseTableView: UITableView!
     @IBOutlet weak var logoContainerView: UIView!
     
+    @IBOutlet weak var popupShadowView: UIView!
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var popupCloseButton: UIButton!
+    @IBOutlet weak var popupSubjectLabel: UILabel!
+    @IBOutlet weak var popupTitleLabel: UILabel!
+    @IBOutlet weak var popupContentTextView: UITextView!
+//    var isPopupShow: Bool = false {
+//        didSet {
+//            self.popupShadowView.isHidden = !self.isPopupShow
+//            self.popupView.isHidden = !self.isPopupShow
+//        }
+//    }
+    
+    
     var partyImageUrl: URL?
     var sourceResult: SourceResult?
     var partyName: String?
@@ -41,9 +55,13 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
     }
     
     func setupUI() {
+        setTransparentNavigationController(true)
+        setShadowViewUnderNavigationController()
+        popupView.layer.borderColor = UIColor.black.cgColor
+        popupView.layer.borderWidth = 1.0
         logoContainerView.layer.borderColor = UIColor.lightGray.cgColor
         logoContainerView.layer.borderWidth = 1.0
-//        promiseTableView.rowHeight = 130
+        promiseTableView.rowHeight = 60
         promiseTableView.estimatedRowHeight = UITableView.automaticDimension
         
         if partyName?.contains("가자!평화인권당") == true {
@@ -98,10 +116,32 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                     let partyName = self?.partyName {
                     
                     vc.url = URL(string: "https://m.search.zum.com/search.zum?method=news&qm=f_typing.news&query=\(partyName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")
-                    vc.navigationTitle = "정당이슈"
+                    vc.navigationTitle = "정당 이슈"
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
             }).disposed(by: rx.disposeBag)
+        
+        popupCloseButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                UIView.animate(withDuration: 0.5) {
+                    self?.popupView.alpha = 0.0
+                    self?.popupShadowView.alpha = 0.0
+                }
+            }).disposed(by: rx.disposeBag)
+    }
+    
+    func setPopupData(promise: Promise?) {
+        guard let promise = promise else { return }
+        
+        self.popupSubjectLabel.text = "[\(promise.realmName ?? "")]"
+        self.popupTitleLabel.text = "\(promise.ord ?? ""). \(promise.title ?? "")"
+        self.popupContentTextView.text = promise.content
+        
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.popupView.alpha = 1.0
+            self?.popupShadowView.alpha = 0.5
+        }
     }
     
     func fetchPartyPromise() {
@@ -126,6 +166,9 @@ extension PartyDetailViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PartyPromiseCell.className, for: indexPath) as? PartyPromiseCell else { return UITableViewCell() }
         
         cell.setData(promise: viewModel!.partyPromiseList?[indexPath.row])
+        if indexPath.row % 2 == 0 {
+            cell.contentView.backgroundColor = UIColor(hex: "#F1F1F2")
+        }
         
         return cell
     }
@@ -134,5 +177,10 @@ extension PartyDetailViewController: UITableViewDataSource {
 extension PartyDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        setPopupData(promise: viewModel!.partyPromiseList?[indexPath.row])
     }
 }

@@ -16,6 +16,7 @@ class SponsorItemCell: UITableViewCell {
     @IBOutlet weak var desertImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
+    @IBOutlet weak var detailLabel: UILabel!
     
     var price = 1000
     var completionSubject = PublishSubject<Void>()
@@ -43,6 +44,7 @@ class SponsorItemCell: UITableViewCell {
         desertImageView.image = sponsorItem.image
         titleLabel.text = sponsorItem.title
         priceButton.setTitle(sponsorItem.priceString, for: .normal)
+        detailLabel.text = sponsorItem.detail
     }
     
 }
@@ -52,4 +54,5 @@ struct SponsorItem {
     var title: String
     var priceString: String
     var price: Int
+    var detail: String
 }
