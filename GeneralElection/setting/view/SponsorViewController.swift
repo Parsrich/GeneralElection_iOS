@@ -32,9 +32,9 @@ class SponsorViewController: BaseViewController {
     
     func setup() {
     
-        sponsorItems.append(SponsorItem(image: UIImage(named: "ic_can")!, title: "캔커피 1개", priceString: "1천원", price: 1000))
-        sponsorItems.append(SponsorItem(image: UIImage(named: "ic_coffee")!, title: "커피 1잔", priceString: "3천원", price: 3000))
-        sponsorItems.append(SponsorItem(image: UIImage(named: "ic_cake")!, title: "커피 & 디저트", priceString: "1만원", price: 10000))
+        sponsorItems.append(SponsorItem(image: UIImage(named: "ic_can")!, title: "캔커피 1개", priceString: "1200원", price: 1200, detail: "캔커피 1개 값의 후원은 저희에게 소소한 보람이됩니다."))
+            sponsorItems.append(SponsorItem(image: UIImage(named: "ic_coffee")!, title: "커피 1잔", priceString: "3900원", price: 2900, detail: "커피 1잔 값의 후원은 저희를 춤추게합니다 ♩ ♪ ♬"))
+        sponsorItems.append(SponsorItem(image: UIImage(named: "ic_cake")!, title: "커피 & 디저트", priceString: "9900원", price: 9900, detail: "커피와 디저트 후원으로 개발자와 디자이너가 활력을 얻습니다!"))
     }
     
     func showAlert(alertTitle title: String, alertMessage message: String) {
@@ -66,6 +66,6 @@ extension SponsorViewController: UITableViewDataSource {
 
 extension SponsorViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 85
     }
 }

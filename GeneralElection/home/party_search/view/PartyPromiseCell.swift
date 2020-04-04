@@ -12,14 +12,12 @@ class PartyPromiseCell: UITableViewCell {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
     
     func setData(promise: Promise?) {
         guard let promise = promise else { return }
         
         numberLabel.text = promise.ord
         subjectLabel.text = "[\(promise.realmName ?? "")]\n\(promise.title ?? "")"
-        contentLabel.text = promise.content
         
     }
 }
