@@ -30,7 +30,7 @@ class PartyItemCell: UICollectionViewCell {
             partyLogoImageView
                 .kf
                 .setImage(with: url,
-                          placeholder: UIImage(named: "ic_user_empty"))
+                          placeholder: UIImage(named: "ic_button"))
             if info.name?.contains("가자!평화인권당") == true {
                 partyLogoImageView.backgroundColor = UIColor.init(hex: "#65A032")
             } else {

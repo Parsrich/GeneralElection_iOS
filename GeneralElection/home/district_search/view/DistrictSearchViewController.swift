@@ -109,7 +109,7 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
     
     func fetchLocation(location: String? = nil) {
         self.activityIndicator.startAnimating()
-        self.viewModel!.fetchDistrictKeys(location: location, errorHandler: {[weak self] error in
+        self.viewModel!.fetchDistrictKeys(location: location, errorHandler: { [weak self] error in
             self?.activityIndicator.stopAnimating()
                 self?.showNetworkErrorView {
                     self?.fetchLocation()

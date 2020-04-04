@@ -18,14 +18,16 @@ class PartySearchViewModel: BaseViewModel {
         super.init()
     }
     
-    func fetchPartyKeys(location: String? = nil, completion: @escaping () -> Void) {
+    func fetchPartyKeys(location: String? = nil, errorHandler: @escaping (Error) -> Void, completion: @escaping () -> Void) {
         if PartyMemory.partyDict == nil {
             FirebaseHelper.fetchDatas(path: .proportional, key: location) .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.asyncInstance)
                 .subscribe(onNext: { party in
                     PartyMemory.partyDict = party
 
-                    }, onCompleted: { [weak self] in
+                }, onError: { error in
+                    errorHandler(error)
+                }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
                 }).disposed(by: rx.disposeBag)

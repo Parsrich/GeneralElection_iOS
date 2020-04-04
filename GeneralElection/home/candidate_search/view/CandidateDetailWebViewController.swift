@@ -15,8 +15,10 @@ import WebKit
 class CandidateDetailWebViewController: BaseViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var navigationTitleLabel: UILabel!
     
     var url: URL?
+    var navigationTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class CandidateDetailWebViewController: BaseViewController {
             webView.load(urlRequest)
         }
         
+        navigationTitleLabel.text = navigationTitle
         setTransparentNavigationController(false)
     }
 }
