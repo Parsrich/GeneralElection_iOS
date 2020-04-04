@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
+import StoreKit
 
 class SponsorItemCell: UITableViewCell {
     
@@ -19,7 +20,8 @@ class SponsorItemCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     
     var price = 1000
-    var completionSubject = PublishSubject<Void>()
+    var buySubject = PublishSubject<SKProduct?>()
+    var sponsorItem: SponsorItem?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,11 +37,13 @@ class SponsorItemCell: UITableViewCell {
                 print("\(self.price)")
                 
                 /// 완료시 수행
-                self.completionSubject.onNext(())
+                self.buySubject.onNext(self.sponsorItem?.product)
             }).disposed(by: rx.disposeBag)
     }
     
     func setData(sponsorItem: SponsorItem) {
+        self.sponsorItem = sponsorItem
+        
         price = sponsorItem.price
         desertImageView.image = sponsorItem.image
         titleLabel.text = sponsorItem.title
@@ -55,4 +59,5 @@ struct SponsorItem {
     var priceString: String
     var price: Int
     var detail: String
+    var product: SKProduct
 }
