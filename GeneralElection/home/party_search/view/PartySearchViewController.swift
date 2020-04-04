@@ -16,7 +16,7 @@ class PartySearchViewController: BaseViewControllerWithViewModel<PartySearchView
         super.viewDidLoad()
         
         setupUI()
-        fetchCandidates()
+        setup()
     }
     
     func setupUI() {
@@ -24,10 +24,18 @@ class PartySearchViewController: BaseViewControllerWithViewModel<PartySearchView
         
     }
     
+    func setup() {
+        fetchCandidates()
+    }
     
     func fetchCandidates() {
         self.activityIndicator.startAnimating()
-        viewModel!.fetchPartyKeys { [weak self] in
+        viewModel!.fetchPartyKeys(errorHandler: { [weak self] error in
+        self?.activityIndicator.stopAnimating()
+            self?.showNetworkErrorView {
+                self?.fetchCandidates()
+            }
+        }) { [weak self] in
             self?.collectionView.reloadData()
             self?.activityIndicator.stopAnimating()
         }
@@ -60,17 +68,27 @@ extension PartySearchViewController: UICollectionViewDelegateFlowLayout, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
         
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: PartyDetailViewController.className) as? PartyDetailViewController {
             
-            let topText = "\(viewModel!.partyList[indexPath.row].name ?? "") 비례대표 명단"
-            vc.districtString = topText
             vc.partyName = viewModel!.partyList[indexPath.row].name
-            vc.candidates = viewModel!.partyList[indexPath.row].proportional
+            vc.candidateList = viewModel!.partyList[indexPath.row].proportional
                         
-            vc.sourceResult = .partySearch
+            vc.partyImageUrl = viewModel!.partyList[indexPath.row].logoImg
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
+//        if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
+//
+//            let topText = "\(viewModel!.partyList[indexPath.row].name ?? "") 비례대표 명단"
+//            vc.districtString = topText
+//            vc.partyName = viewModel!.partyList[indexPath.row].name
+//            vc.candidates = viewModel!.partyList[indexPath.row].proportional
+//
+//            vc.sourceResult = .partySearch
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
     }
     
 }

@@ -230,6 +230,60 @@ class PartySource {
         "한반도미래연합":50,
         "홍익당": 51
     ]
+    
+    static let partyProportionalNumber: [String: Int] = [
+      "더불어민주당": 0,
+      "미래통합당": 0,
+      "민생당": 3,
+      "미래한국당": 4,
+      "더불어시민당": 5,
+      "정의당": 6,
+      "우리공화당": 7,
+      "민중당": 8,
+      "한국경제당": 9,
+      "국민의당": 10,
+      "친박신당": 11,
+      "열린민주당": 12,
+      "코리아": 13,
+      "가자!평화인권당": 14,
+      "가자환경당": 15,
+      "국가혁명배당금당": 16,
+      "국민새정당": 17,
+      "국민참여신당": 18,
+      "기독자유통일당": 19,
+      "깨어있는시민연대당": 20,
+      "남북통일당": 21,
+      "노동당": 22,
+      "녹색당": 23,
+      "대한당": 24,
+      "대한민국당": 25,
+      "미래당": 26,
+      "미래민주당": 27,
+      "새누리당": 28,
+      "여성의당": 29,
+      "우리당": 30,
+      "자유당": 31,
+      "새벽당": 32,
+      "자영업당": 33,
+      "충청의미래당": 34,
+      "한국복지당": 35,
+      "통일민주당": 36,
+      "홍익당": 37,
+      "기독당": 0,
+      "기본소득당": 0,
+      "미래자영업당": 0,
+      "민중민주당": 0,
+      "사이버모바일국민정책당": 0,
+      "시대전환": 0,
+      "자유의새벽당": 0,
+      "정치개혁연합": 0,
+      "직능자영업당": 0,
+      "친박연대": 0,
+      "통합민주당": 0,
+      "한국국민당": 0,
+      "한나라당": 0,
+      "한반도미래연합": 0
+    ]
 
     static let partyWebsites = [String: String]()
     
@@ -247,6 +301,12 @@ class PartySource {
     
     static func getPartyNumber(party: String) -> Int {
         guard let number = partyNumbers[party] else { return 0 }
+        
+        return number
+    }
+    
+    static func getPartyProportionalNumber(party: String) -> Int {
+        guard let number = partyProportionalNumber[party] else { return 0 }
         
         return number
     }

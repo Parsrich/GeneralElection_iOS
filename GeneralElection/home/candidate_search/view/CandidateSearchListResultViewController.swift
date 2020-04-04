@@ -22,8 +22,9 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     @IBOutlet weak var buttonClickLabel: UILabel!
     @IBOutlet weak var categoryView: UIView!
     
+    @IBOutlet weak var proportionalLabel: UILabel!
     @IBOutlet weak var candidateViewTopContraint: NSLayoutConstraint!
-    @IBOutlet weak var districtLabelLeadingConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var districtLabelLeadingConstraint: NSLayoutConstraint!
     
     var electionType: ElectionType?
     var electionName: LocationElectionName?
@@ -49,9 +50,6 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         }
         if let districtString = districtString {
             viewModel!.districtString = districtString
-        }
-        if let partyName = partyName {
-            viewModel!.partyName = partyName
         }
         
         setupUI()
@@ -88,9 +86,14 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
             case .districtSearch:
                 emptyView.isHidden = !viewModel!.electionName.isEmpty
             case .candidateSearch, .partySearch:
-                districtLabelLeadingConstraint.priority = .defaultHigh
-                emptyView.isHidden = (candidates?.count ?? 0) != 0
+                districtLabel.isHidden = true
                 mapIconView.isHidden = true
+                proportionalLabel.isHidden = false
+                emptyView.isHidden = (candidates?.count ?? 0) != 0
+//            case .candidateSearch:
+//                districtLabelLeadingConstraint.priority = .defaultHigh
+//                emptyView.isHidden = (candidates?.count ?? 0) != 0
+//                mapIconView.isHidden = true
             }
         }
         
