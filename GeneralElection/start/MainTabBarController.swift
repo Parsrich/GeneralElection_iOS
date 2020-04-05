@@ -18,6 +18,9 @@ class MainTabBarController: UITabBarController {
         setData()
         setSelectedIndex(index: 1)
         self.tabBar.barStyle = .default
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } 
     }
     
     func setSelectedIndex(index: Int) {

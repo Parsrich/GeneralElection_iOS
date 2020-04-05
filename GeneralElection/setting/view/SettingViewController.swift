@@ -77,6 +77,8 @@ extension SettingViewController: UITableViewDelegate {
         } else if indexPath.row == 2 {
             let carteViewController = CarteViewController()
             present(carteViewController, animated: true)
+        } else if indexPath.row == 3 {
+            (tableView.cellForRow(at: indexPath) as? SettingCell)?.rightImage.isHidden = true
         }
     }
 }

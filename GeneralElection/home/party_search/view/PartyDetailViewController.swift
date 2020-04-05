@@ -128,10 +128,15 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
         popupCloseButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-                UIView.animate(withDuration: 0.5) {
+                UIView.animate(withDuration: 0.5, animations: {
                     self?.popupView.alpha = 0.0
                     self?.popupShadowView.alpha = 0.0
+                }) { _ in
+                    self?.popupSubjectLabel.text = ""
+                    self?.popupTitleLabel.text = ""
+                    self?.popupContentTextView.text = ""
                 }
+                
             }).disposed(by: rx.disposeBag)
     }
     
@@ -174,6 +179,8 @@ extension PartyDetailViewController: UITableViewDataSource {
         cell.setData(promise: viewModel!.partyPromiseList?[indexPath.row])
         if indexPath.row % 2 == 0 {
             cell.contentView.backgroundColor = UIColor(hex: "#F1F1F2")
+        } else {
+            cell.contentView.backgroundColor = UIColor.white
         }
         
         return cell

@@ -1,15 +1,14 @@
 //
-//  SettingCell.swift
+//  SettingNoticeCell.swift
 //  GeneralElection
 //
-//  Created by Minki on 2020/03/19.
+//  Created by Minki on 2020/04/05.
 //  Copyright © 2020 Parsrich. All rights reserved.
 //
 
 import UIKit
 
-class SettingCell: UITableViewCell {
+class SettingNoticeCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var rightImage: UIImageView!
 }
