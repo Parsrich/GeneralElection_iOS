@@ -29,6 +29,7 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
     @IBOutlet weak var popupSubjectLabel: UILabel!
     @IBOutlet weak var popupTitleLabel: UILabel!
     @IBOutlet weak var popupContentTextView: UITextView!
+    @IBOutlet weak var emptyPromiseView: UIImageView!
 //    var isPopupShow: Bool = false {
 //        didSet {
 //            self.popupShadowView.isHidden = !self.isPopupShow
@@ -86,6 +87,9 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
             proportionalButton.isEnabled = true
             proportionNumberLabel.text = "비례정당번호 \(proportionalNumber)"
         }
+        
+        
+        
     }
     
     func setup() {
@@ -151,6 +155,8 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                 self?.fetchPartyPromise()
             }
         }) { [weak self] in
+
+            self?.emptyPromiseView.isHidden = (self?.viewModel!.partyPromiseList?.count ?? 0) != 0
             self?.promiseTableView.reloadData()
             self?.activityIndicator.stopAnimating()
         }

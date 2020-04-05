@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5231D088136F2B07E1D51C24 /* Pods_GeneralElection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */; };
 		CA0DE8CF241CA7C6009FBD03 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */; };
+		CA19017024399D6000C8FD29 /* FullScreenAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */; };
+		CA19017224399D6B00C8FD29 /* NativeAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19017124399D6B00C8FD29 /* NativeAdMob.swift */; };
+		CA1901742439A81600C8FD29 /* AdCandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1901732439A81600C8FD29 /* AdCandidateCell.swift */; };
 		CA26666B242295C4003055EC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9B2241377E500C76E2E /* SettingViewController.swift */; };
 		CA26666C242295CE003055EC /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9AB241377CA00C76E2E /* NoticeViewController.swift */; };
 		CA2811BA2424937800DCF8AA /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2811B92424937800DCF8AA /* IntExtension.swift */; };
@@ -44,10 +47,12 @@
 		CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */; };
 		CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */; };
 		CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472469242B2026000A3C10 /* CandidateCell.swift */; };
-		CA49156B24360FF200FD058C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA49156A24360FF200FD058C /* GoogleService-Info.plist */; };
 		CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3B24235EA700FECFCD /* SettingCell.swift */; };
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
+		CA5DBD7D2439B8C900C3C2B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA5DBD7C2439B8C900C3C2B8 /* GoogleService-Info.plist */; };
+		CA5DBD7F2439D36000C3C2B8 /* AdPartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */; };
+		CA5DBD812439D3A300C3C2B8 /* AdCandidateSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */; };
 		CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */; };
 		CA74EFFC2433929C00775A56 /* PartyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA74EFFB2433929C00775A56 /* PartyItemCell.swift */; };
 		CA78339B242E1B6F00B2FA3E /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */; };
@@ -87,6 +92,9 @@
 		83AFF34B5AE768ED5C7CDFED /* Pods-GeneralElection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.debug.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.debug.xcconfig"; sourceTree = "<group>"; };
 		93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.release.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.release.xcconfig"; sourceTree = "<group>"; };
 		CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdMob.swift; sourceTree = "<group>"; };
+		CA19017124399D6B00C8FD29 /* NativeAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdMob.swift; sourceTree = "<group>"; };
+		CA1901732439A81600C8FD29 /* AdCandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCandidateCell.swift; sourceTree = "<group>"; };
 		CA2811B92424937800DCF8AA /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		CA2811BB24249FAC00DCF8AA /* CandidateSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultViewController.swift; sourceTree = "<group>"; };
 		CA2811BD24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultViewModel.swift; sourceTree = "<group>"; };
@@ -124,10 +132,12 @@
 		CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchListResultViewController.swift; sourceTree = "<group>"; };
 		CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultListViewModel.swift; sourceTree = "<group>"; };
 		CA472469242B2026000A3C10 /* CandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
-		CA49156A24360FF200FD058C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA59EF3B24235EA700FECFCD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		CA5DBD7C2439B8C900C3C2B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPartyCell.swift; sourceTree = "<group>"; };
+		CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCandidateSearchView.swift; sourceTree = "<group>"; };
 		CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailCell.swift; sourceTree = "<group>"; };
 		CA74EFFB2433929C00775A56 /* PartyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyItemCell.swift; sourceTree = "<group>"; };
 		CA78339A242E1B6F00B2FA3E /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
@@ -192,6 +202,18 @@
 				93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA19016A2439894400C8FD29 /* admob */ = {
+			isa = PBXGroup;
+			children = (
+				CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */,
+				CA19017124399D6B00C8FD29 /* NativeAdMob.swift */,
+				CA1901732439A81600C8FD29 /* AdCandidateCell.swift */,
+				CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */,
+				CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */,
+			);
+			path = admob;
 			sourceTree = "<group>";
 		};
 		CA3D865B2425CA9800872223 /* model */ = {
@@ -296,6 +318,7 @@
 		CA46F99C2413727B00C76E2E /* util */ = {
 			isa = PBXGroup;
 			children = (
+				CA19016A2439894400C8FD29 /* admob */,
 				CA59EF3F2423946600FECFCD /* firebase */,
 				CA46F99D2413728100C76E2E /* extension */,
 				CA46F9B724137DCF00C76E2E /* SplashSegue.swift */,
@@ -372,7 +395,7 @@
 		CA46F9C82413921000C76E2E /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA49156A24360FF200FD058C /* GoogleService-Info.plist */,
+				CA5DBD7C2439B8C900C3C2B8 /* GoogleService-Info.plist */,
 				CAF0A4832436AC27007CE930 /* apikey.json */,
 				CA2DCE22241DF084006A304D /* GmarketSansBold.otf */,
 				CA2DCE23241DF085006A304D /* GmarketSansLight.otf */,
@@ -577,11 +600,11 @@
 				CAF0A4842436AC27007CE930 /* apikey.json in Resources */,
 				CA46F9AE241377D800C76E2E /* Notice.storyboard in Resources */,
 				CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */,
+				CA5DBD7D2439B8C900C3C2B8 /* GoogleService-Info.plist in Resources */,
 				CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */,
 				CA46F9A72413778D00C76E2E /* Home.storyboard in Resources */,
 				CA2DCE24241DF085006A304D /* GmarketSansMedium.otf in Resources */,
 				CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */,
-				CA49156B24360FF200FD058C /* GoogleService-Info.plist in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
 				CA2DCE26241DF085006A304D /* GmarketSansLight.otf in Resources */,
 			);
@@ -676,6 +699,7 @@
 			files = (
 				CA26666C242295CE003055EC /* NoticeViewController.swift in Sources */,
 				CA26666B242295C4003055EC /* SettingViewController.swift in Sources */,
+				CA5DBD7F2439D36000C3C2B8 /* AdPartyCell.swift in Sources */,
 				CAF0A4862436B119007CE930 /* PartyPromiseApi.swift in Sources */,
 				CAE074DE243375E800174798 /* CandidateDetailWebViewController.swift in Sources */,
 				CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */,
@@ -686,6 +710,7 @@
 				CAF0A48A2436C3E8007CE930 /* PartyPromise.swift in Sources */,
 				CA46F9BF2413874500C76E2E /* BaseViewModel.swift in Sources */,
 				CA46F99F2413729B00C76E2E /* UIViewExtension.swift in Sources */,
+				CA5DBD812439D3A300C3C2B8 /* AdCandidateSearchView.swift in Sources */,
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
 				CAF0A4882436B1B9007CE930 /* BaseNetwork.swift in Sources */,
 				CA36C7282436CD23007B2605 /* ApiService.swift in Sources */,
@@ -702,6 +727,7 @@
 				CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */,
 				CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */,
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
+				CA1901742439A81600C8FD29 /* AdCandidateCell.swift in Sources */,
 				CADAA5222438DD3E00A64268 /* IAPHelper.swift in Sources */,
 				CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */,
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
@@ -710,12 +736,14 @@
 				CA46F9A52413742500C76E2E /* ArrayExtension.swift in Sources */,
 				CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */,
 				CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */,
+				CA19017024399D6000C8FD29 /* FullScreenAdMob.swift in Sources */,
 				CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */,
 				CAF613322421E7C200D26D31 /* Party.swift in Sources */,
 				CA46F9C1241387F500C76E2E /* BaseViewControllerWithViewModel.swift in Sources */,
 				CAAC705C24384CA300C4A837 /* PartyDetailViewController.swift in Sources */,
 				CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */,
 				CAF613342421E99B00D26D31 /* CityCell.swift in Sources */,
+				CA19017224399D6B00C8FD29 /* NativeAdMob.swift in Sources */,
 				CAD575532436E06200FF8E8D /* PartyPromiseBaseResponse.swift in Sources */,
 				CA2811BA2424937800DCF8AA /* IntExtension.swift in Sources */,
 				CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
+import GoogleMobileAds
 
 class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
 
@@ -39,24 +40,30 @@ class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
         partySearchButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-                if let vc = self?.selectViewController(.homeDetail, viewControllerName: PartySearchViewController.className) as? PartySearchViewController {
-                    self?.navigationController?.pushViewController(vc, animated: true)
+                guard let `self` = self else { return }
+                FullScreenAdMobManager.share.showAd(from: self)
+                if let vc = self.selectViewController(.homeDetail, viewControllerName: PartySearchViewController.className) as? PartySearchViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             }).disposed(by: rx.disposeBag)
         
         districtSearchButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-            if let vc = self?.selectViewController(.homeDetail, viewControllerName: DistrictSearchViewController.className) as? DistrictSearchViewController {
-                self?.navigationController?.pushViewController(vc, animated: true)
+            guard let `self` = self else { return }
+            FullScreenAdMobManager.share.showAd(from: self)
+            if let vc = self.selectViewController(.homeDetail, viewControllerName: DistrictSearchViewController.className) as? DistrictSearchViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             }).disposed(by: rx.disposeBag)
         
         candidateSearchButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-            if let vc = self?.selectViewController(.homeDetail, viewControllerName: CandidateSearchViewController.className) as? CandidateSearchViewController {
-                self?.navigationController?.pushViewController(vc, animated: true)
+            guard let `self` = self else { return }
+            FullScreenAdMobManager.share.showAd(from: self)
+            if let vc = self.selectViewController(.homeDetail, viewControllerName: CandidateSearchViewController.className) as? CandidateSearchViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             }).disposed(by: rx.disposeBag)
     }
@@ -64,3 +71,36 @@ class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
 
 }
 
+
+extension HomeViewController: GADInterstitialDelegate {
+    /// Tells the delegate an ad request succeeded.
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//      print("interstitialDidReceiveAd")
+//    }
+
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+      print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+      print("interstitialWillPresentScreen")
+    }
+
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+      print("interstitialWillDismissScreen")
+    }
+
+    /// Tells the delegate the interstitial had been animated off the screen.
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+      print("interstitialDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+      print("interstitialWillLeaveApplication")
+    }
+}
