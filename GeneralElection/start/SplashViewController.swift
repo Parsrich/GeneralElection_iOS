@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import RxSwift
+import GoogleMobileAds
 
 class SplashViewController: BaseViewController {
     
@@ -19,8 +20,7 @@ class SplashViewController: BaseViewController {
         
         setFirebase()
         
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { [weak self] in
-//        }
+        googleAdMob()
     }
     
     func setFirebase() {
@@ -68,5 +68,9 @@ class SplashViewController: BaseViewController {
             
         }
 
+    }
+    
+    func googleAdMob() {
+        FullScreenAdMobManager.share.createAd()
     }
 }
