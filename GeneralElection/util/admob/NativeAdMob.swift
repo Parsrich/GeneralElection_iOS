@@ -13,11 +13,11 @@ class NativeAdMobManager: NSObject {
     static let share = NativeAdMobManager()
     var adLoader: GADAdLoader?
     
-    #if DEBUG // 네이티브 테스트
-    let adUnitId = "ca-app-pub-3940256099942544/3986624511"
-    #else   // 네이티브 광고 ID
+//    #if DEBUG // 네이티브 테스트
+//    let adUnitId = "ca-app-pub-3940256099942544/3986624511"
+//    #else   // 네이티브 광고 ID
     let adUnitId = "ca-app-pub-6176394344908792/5156701876"
-    #endif
+//    #endif
     
     func createAd(delegate: GADAdLoaderDelegate, viewController: UIViewController) {
         adLoader = GADAdLoader(adUnitID: adUnitId,
