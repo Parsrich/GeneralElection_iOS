@@ -843,11 +843,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="TbO-NF-rgD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="300.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-cO-cdc">
-                                <rect key="frame" x="20" y="601" width="374" height="192"/>
+                                <rect key="frame" x="20" y="300.5" width="374" height="492.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후보자 검색" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tN-6g-t0s">
                                         <rect key="frame" x="0.0" y="20" width="374" height="50"/>
@@ -893,16 +893,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* 검색창에 후보자 이름을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-AA-uVf">
-                                        <rect key="frame" x="10" y="150" width="354" height="16.5"/>
+                                        <rect key="frame" x="10" y="150" width="354" height="14.5"/>
                                         <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pj4-PP-EvQ">
-                                        <rect key="frame" x="10" y="150" width="354" height="42"/>
+                                        <rect key="frame" x="10" y="150" width="354" height="342.5"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-vV-T7o">
-                                                <rect key="frame" x="0.0" y="5" width="354" height="37"/>
+                                                <rect key="frame" x="0.0" y="5" width="354" height="337.5"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CandidateNameCell" rowHeight="72" id="FEL-ST-iS9" customClass="CandidateNameCell" customModule="총선" customModuleProvider="target">
@@ -1245,14 +1245,14 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="정당이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpB-Ow-mac">
-                                                <rect key="frame" x="38" y="0.0" width="59" height="30"/>
+                                                <rect key="frame" x="38" y="0.0" width="65.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비례정당번호 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k12-1L-3bL">
-                                                <rect key="frame" x="107" y="0.0" width="247" height="30"/>
+                                                <rect key="frame" x="113.5" y="0.0" width="240.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.44705882352941173" green="0.41176470588235292" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
@@ -1409,7 +1409,7 @@
                                                 <rect key="frame" x="0.0" y="20" width="354" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_list" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-vh-iqS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30.000000000000014" height="30.000000000000014"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="JK3-vh-iqS" secondAttribute="height" multiplier="1:1" id="Gig-m4-rr9"/>
@@ -1578,12 +1578,6 @@
                             <constraint firstItem="58u-mY-Bkf" firstAttribute="leading" secondItem="1D9-TG-TZc" secondAttribute="leading" constant="50" id="xDS-7c-cdJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1D9-TG-TZc"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="BDe-la-8rR"/>
-                                <exclude reference="58u-mY-Bkf"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0Wf-ep-vyP">
                         <nil key="title"/>
@@ -2119,7 +2113,7 @@
                                     <constraint firstAttribute="trailing" secondItem="U0W-Eu-WUd" secondAttribute="trailing" constant="20" id="SL9-k6-DYg"/>
                                     <constraint firstAttribute="bottom" secondItem="QMj-Ds-IWG" secondAttribute="bottom" constant="10" id="TCi-8H-PTb"/>
                                     <constraint firstItem="QMj-Ds-IWG" firstAttribute="leading" secondItem="wjM-IO-qTh" secondAttribute="leading" constant="10" id="Uha-qS-d61"/>
-                                    <constraint firstItem="QMj-Ds-IWG" firstAttribute="top" secondItem="fu7-UK-nGM" secondAttribute="bottom" priority="250" constant="30" id="Uxd-AH-Hw1"/>
+                                    <constraint firstItem="QMj-Ds-IWG" firstAttribute="top" secondItem="fu7-UK-nGM" secondAttribute="bottom" priority="250" constant="20" id="Uxd-AH-Hw1"/>
                                     <constraint firstItem="OAd-bf-1D9" firstAttribute="trailing" secondItem="fu7-UK-nGM" secondAttribute="trailing" constant="10" id="cvn-Pj-JDm"/>
                                     <constraint firstItem="vnC-8K-hR8" firstAttribute="leading" secondItem="wjM-IO-qTh" secondAttribute="leading" constant="10" id="dkn-NP-njr"/>
                                     <constraint firstItem="U0W-Eu-WUd" firstAttribute="top" secondItem="vnC-8K-hR8" secondAttribute="bottom" priority="500" constant="20" id="lhR-PQ-MeF"/>
@@ -2135,11 +2129,6 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Wga-a8-rb4"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2239,7 +2228,7 @@
         <image name="ic_selectBox" width="11" height="9"/>
         <image name="img_background" width="414.5" height="300.5"/>
         <image name="img_empty" width="414" height="896"/>
-        <image name="img_empty_promise" width="414" height="896"/>
+        <image name="img_empty_promise" width="1242" height="2688"/>
         <image name="tab_home" width="48" height="48"/>
         <image name="tab_home_select" width="48" height="48"/>
     </resources>
