@@ -1881,6 +1881,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
                                                             <outlet property="adImageView" destination="AtG-rM-uBw" id="7vv-nN-w9M"/>
+                                                            <outlet property="adMarkLabel" destination="SqM-Lv-fqb" id="3U2-g7-gNJ"/>
                                                             <outlet property="advertisementLabel" destination="7af-fx-w81" id="Ahm-ed-Dkq"/>
                                                             <outlet property="contentLabel" destination="8Dr-iu-jxr" id="0ur-fx-cv6"/>
                                                             <outlet property="headlineLabel" destination="aBi-Zg-6KV" id="jjZ-1m-FAI"/>
