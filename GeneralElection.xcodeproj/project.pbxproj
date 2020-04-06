@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5231D088136F2B07E1D51C24 /* Pods_GeneralElection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */; };
 		CA0DE8CF241CA7C6009FBD03 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */; };
+		CA176840243AF11100BC2FBB /* AdCandidateSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */; };
 		CA19017024399D6000C8FD29 /* FullScreenAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */; };
 		CA19017224399D6B00C8FD29 /* NativeAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19017124399D6B00C8FD29 /* NativeAdMob.swift */; };
 		CA1901742439A81600C8FD29 /* AdCandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1901732439A81600C8FD29 /* AdCandidateCell.swift */; };
@@ -94,6 +95,7 @@
 		83AFF34B5AE768ED5C7CDFED /* Pods-GeneralElection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.debug.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.debug.xcconfig"; sourceTree = "<group>"; };
 		93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.release.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.release.xcconfig"; sourceTree = "<group>"; };
 		CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdCandidateSearchView.xib; sourceTree = "<group>"; };
 		CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdMob.swift; sourceTree = "<group>"; };
 		CA19017124399D6B00C8FD29 /* NativeAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdMob.swift; sourceTree = "<group>"; };
 		CA1901732439A81600C8FD29 /* AdCandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCandidateCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				CA1901732439A81600C8FD29 /* AdCandidateCell.swift */,
 				CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */,
 				CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */,
+				CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */,
 			);
 			path = admob;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
 				CA2DCE26241DF085006A304D /* GmarketSansLight.otf in Resources */,
+				CA176840243AF11100BC2FBB /* AdCandidateSearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
