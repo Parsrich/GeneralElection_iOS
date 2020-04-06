@@ -112,8 +112,8 @@ extension FirebaseManager {
 //        }
 //    }
 //
-    func stringValue(key: RemoteConfigKey) -> String {
-        return remoteConfig.configValue(forKey: key.rawValue).stringValue ?? ""
+    func stringValue(key: RemoteConfigKey, defaultValue: String = "") -> String {
+        return remoteConfig.configValue(forKey: key.rawValue).stringValue ?? defaultValue
     }
 //
 //    func boolValue(key: RemoteConfigKey) -> Bool {

@@ -20,19 +20,23 @@ class NativeAdMobManager: NSObject {
     var candidateAdLoader: GADAdLoader?
     var searchAdLoader: GADAdLoader?
     var partyAdLoader: GADAdLoader?
+
     #if DEBUG // 네이티브 테스트
     let candidateAdUnitId = "ca-app-pub-3940256099942544/3986624511"
     let searchAdUnitId = "ca-app-pub-3940256099942544/3986624511"
     let partyAdUnitId = "ca-app-pub-3940256099942544/3986624511"
     #else   // 네이티브 광고 ID
-    let candidateAdUnitId = "ca-app-pub-6176394344908792/5156701876"
-    let searchAdUnitId = "ca-app-pub-6176394344908792/3177228180"
+    let candidateAdUnitId =  FirebaseManager.share.stringValue(key: .candidateListAdId, defaultValue: "ca-app-pub-6176394344908792/5156701876")
+    let searchAdUnitId = FirebaseManager.share.stringValue(key: .searchAdId, defaultValue: "ca-app-pub-6176394344908792/3177228180")
     let partyAdUnitId = "ca-app-pub-6176394344908792/6924901505"
     #endif
     
     func createAd(delegate: GADAdLoaderDelegate, viewController: UIViewController, type: AdType) {
+        
         switch type {
         case .candidate:
+            
+            
             candidateAdLoader = GADAdLoader(adUnitID: candidateAdUnitId,
                 rootViewController: viewController,
                 adTypes: [ .unifiedNative ],
