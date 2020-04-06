@@ -48,7 +48,8 @@ class SplashViewController: BaseViewController {
             
             /// 새로운 버전 체크
             let fetchedAppVersion = FirebaseManager.share.stringValue(key: .appVersion)
-            if fetchedAppVersion != Config.appVersion {
+            
+            if Config.appVersion < fetchedAppVersion {
 
                 DispatchQueue.main.async {
                     let vc = self.showConfirmationAlert(alertTitle: "앱이 업데이트 되었습니다.", alertMessage: "새로운 앱으로 업데이트를 하기 위해 앱스토어로 이동합니다.")

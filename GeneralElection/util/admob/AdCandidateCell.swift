@@ -8,13 +8,9 @@
 
 import UIKit
 import GoogleMobileAds
+import RxSwift
 
 class AdCandidateCell: UITableViewCell {
-    
-    /// The height constraint applied to the ad view, where necessary.
-    var heightConstraint: NSLayoutConstraint?
-    var unAdLoaderDelegate: GADUnifiedNativeAdLoaderDelegate?
-    var adLoaderDelegate: GADAdLoaderDelegate?
     
     @IBOutlet weak var nativeAdView: GADUnifiedNativeAdView!
 //    @IBOutlet weak var mediaView: GADMediaView!
@@ -27,14 +23,27 @@ class AdCandidateCell: UITableViewCell {
     @IBOutlet weak var installButton: UIButton!
     @IBOutlet weak var adMarkLabel: UILabel!
     
+    @IBOutlet weak var adViewHeightConstraint: NSLayoutConstraint!
     var setupFlag = true
+    private var heightSubject = BehaviorSubject<CGFloat>(value: 0)
+    var heightObservable: Observable<CGFloat> {
+        return heightSubject.asObservable()
+    }
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-//        viewBinding()
+//        nativeAdView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        let constraint = nativeAdView.heightAnchor.constraint(equalToConstant: 130)
+//        NSLayoutConstraint.activate([
+//          nativeAdView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0),
+//          nativeAdView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0),
+//          nativeAdView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0),
+//          nativeAdView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
+//          constraint
+//        ])
     }
     
     func viewBinding() {
@@ -74,8 +83,10 @@ extension AdCandidateCell: GADUnifiedNativeAdDelegate {
 
 extension AdCandidateCell: GADAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
-        print("\(adLoader) failed with error: \(error.localizedDescription)")
+        nativeAdView?.isHidden = true
         adMarkLabel.isHidden = true
+        print("\(adLoader) failed with error: \(error.localizedDescription)")
+        self.heightSubject.onNext(0)
     }
 }
 
@@ -89,9 +100,13 @@ extension AdCandidateCell: GADVideoControllerDelegate {
 extension AdCandidateCell: GADUnifiedNativeAdLoaderDelegate {
     
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+        nativeAdView?.isHidden = false
+        adMarkLabel.isHidden = false
+        self.heightSubject.onNext(130)
         
         nativeAdView?.nativeAd = nativeAd
         
+        print("headline: \(nativeAd.headline ?? "")")
         // Set ourselves as the native ad delegate to be notified of native ad events.
         nativeAd.delegate = self
         
