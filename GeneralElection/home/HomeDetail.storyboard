@@ -1315,7 +1315,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYi-Cf-eZP">
                                                 <rect key="frame" x="205" y="69.5" width="149" height="42.5"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
-                                                <state key="normal" title="정당이슈보기" backgroundImage="ic_button"/>
+                                                <state key="normal" title="정당정보위키" backgroundImage="ic_button"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

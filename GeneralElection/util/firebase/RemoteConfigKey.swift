@@ -7,10 +7,10 @@
 //
 
 enum RemoteConfigKey: String {
-    case appVersion = "app_version"
+    case appVersion = "ios_app_version"
     case appStoreUrl = "app_store_url"
     case introduceMessage = "introduce_message"
-    case candidateListAdId = "candidate_list_ad_id"
-    case searchAdId = "search_ad_id"
-    case fullAdId = "full_ad_id"
+    case candidateListAdId = "ios_candidate_list_ad_id"
+    case searchAdId = "ios_search_ad_id"
+    case fullAdId = "ios_full_ad_id"
 }
