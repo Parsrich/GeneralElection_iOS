@@ -37,8 +37,6 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
 //        }
 //    }
     
-    
-    var partyImageUrl: URL?
     var sourceResult: SourceResult?
     var partyName: String?
     var candidateList: [Candidate]?
@@ -71,10 +69,11 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
             partyLogoImageView.backgroundColor = UIColor.white
         }
         
-        partyLogoImageView
-            .kf
-            .setImage(with: partyImageUrl,
-                  placeholder: UIImage(named: "ic_loading"))
+        partyLogoImageView.image = UIImage(named: partyName ?? "ic_loading")
+//        partyLogoImageView
+//            .kf
+//            .setImage(with: partyImageUrl,
+//                  placeholder: UIImage(named: partyName ?? "ic_loading"))
         partyNameLabel.text = partyName
         partyNamePromiseLabel.text = "\(partyName ?? "") 공약"
         
@@ -119,8 +118,17 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                 if let vc = self?.storyboard?.instantiateViewController(withIdentifier: CandidateDetailWebViewController.className) as? CandidateDetailWebViewController,
                     let partyName = self?.partyName {
                     
-                    vc.url = URL(string: "https://m.search.zum.com/search.zum?method=news&qm=f_typing.news&query=\(partyName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")
-                    vc.navigationTitle = "정당 이슈"
+                    var fullPartyName = partyName
+                    if partyName == "코리아" {
+                        fullPartyName = "가자코리아"
+                    } else if partyName == "새벽당" {
+                        fullPartyName = "자유의새벽당"
+                    } else if partyName == "자영업당" {
+                        fullPartyName = "중소자영업당"
+                    }
+                    
+                    vc.url = URL(string: "https://namu.wiki/w/\(fullPartyName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")
+                    vc.navigationTitle = "정당 정보 위키"
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
             }).disposed(by: rx.disposeBag)
