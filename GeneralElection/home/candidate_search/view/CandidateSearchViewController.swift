@@ -26,6 +26,8 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     
     @IBOutlet weak var adContainerView: UIView!
     
+    var nativeAdView: GADTSmallTemplateView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,11 +35,13 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
         setupUI()
         bindRx()
 
-        if let adView = AdCandidateSearchView.instanceFromNib() {
-            adContainerView.addSubViewWithFullAutoLayout(subview: adView)
-            NativeAdMobManager.share.createAd(delegate: adView, viewController: self, type: .search)
-            NativeAdMobManager.share.showAd(type: .search)
-        }
+        
+        nativeAdView = GADTSmallTemplateView(frame: adContainerView.frame)
+        adContainerView.addSubViewWithFullAutoLayout(subview: nativeAdView)
+        adContainerView.isHidden = true
+        
+        NativeAdMobManager.share.createAd(delegate: self, viewController: self, type: .search)
+        NativeAdMobManager.share.showAd(type: .search)
     }
     
     func setupUI() {
@@ -157,5 +161,79 @@ extension CandidateSearchViewController: UITableViewDelegate {
         guard let name = viewModel!.candidateNameList?[indexPath.row] else { return }
         
         nextViewController(name: name)
+    }
+}
+
+extension CandidateSearchViewController: GADUnifiedNativeAdDelegate {
+    public func nativeAdDidRecordImpression(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad was shown.
+    }
+    
+    public func nativeAdDidRecordClick(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad was clicked on.
+    }
+    
+    public func nativeAdWillPresentScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will present a full screen view.
+    }
+    
+    public func nativeAdWillDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will dismiss a full screen view.
+    }
+    
+    public func nativeAdDidDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad did dismiss a full screen view.
+    }
+    
+    public func nativeAdWillLeaveApplication(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will cause the application to become inactive and
+        // open a new application.
+    }
+}
+
+extension CandidateSearchViewController: GADUnifiedNativeAdLoaderDelegate {
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(adLoader) failed with error: \(error.localizedDescription)")
+        adContainerView.isHidden = true
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+        print("\(adLoader) didReceived")
+        adContainerView.isHidden = false
+        nativeAdView.nativeAd = nativeAd
+        nativeAd.delegate = self
+        // Associate the native ad view with the native ad object. This is
+        // required to make the ad clickable.
+        nativeAdView.nativeAd = nativeAd
+
+        // Populate the native ad view with the native ad assets.
+        // The headline is guaranteed to be present in every native ad.
+        (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
+
+        // These assets are not guaranteed to be present. Check that they are before
+        // showing or hiding them.
+        (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
+        nativeAdView.bodyView?.isHidden = nativeAd.body == nil
+
+        (nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
+        nativeAdView.callToActionView?.isHidden = nativeAd.callToAction == nil
+
+        (nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
+        nativeAdView.iconView?.isHidden = nativeAd.icon == nil
+
+        nativeAdView.starRatingView?.isHidden = true
+
+        (nativeAdView.storeView as? UILabel)?.text = nativeAd.store
+        nativeAdView.storeView?.isHidden = nativeAd.store == nil
+
+        (nativeAdView.priceView as? UILabel)?.text = nativeAd.price
+        nativeAdView.priceView?.isHidden = nativeAd.price == nil
+
+        (nativeAdView.advertiserView as? UILabel)?.text = nativeAd.advertiser
+        nativeAdView.advertiserView?.isHidden = nativeAd.advertiser == nil
+
+        // In order for the SDK to process touch events properly, user interaction
+        // should be disabled.
+        nativeAdView.callToActionView?.isUserInteractionEnabled = false
     }
 }
