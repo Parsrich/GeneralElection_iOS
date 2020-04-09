@@ -25,6 +25,8 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     @IBOutlet weak var proportionalLabel: UILabel!
     @IBOutlet weak var candidateViewTopContraint: NSLayoutConstraint!
+    var nativeAdView: GADTSmallTemplateView!
+    
     var adHeight: CGFloat = 0.0
     var adFlag = true
     
@@ -196,30 +198,18 @@ extension CandidateSearchListResultViewController: UITableViewDataSource {
                         }
                         
                     }).disposed(by: rx.disposeBag)
-                NativeAdMobManager.share.createAd(delegate: cell, viewController: self, type: .candidate)
+
+                nativeAdView = GADTSmallTemplateView(frame: cell.contentView.frame)
+                cell.contentView.addSubViewWithFullAutoLayout(subview: nativeAdView)
+                nativeAdView.isHidden = true
+                
+                NativeAdMobManager.share.createAd(delegate: self, viewController: self, type: .candidate)
                 NativeAdMobManager.share.showAd(type: .candidate)
                 adFlag = false
             }
             
             return cell
         }
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: AdCandidateCell.className, for: indexPath) as? AdCandidateCell,
-//            indexPath.row == 0 {
-//
-//            if adFlag {
-//                cell.heightObservable
-//                    .subscribe(onNext: { [weak self] height in
-//                        self?.adHeight = height
-////                        tableView.reloadRows(at: [indexPath], with: .none)
-//                        tableView.deleteRows(at: [indexPath], with: .fade)
-//                    }).disposed(by: rx.disposeBag)
-//                NativeAdMobManager.share.createAd(delegate: cell, viewController: self)
-//                NativeAdMobManager.share.showAd()
-//                adFlag = false
-//            }
-//
-//            return cell
-//        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateCell.className, for: indexPath) as? CandidateCell else { return UITableViewCell() }
         
         cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row], sourceResult: sourceResult)
@@ -247,7 +237,7 @@ extension CandidateSearchListResultViewController: UITableViewDelegate {
         if indexPath.section == 0 {
             return adHeight
         } else {
-        return 130
+            return 130
         }
     }
     
@@ -256,4 +246,79 @@ extension CandidateSearchListResultViewController: UITableViewDelegate {
     }
     
     
+}
+
+
+extension CandidateSearchListResultViewController: GADUnifiedNativeAdDelegate {
+    public func nativeAdDidRecordImpression(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad was shown.
+    }
+    
+    public func nativeAdDidRecordClick(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad was clicked on.
+    }
+    
+    public func nativeAdWillPresentScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will present a full screen view.
+    }
+    
+    public func nativeAdWillDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will dismiss a full screen view.
+    }
+    
+    public func nativeAdDidDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad did dismiss a full screen view.
+    }
+    
+    public func nativeAdWillLeaveApplication(_ nativeAd: GADUnifiedNativeAd) {
+        // The native ad will cause the application to become inactive and
+        // open a new application.
+    }
+}
+
+extension CandidateSearchListResultViewController: GADUnifiedNativeAdLoaderDelegate {
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(adLoader) failed with error: \(error.localizedDescription)")
+        nativeAdView.isHidden = true
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+        print("\(adLoader) didReceived")
+        nativeAdView.isHidden = false
+        nativeAdView.nativeAd = nativeAd
+        nativeAd.delegate = self
+        // Associate the native ad view with the native ad object. This is
+        // required to make the ad clickable.
+        nativeAdView.nativeAd = nativeAd
+
+        // Populate the native ad view with the native ad assets.
+        // The headline is guaranteed to be present in every native ad.
+        (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
+
+        // These assets are not guaranteed to be present. Check that they are before
+        // showing or hiding them.
+        (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
+        nativeAdView.bodyView?.isHidden = nativeAd.body == nil
+
+        (nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
+        nativeAdView.callToActionView?.isHidden = nativeAd.callToAction == nil
+
+        (nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
+        nativeAdView.iconView?.isHidden = nativeAd.icon == nil
+
+        nativeAdView.starRatingView?.isHidden = true
+
+        (nativeAdView.storeView as? UILabel)?.text = nativeAd.store
+        nativeAdView.storeView?.isHidden = nativeAd.store == nil
+
+        (nativeAdView.priceView as? UILabel)?.text = nativeAd.price
+        nativeAdView.priceView?.isHidden = nativeAd.price == nil
+
+        (nativeAdView.advertiserView as? UILabel)?.text = nativeAd.advertiser
+        nativeAdView.advertiserView?.isHidden = nativeAd.advertiser == nil
+
+        // In order for the SDK to process touch events properly, user interaction
+        // should be disabled.
+        nativeAdView.callToActionView?.isUserInteractionEnabled = false
+    }
 }
