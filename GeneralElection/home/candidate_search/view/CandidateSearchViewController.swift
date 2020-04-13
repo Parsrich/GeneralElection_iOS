@@ -109,10 +109,23 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
                 vc.sourceResult = .candidateSearch
                 vc.candidate = candidates.first
                 
+                if candidates.first?.status == "resign" {
+                    showAlert(alertTitle: "사퇴한 후보자입니다.", alertMessage: "")
+                    return
+                }
+                
                 navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
+    
+    func showAlert(alertTitle title: String, alertMessage message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 extension CandidateSearchViewController: UITextFieldDelegate {
