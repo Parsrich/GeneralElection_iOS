@@ -9,15 +9,15 @@
 import Foundation
 
 class PartyPromiseApi: ApiBase<PartyPromiseBaseResponse> {
-    
+
     init(partyName: String) {
         super.init()
         self.params = ["resultType": "json",
-                       "serviceKey": ApiKeys.partyPromise,
+                       "serviceKey": ApiKeys.getKey,
                        "sgId": "20200415",
                        "partyName": partyName]
     }
-    
+
     override var path: String {
         return "9760000/PartyPlcInfoInqireService/getPartyPlcInfoInqire"
     }
