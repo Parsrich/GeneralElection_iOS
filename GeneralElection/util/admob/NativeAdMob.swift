@@ -24,11 +24,9 @@ class NativeAdMobManager: NSObject {
     #if DEBUG // 네이티브 테스트
     let candidateAdUnitId = "ca-app-pub-3940256099942544/3986624511"
     let searchAdUnitId = "ca-app-pub-3940256099942544/3986624511"
-//    let partyAdUnitId = "ca-app-pub-3940256099942544/3986624511"
     #else   // 네이티브 광고 ID
     let candidateAdUnitId =  FirebaseManager.share.stringValue(key: .candidateListAdId, defaultValue: "ca-app-pub-6176394344908792/5156701876")
     let searchAdUnitId = FirebaseManager.share.stringValue(key: .searchAdId, defaultValue: "ca-app-pub-6176394344908792/3177228180")
-//    let partyAdUnitId = "ca-app-pub-6176394344908792/6924901505"
     #endif
     
     func createAd(delegate: GADAdLoaderDelegate, viewController: UIViewController, type: AdType) {
@@ -48,12 +46,6 @@ class NativeAdMobManager: NSObject {
                 adTypes: [ .unifiedNative ],
                 options: nil)
             searchAdLoader?.delegate = delegate
-//        case .party:
-//            partyAdLoader = GADAdLoader(adUnitID: partyAdUnitId,
-//                rootViewController: viewController,
-//                adTypes: [ .unifiedNative ],
-//                options: nil)
-//            partyAdLoader?.delegate = delegate
             
         }
     }
@@ -64,8 +56,6 @@ class NativeAdMobManager: NSObject {
             candidateAdLoader?.load(GADRequest())
         case .search:
             searchAdLoader?.load(GADRequest())
-//        case .party:
-//            partyAdLoader?.load(GADRequest())
         }
     }
 }
