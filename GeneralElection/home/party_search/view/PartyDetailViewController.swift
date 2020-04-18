@@ -103,8 +103,10 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                 
                 if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
         
-                    vc.districtString = "\(self.partyName ?? "") 비례대표 명단"
-                    vc.candidates = self.candidateList
+                    vc.viewModel!.districtString = "\(self.partyName ?? "") 비례대표 명단"
+                    vc.viewModel!.setDataFromCandidateSearchVC(candidates: self.candidateList ?? [Candidate]())
+//                    vc.candidates = self.candidateList
+//                    vc.districtString = "\(self.partyName ?? "") 비례대표 명단"
                     vc.sourceResult = .partySearch
                     
                     self.navigationController?.pushViewController(vc, animated: true)

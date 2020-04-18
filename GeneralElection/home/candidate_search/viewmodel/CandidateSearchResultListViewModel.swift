@@ -161,7 +161,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         self.electionType = electionType
     }
     
-    func setDataInDistrictVC(type: ElectionType,
+    func setDataFromDistrictVC(type: ElectionType,
                              name: LocationElectionName,
                              districtString: String) {
         self.electionType = type
@@ -169,5 +169,9 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         self.districtString = districtString
     }
     
+    func setDataFromCandidateSearchVC(candidates: [Candidate]) {
+        congressCandidateList.removeAll()
+        congressCandidateList = candidates.sorted { Int($0.recommend ?? "0") ?? 0 < Int($1.recommend ?? "0") ?? 0 }
+    }
     
 }

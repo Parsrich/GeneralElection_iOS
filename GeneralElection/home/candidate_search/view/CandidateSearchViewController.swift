@@ -99,7 +99,8 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
 
                 vc.sourceResult = .candidateSearch
-                vc.candidates = candidates
+                vc.viewModel?.setDataFromCandidateSearchVC(candidates: candidates)
+//                vc.candidates = candidates
                 
                 navigationController?.pushViewController(vc, animated: true)
             }
