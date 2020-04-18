@@ -213,7 +213,7 @@ extension DistrictSearchViewController: UITableViewDelegate {
             self.viewModel!.switchLocationType(.selectedDone)
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
                 
-                vc.viewModel?.setDataInDistrictVC(type: self.viewModel!.electionType,
+                vc.viewModel?.setDataFromDistrictVC(type: self.viewModel!.electionType,
                                                   name: self.viewModel!.electionName,
                                                   districtString: "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)")
                 
