@@ -13,5 +13,4 @@ class BaseCellViewModel: NSObject {
     required override init() {
         super.init()
     }
-    
 }
