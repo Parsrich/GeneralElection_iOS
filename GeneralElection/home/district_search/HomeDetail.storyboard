@@ -200,12 +200,12 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4AG-Uh-WJp">
-                                                <rect key="frame" x="38" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="38" y="0.0" width="63" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-cg-Vx0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
                                                         <color key="backgroundColor" red="0.44705882352941173" green="0.41176470588235292" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                         <state key="normal" title="시・도">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,7 +228,7 @@
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-da-zfc">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                         <color key="backgroundColor" red="0.80784313725490198" green="0.80000000000000004" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                         <state key="normal" title="구・시・군">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,7 +251,7 @@
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-po-ZuD">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                         <color key="backgroundColor" red="0.80784313725490198" green="0.80000000000000004" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                         <state key="normal" title="동・면・읍">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,7 +274,7 @@
                                             <constraint firstItem="N2f-RB-YUC" firstAttribute="top" secondItem="6X3-v7-c0D" secondAttribute="top" id="26A-Or-6dh"/>
                                             <constraint firstAttribute="height" constant="30" id="RnN-s6-d0x"/>
                                             <constraint firstItem="4AG-Uh-WJp" firstAttribute="top" secondItem="6X3-v7-c0D" secondAttribute="top" id="YlH-VH-56P"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4AG-Uh-WJp" secondAttribute="trailing" constant="10" id="gxR-oI-paA"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4AG-Uh-WJp" secondAttribute="trailing" id="gxR-oI-paA"/>
                                             <constraint firstItem="4AG-Uh-WJp" firstAttribute="leading" secondItem="N2f-RB-YUC" secondAttribute="trailing" constant="8" id="iFS-Dp-2bb"/>
                                             <constraint firstItem="N2f-RB-YUC" firstAttribute="leading" secondItem="6X3-v7-c0D" secondAttribute="leading" constant="10" id="kdg-Kc-rNd"/>
                                             <constraint firstAttribute="bottom" secondItem="4AG-Uh-WJp" secondAttribute="bottom" id="kt1-8b-Vyk"/>
@@ -486,7 +486,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="TbO-NF-rgD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="300.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-cO-cdc">
@@ -536,7 +536,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* 검색창에 후보자 이름을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-AA-uVf">
-                                        <rect key="frame" x="10" y="150" width="354" height="16.5"/>
+                                        <rect key="frame" x="10" y="150" width="354" height="14.5"/>
                                         <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -785,7 +785,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="113"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-46-mgV">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_user_empty" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-46-mgV">
                                                                     <rect key="frame" x="10" y="10" width="74.5" height="93"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="cAz-46-mgV" secondAttribute="height" multiplier="4:5" id="QxL-Qc-0lT"/>
@@ -1036,8 +1036,8 @@
         <image name="ic_mapPin" width="20.5" height="28.5"/>
         <image name="ic_mappin" width="48" height="48"/>
         <image name="ic_party_minju" width="54.5" height="34"/>
-        <image name="ic_profile" width="56.5" height="67.5"/>
         <image name="ic_search" width="13.5" height="15"/>
+        <image name="ic_user_empty" width="72" height="72"/>
         <image name="img_background" width="414.5" height="300.5"/>
         <image name="tab_home" width="48" height="48"/>
         <image name="tab_home_select" width="48" height="48"/>

@@ -11,12 +11,7 @@ import Kingfisher
 
 class CandidateCell: UITableViewCell {
     
-    @IBOutlet weak var thumbnailImageView: UIImageView! {
-        didSet {
-            self.thumbnailImageView.layer.borderColor = UIColor.lightGray.cgColor
-            self.thumbnailImageView.layer.borderWidth = 1.0
-        }
-    }
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var partyColorView: UIView!
     @IBOutlet weak var partyNameLabel: UILabel!
     @IBOutlet weak var candidateNameLabel: UILabel!
