@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		5231D088136F2B07E1D51C24 /* Pods_GeneralElection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */; };
 		CA0DE8CF241CA7C6009FBD03 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */; };
+		CA176840243AF11100BC2FBB /* AdCandidateSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */; };
 		CA19017024399D6000C8FD29 /* FullScreenAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */; };
 		CA19017224399D6B00C8FD29 /* NativeAdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19017124399D6B00C8FD29 /* NativeAdMob.swift */; };
+		CA1901742439A81600C8FD29 /* AdCandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1901732439A81600C8FD29 /* AdCandidateCell.swift */; };
 		CA26666B242295C4003055EC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9B2241377E500C76E2E /* SettingViewController.swift */; };
 		CA26666C242295CE003055EC /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9AB241377CA00C76E2E /* NoticeViewController.swift */; };
 		CA2811BA2424937800DCF8AA /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2811B92424937800DCF8AA /* IntExtension.swift */; };
@@ -22,12 +24,6 @@
 		CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2DCE27241E7931006A304D /* ShadowView.swift */; };
 		CA36C7282436CD23007B2605 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA36C7272436CD23007B2605 /* ApiService.swift */; };
 		CA3D865D2425E38D00872223 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D865C2425E38D00872223 /* District.swift */; };
-		CA4509B7243F32DD0009E348 /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4509AF243F32DD0009E348 /* GADTMediumTemplateView.xib */; };
-		CA4509B8243F32DD0009E348 /* GADTSmallTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4509B2243F32DD0009E348 /* GADTSmallTemplateView.m */; };
-		CA4509B9243F32DD0009E348 /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4509B3243F32DD0009E348 /* GADTSmallTemplateView.xib */; };
-		CA4509BA243F32DD0009E348 /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4509B4243F32DD0009E348 /* GADTTemplateView.m */; };
-		CA4509BB243F32DD0009E348 /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4509B5243F32DD0009E348 /* GADTMediumTemplateView.m */; };
-		CA4509C3243F4B600009E348 /* AdCandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4509C2243F4B600009E348 /* AdCandidateCell.swift */; };
 		CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F982241369FD00C76E2E /* AppDelegate.swift */; };
 		CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F986241369FD00C76E2E /* HomeViewController.swift */; };
 		CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA46F988241369FD00C76E2E /* Main.storyboard */; };
@@ -56,6 +52,8 @@
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
 		CA5DBD7D2439B8C900C3C2B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA5DBD7C2439B8C900C3C2B8 /* GoogleService-Info.plist */; };
+		CA5DBD7F2439D36000C3C2B8 /* AdPartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */; };
+		CA5DBD812439D3A300C3C2B8 /* AdCandidateSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */; };
 		CA5DBD83243A11C400C3C2B8 /* NoticeContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD82243A11C300C3C2B8 /* NoticeContents.swift */; };
 		CA5DBD85243A156E00C3C2B8 /* SettingNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBD84243A156E00C3C2B8 /* SettingNoticeCell.swift */; };
 		CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */; };
@@ -97,8 +95,10 @@
 		83AFF34B5AE768ED5C7CDFED /* Pods-GeneralElection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.debug.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.debug.xcconfig"; sourceTree = "<group>"; };
 		93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralElection.release.xcconfig"; path = "Target Support Files/Pods-GeneralElection/Pods-GeneralElection.release.xcconfig"; sourceTree = "<group>"; };
 		CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdCandidateSearchView.xib; sourceTree = "<group>"; };
 		CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdMob.swift; sourceTree = "<group>"; };
 		CA19017124399D6B00C8FD29 /* NativeAdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdMob.swift; sourceTree = "<group>"; };
+		CA1901732439A81600C8FD29 /* AdCandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCandidateCell.swift; sourceTree = "<group>"; };
 		CA2811B92424937800DCF8AA /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		CA2811BB24249FAC00DCF8AA /* CandidateSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultViewController.swift; sourceTree = "<group>"; };
 		CA2811BD24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultViewModel.swift; sourceTree = "<group>"; };
@@ -108,16 +108,6 @@
 		CA2DCE27241E7931006A304D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		CA36C7272436CD23007B2605 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CA3D865C2425E38D00872223 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
-		CA4509AF243F32DD0009E348 /* GADTMediumTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTMediumTemplateView.xib; sourceTree = "<group>"; };
-		CA4509B0243F32DD0009E348 /* GADTTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTTemplateView.h; sourceTree = "<group>"; };
-		CA4509B1243F32DD0009E348 /* GADTMediumTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTMediumTemplateView.h; sourceTree = "<group>"; };
-		CA4509B2243F32DD0009E348 /* GADTSmallTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTSmallTemplateView.m; sourceTree = "<group>"; };
-		CA4509B3243F32DD0009E348 /* GADTSmallTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTSmallTemplateView.xib; sourceTree = "<group>"; };
-		CA4509B4243F32DD0009E348 /* GADTTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTTemplateView.m; sourceTree = "<group>"; };
-		CA4509B5243F32DD0009E348 /* GADTMediumTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTMediumTemplateView.m; sourceTree = "<group>"; };
-		CA4509B6243F32DD0009E348 /* GADTSmallTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTSmallTemplateView.h; sourceTree = "<group>"; };
-		CA4509C1243F36CC0009E348 /* GeneralElection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeneralElection-Bridging-Header.h"; sourceTree = "<group>"; };
-		CA4509C2243F4B600009E348 /* AdCandidateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCandidateCell.swift; sourceTree = "<group>"; };
 		CA46F97F241369FD00C76E2E /* 총선.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "총선.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46F982241369FD00C76E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA46F986241369FD00C76E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +140,8 @@
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		CA5DBD7C2439B8C900C3C2B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPartyCell.swift; sourceTree = "<group>"; };
+		CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCandidateSearchView.swift; sourceTree = "<group>"; };
 		CA5DBD82243A11C300C3C2B8 /* NoticeContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeContents.swift; sourceTree = "<group>"; };
 		CA5DBD84243A156E00C3C2B8 /* SettingNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNoticeCell.swift; sourceTree = "<group>"; };
 		CA65EF852433465B0016ACBD /* CandidateDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailCell.swift; sourceTree = "<group>"; };
@@ -221,10 +213,12 @@
 		CA19016A2439894400C8FD29 /* admob */ = {
 			isa = PBXGroup;
 			children = (
-				CA4509AE243F32DD0009E348 /* nativetemplates */,
 				CA19016F24399D6000C8FD29 /* FullScreenAdMob.swift */,
 				CA19017124399D6B00C8FD29 /* NativeAdMob.swift */,
-				CA4509C2243F4B600009E348 /* AdCandidateCell.swift */,
+				CA1901732439A81600C8FD29 /* AdCandidateCell.swift */,
+				CA5DBD7E2439D36000C3C2B8 /* AdPartyCell.swift */,
+				CA5DBD802439D3A300C3C2B8 /* AdCandidateSearchView.swift */,
+				CA17683F243AF11100BC2FBB /* AdCandidateSearchView.xib */,
 			);
 			path = admob;
 			sourceTree = "<group>";
@@ -242,22 +236,6 @@
 				CA5DBD82243A11C300C3C2B8 /* NoticeContents.swift */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		CA4509AE243F32DD0009E348 /* nativetemplates */ = {
-			isa = PBXGroup;
-			children = (
-				CA4509AF243F32DD0009E348 /* GADTMediumTemplateView.xib */,
-				CA4509B0243F32DD0009E348 /* GADTTemplateView.h */,
-				CA4509B1243F32DD0009E348 /* GADTMediumTemplateView.h */,
-				CA4509B2243F32DD0009E348 /* GADTSmallTemplateView.m */,
-				CA4509B3243F32DD0009E348 /* GADTSmallTemplateView.xib */,
-				CA4509B4243F32DD0009E348 /* GADTTemplateView.m */,
-				CA4509B5243F32DD0009E348 /* GADTMediumTemplateView.m */,
-				CA4509B6243F32DD0009E348 /* GADTSmallTemplateView.h */,
-				CA4509C1243F36CC0009E348 /* GeneralElection-Bridging-Header.h */,
-			);
-			path = nativetemplates;
 			sourceTree = "<group>";
 		};
 		CA46F976241369FD00C76E2E = {
@@ -626,11 +604,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4509B9243F32DD0009E348 /* GADTSmallTemplateView.xib in Resources */,
 				CA46F98F24136A0000C76E2E /* LaunchScreen.storyboard in Resources */,
 				CA46F98C24136A0000C76E2E /* Assets.xcassets in Resources */,
 				CAF0A4842436AC27007CE930 /* apikey.json in Resources */,
-				CA4509B7243F32DD0009E348 /* GADTMediumTemplateView.xib in Resources */,
 				CA46F9AE241377D800C76E2E /* Notice.storyboard in Resources */,
 				CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */,
 				CA5DBD7D2439B8C900C3C2B8 /* GoogleService-Info.plist in Resources */,
@@ -640,6 +616,7 @@
 				CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
 				CA2DCE26241DF085006A304D /* GmarketSansLight.otf in Resources */,
+				CA176840243AF11100BC2FBB /* AdCandidateSearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,7 +709,7 @@
 			files = (
 				CA26666C242295CE003055EC /* NoticeViewController.swift in Sources */,
 				CA26666B242295C4003055EC /* SettingViewController.swift in Sources */,
-				CA4509C3243F4B600009E348 /* AdCandidateCell.swift in Sources */,
+				CA5DBD7F2439D36000C3C2B8 /* AdPartyCell.swift in Sources */,
 				CAF0A4862436B119007CE930 /* PartyPromiseApi.swift in Sources */,
 				CAE074DE243375E800174798 /* CandidateDetailWebViewController.swift in Sources */,
 				CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */,
@@ -743,6 +720,7 @@
 				CAF0A48A2436C3E8007CE930 /* PartyPromise.swift in Sources */,
 				CA46F9BF2413874500C76E2E /* BaseViewModel.swift in Sources */,
 				CA46F99F2413729B00C76E2E /* UIViewExtension.swift in Sources */,
+				CA5DBD812439D3A300C3C2B8 /* AdCandidateSearchView.swift in Sources */,
 				CA5DBD85243A156E00C3C2B8 /* SettingNoticeCell.swift in Sources */,
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
 				CAF0A4882436B1B9007CE930 /* BaseNetwork.swift in Sources */,
@@ -760,6 +738,7 @@
 				CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */,
 				CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */,
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
+				CA1901742439A81600C8FD29 /* AdCandidateCell.swift in Sources */,
 				CADAA5222438DD3E00A64268 /* IAPHelper.swift in Sources */,
 				CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */,
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
@@ -787,17 +766,14 @@
 				CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */,
 				CA3D865D2425E38D00872223 /* District.swift in Sources */,
 				CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */,
-				CA4509B8243F32DD0009E348 /* GADTSmallTemplateView.m in Sources */,
 				CAAC705E24384CD400C4A837 /* PartyDetailViewModel.swift in Sources */,
 				CA46F9B824137DCF00C76E2E /* SplashSegue.swift in Sources */,
-				CA4509BA243F32DD0009E348 /* GADTTemplateView.m in Sources */,
 				CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */,
 				CA46F9B624137AD400C76E2E /* SplashViewController.swift in Sources */,
 				CA2811BC24249FAC00DCF8AA /* CandidateSearchResultViewController.swift in Sources */,
 				CA46F9A32413741000C76E2E /* CodableExtension.swift in Sources */,
 				CA9AEAD0241B0F840022A2C8 /* PartySearchViewController.swift in Sources */,
 				CA5DBD83243A11C400C3C2B8 /* NoticeContents.swift in Sources */,
-				CA4509BB243F32DD0009E348 /* GADTMediumTemplateView.m in Sources */,
 				CA9AEAD2241B0FA20022A2C8 /* PartySearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,7 +922,7 @@
 				CODE_SIGN_ENTITLEMENTS = "GeneralElection/총선.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -958,7 +934,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Swift-Project/GeneralElection/GeneralElection/util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -972,7 +947,7 @@
 				CODE_SIGN_ENTITLEMENTS = "GeneralElection/총선.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -984,7 +959,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Swift-Project/GeneralElection/GeneralElection/util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
