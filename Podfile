@@ -17,8 +17,7 @@ target 'GeneralElection' do
 
   # Firebase
   pod 'Firebase/Core'
-  pod 'Firebase/RemoteConfig'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
 #  pod 'Firebase/AdMob'

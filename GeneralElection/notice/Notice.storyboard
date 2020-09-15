@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ad1-xl-9Q3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GmarketSansBold.otf">
-            <string>GmarketSansBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Notice View Controller-->
         <scene sceneID="JCd-8D-aD5">
@@ -20,45 +15,26 @@
                     <view key="view" contentMode="scaleToFill" id="Y3f-vq-rOe" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_notice" selectedImage="tab_notice_select" id="N6X-as-CdL"/>
-                    <navigationItem key="navigationItem" id="EJ3-YX-l6j">
-                        <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="CGm-XO-a9v">
-                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-Qq-Gmx">
-                                    <rect key="frame" x="-46.5" y="-12" width="93" height="24"/>
-                                    <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="24"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="0mH-Qq-Gmx" firstAttribute="centerX" secondItem="CGm-XO-a9v" secondAttribute="centerX" id="Tz6-2Y-vOv"/>
-                                <constraint firstItem="0mH-Qq-Gmx" firstAttribute="centerY" secondItem="CGm-XO-a9v" secondAttribute="centerY" id="UcK-HL-xvk"/>
-                            </constraints>
-                        </view>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="RBt-Dp-Aky"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcX-PN-9XC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="XjO-SQ-dRV">
             <objects>
                 <navigationController storyboardIdentifier="NoticeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ad1-xl-9Q3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5oq-D7-XRX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jjm-qZ-UfE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -71,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_notice" width="48" height="48"/>
-        <image name="tab_notice_select" width="48" height="48"/>
+        <image name="tab_notice" width="50" height="50"/>
+        <image name="tab_notice_select" width="50" height="50"/>
     </resources>
 </document>

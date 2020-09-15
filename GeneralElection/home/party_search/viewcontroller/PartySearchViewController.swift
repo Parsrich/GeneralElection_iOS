@@ -11,11 +11,5 @@ import UIKit
 class PartySearchViewController: BaseViewControllerWithViewModel<PartySearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupUI()
-    }
-    
-    func setupUI() {
-        setShadowViewUnderNavigationController()
     }
 }

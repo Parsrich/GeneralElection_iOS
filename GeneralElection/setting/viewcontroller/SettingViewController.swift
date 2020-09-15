@@ -1,5 +1,5 @@
 //
-//  NoticeViewController.swift
+//  SettingViewController.swift
 //  GeneralElection
 //
 //  Created by Minki on 2020/03/07.
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
-class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
+class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()

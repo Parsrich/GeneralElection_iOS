@@ -12,7 +12,7 @@ import UIKit
 class ShadowView: UIView {
     
     @IBInspectable var startColor:   UIColor
-        = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3) {
+        = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0) {
         didSet {
             updateColors()
         }
