@@ -11,9 +11,4 @@ import NSObject_Rx
 
 class PartySearchViewModel: BaseViewModel {
     
-    var partyList: [Party]?
-    
-    required init() {
-        super.init()
-    }
 }
