@@ -47,7 +47,7 @@ class DistrictSearchViewModel: BaseViewModel {
         super.init()
     }
     
-    func fetchDistrictKeys(location: String? = nil, errorHandler: @escaping (Error) -> Void, completion: @escaping () -> Void) {
+    func fetchDistrictKeys(location: String? = nil, completion: @escaping () -> Void) {
         if District.districtDict == nil {
             FirebaseHelper.fetchDatas(path: .district, key: location)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
@@ -55,9 +55,7 @@ class DistrictSearchViewModel: BaseViewModel {
                 .subscribe(onNext: { district in
                     District.districtDict = district
                     
-                }, onError: { error in
-                    errorHandler(error)
-                }, onCompleted: { [weak self] in
+                    }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
                 }).disposed(by: rx.disposeBag)

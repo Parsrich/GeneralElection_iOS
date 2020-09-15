@@ -80,19 +80,10 @@ class BaseViewController: UIViewController {
         activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
     }
     
-    func showConfirmationAlert(alertTitle title: String, alertMessage message: String, buttonText: String = "OK", completionHandler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
+    func showConfirmationAlert(alertTitle title: String, alertMessage message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: buttonText, style: .default, handler: completionHandler)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         return alertController
-    }
-    
-    func showNetworkErrorView(retryHandler: @escaping () -> Void) {
-        
-        let alert = showConfirmationAlert(alertTitle: "네트워크 에러", alertMessage: "네트워크를 확인해 주세요.", buttonText: "재시도") { _ in
-            retryHandler()
-        }
-        
-        self.present(alert, animated: true, completion: nil)
     }
 }

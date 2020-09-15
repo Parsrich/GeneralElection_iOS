@@ -32,7 +32,7 @@ class CandidateCell: UITableViewCell {
             thumbnailImageView
                 .kf
                 .setImage(with: url,
-                          placeholder: UIImage(named: "ic_profile"))
+                          placeholder: UIImage(named: "ic_user_empty"))
         }
         numberColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
 //        if let sourceResult = sourceResult {
