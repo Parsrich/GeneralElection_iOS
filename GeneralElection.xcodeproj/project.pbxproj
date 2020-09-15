@@ -29,7 +29,6 @@
 		CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */; };
 		CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C42413886400C76E2E /* HomeViewModel.swift */; };
 		CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C62413887000C76E2E /* SettingViewModel.swift */; };
-		CA46F9CA2413923F00C76E2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +59,6 @@
 		CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C42413886400C76E2E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C62413887000C76E2E /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
-		CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneralElection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,13 +112,14 @@
 		CA46F981241369FD00C76E2E /* GeneralElection */ = {
 			isa = PBXGroup;
 			children = (
-				CA46F9C82413921000C76E2E /* resources */,
 				CA46F9B92413857600C76E2E /* start */,
 				CA46F99C2413727B00C76E2E /* util */,
 				CA46F9972413709600C76E2E /* notice */,
 				CA46F9962413708D00C76E2E /* home */,
 				CA46F998241370CD00C76E2E /* setting */,
 				CA46F988241369FD00C76E2E /* Main.storyboard */,
+				CA46F98B24136A0000C76E2E /* Assets.xcassets */,
+				CA46F98D24136A0000C76E2E /* LaunchScreen.storyboard */,
 				CA46F99024136A0000C76E2E /* Info.plist */,
 			);
 			path = GeneralElection;
@@ -261,16 +260,6 @@
 			path = start;
 			sourceTree = "<group>";
 		};
-		CA46F9C82413921000C76E2E /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */,
-				CA46F98D24136A0000C76E2E /* LaunchScreen.storyboard */,
-				CA46F98B24136A0000C76E2E /* Assets.xcassets */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,7 +326,6 @@
 				CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */,
 				CA46F9A72413778D00C76E2E /* Home.storyboard in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
-				CA46F9CA2413923F00C76E2E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

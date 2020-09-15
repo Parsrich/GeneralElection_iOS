@@ -10,34 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
-import Firebase
 
 class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
 
-    let db = Firestore.firestore()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        setup()
-    }
-    
-    func setup() {
-        /// 파베 불러오기 예제
-//        db.collection("users").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-    }
 
 }
 
