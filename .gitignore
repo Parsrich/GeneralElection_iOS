@@ -100,18 +100,6 @@ iOSInjectionProject/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 
-### Firebase ###
-.idea
-**/node_modules/*
-**/.firebaserc
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
-/GeneralElection/resources/GoogleService-Info.plist
-
-### Data API Key
-/GeneralElection/resources/apikey.json
 
 
 
@@ -187,5 +175,3 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/git,xcode,swift,swiftpm,carthage,cocoapods,objective-c,swiftpackagemanager
-
-
