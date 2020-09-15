@@ -13,12 +13,11 @@ class FullScreenAdMobManager: NSObject {
     static let share = FullScreenAdMobManager()
     var interstitial: GADInterstitial?
     var delegate: GADInterstitialDelegate?
-    var count = 0
     
-    #if DEBUG   // 전면 테스트
-    let adUnitId = "ca-app-pub-3940256099942544/4411468910"
-    #else   // 전면 광고 ID
-    let adUnitId = "ca-app-pub-6176394344908792/1135650097"
+    #if DEBUG
+    let adUnitId = "ca-app-pub-3940256099942544/3986624511"
+    #else
+    let adUnitId = "ca-app-pub-6176394344908792/5156701876"
     #endif
     
     func createAd() {
@@ -38,12 +37,7 @@ class FullScreenAdMobManager: NSObject {
         if interstitial?.isReady == true {
             interstitial?.present(fromRootViewController: fromRootViewController)
         } else {
-            if count == 5 {
-                renewAd()
-                count = 0
-                return
-            }
-            count += 1
+            renewAd()
         }
     }
 }

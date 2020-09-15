@@ -63,8 +63,6 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         case .districtSearch:
             fetchCandidates()
         case .candidateSearch:
-            districtLabel.isHidden = false
-            proportionalLabel.isHidden = true
             districtLabel.text = "\(candidates?.first?.name ?? "")에 대한 검색 결과입니다."
             fallthrough
         case .partySearch:

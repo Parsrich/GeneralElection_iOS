@@ -53,7 +53,7 @@ extension SettingViewController: UITableViewDelegate {
         
         if indexPath.row == 0 {
             
-            performSegue(withIdentifier: "IntroduceSegue", sender: self)
+            performSegue(withIdentifier: "SponsorSegue", sender: self)
         } else if indexPath.row == 1 {
             
 

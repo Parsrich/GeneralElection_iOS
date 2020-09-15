@@ -9,5 +9,4 @@
 enum RemoteConfigKey: String {
     case appVersion = "app_version"
     case appStoreUrl = "app_store_url"
-    case introduceMessage = "introduce_message"
 }

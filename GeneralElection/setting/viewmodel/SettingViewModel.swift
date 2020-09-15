@@ -23,7 +23,7 @@ class SettingViewModel: BaseViewModel {
     func setup() {
         settingList.append(contentsOf: ["앱 소개",
             //"후원하기",
-                                        "문의하기",
+                                        "오류 문의",
                                         "오픈소스 라이선스",
                                         "앱 버전: \(Config.appVersion)"])
     }

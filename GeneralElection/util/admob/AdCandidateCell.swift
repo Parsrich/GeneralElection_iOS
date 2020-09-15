@@ -17,7 +17,6 @@ class AdCandidateCell: UITableViewCell {
     var adLoaderDelegate: GADAdLoaderDelegate?
     
     @IBOutlet weak var nativeAdView: GADUnifiedNativeAdView!
-//    @IBOutlet weak var mediaView: GADMediaView!
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var advertisementLabel: UILabel!
@@ -99,11 +98,8 @@ extension AdCandidateCell: GADUnifiedNativeAdLoaderDelegate {
         // Populate the native ad view with the native ad assets.
         // The headline and mediaContent are guaranteed to be present in every native ad.
         headlineLabel?.text = nativeAd.headline
+//        nativeAdView?.mediaView?.mediaContent = nativeAd.mediaContent
         
-        
-//        ////// video
-//        mediaView?.mediaContent = nativeAd.mediaContent
-//
 //        // Some native ads will include a video asset, while others do not. Apps can use the
 //        // GADVideoController's hasVideoContent property to determine if one is present, and adjust their
 //        // UI accordingly.
@@ -117,7 +113,19 @@ extension AdCandidateCell: GADUnifiedNativeAdLoaderDelegate {
 //        else {
 //            print("Ad does not contain a video.")
 //        }
-//        ////// video
+        
+//        // This app uses a fixed width for the GADMediaView and changes its height to match the aspect
+//        // ratio of the media it displays.
+//        if let mediaView = nativeAdView?.mediaView, nativeAd.mediaContent.aspectRatio > 0 {
+//            heightConstraint = NSLayoutConstraint(item: mediaView,
+//                                                  attribute: .height,
+//                                                  relatedBy: .equal,
+//                                                  toItem: mediaView,
+//                                                  attribute: .width,
+//                                                  multiplier: CGFloat(1 / nativeAd.mediaContent.aspectRatio),
+//                                                  constant: 0)
+//            heightConstraint?.isActive = true
+//        }
         
         // These assets are not guaranteed to be present. Check that they are before
         // showing or hiding them.
@@ -144,7 +152,7 @@ extension AdCandidateCell: GADUnifiedNativeAdLoaderDelegate {
         advertisementLabel?.isHidden = nativeAd.advertiser == nil
         
         // In order for the SDK to process touch events properly, user interaction should be disabled.
-        installButton?.isUserInteractionEnabled = false
+        installButton?.isUserInteractionEnabled = true
         
     }
 }
