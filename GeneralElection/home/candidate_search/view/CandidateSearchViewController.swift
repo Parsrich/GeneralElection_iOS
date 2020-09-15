@@ -24,20 +24,12 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var adContainerView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         candidateSearchField.delegate = self
         setupUI()
         bindRx()
-
-        if let adView = AdCandidateSearchView.instanceFromNib() {
-            adContainerView.addSubViewWithFullAutoLayout(subview: adView)
-            NativeAdMobManager.share.createAd(delegate: adView, viewController: self, type: .search)
-            NativeAdMobManager.share.showAd(type: .search)
-        }
     }
     
     func setupUI() {
@@ -50,14 +42,6 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
                                                           alpha: 1.0).cgColor
 
         candidateSearchField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
-        
-        adContainerView.layer.borderWidth = 1
-        adContainerView.layer.borderColor = UIColor.lightGray.cgColor
-        
-        if view.topSafeAreaInset == 20 {
-            self.topConstraint.constant = self.topConstraint.constant - 20
-            view.layoutIfNeeded()
-        }
     }
     
     func bindRx() {

@@ -7,61 +7,27 @@
 //
 
 import GoogleMobileAds
-import RxSwift
 
-enum AdType {
-    case candidate
-    case search
-    case party
-}
 class NativeAdMobManager: NSObject {
     
     static let share = NativeAdMobManager()
-    var candidateAdLoader: GADAdLoader?
-    var searchAdLoader: GADAdLoader?
-    var partyAdLoader: GADAdLoader?
-    #if DEBUG // 네이티브 테스트
-    let candidateAdUnitId = "ca-app-pub-3940256099942544/3986624511"
-    let searchAdUnitId = "ca-app-pub-3940256099942544/3986624511"
-    let partyAdUnitId = "ca-app-pub-3940256099942544/3986624511"
-    #else   // 네이티브 광고 ID
-    let candidateAdUnitId = "ca-app-pub-6176394344908792/5156701876"
-    let searchAdUnitId = "ca-app-pub-6176394344908792/3177228180"
-    let partyAdUnitId = "ca-app-pub-6176394344908792/6924901505"
-    #endif
+    var adLoader: GADAdLoader?
     
-    func createAd(delegate: GADAdLoaderDelegate, viewController: UIViewController, type: AdType) {
-        switch type {
-        case .candidate:
-            candidateAdLoader = GADAdLoader(adUnitID: candidateAdUnitId,
-                rootViewController: viewController,
-                adTypes: [ .unifiedNative ],
-                options: nil)
-            candidateAdLoader?.delegate = delegate
-        case .search:
-            searchAdLoader = GADAdLoader(adUnitID: searchAdUnitId,
-                rootViewController: viewController,
-                adTypes: [ .unifiedNative ],
-                options: nil)
-            searchAdLoader?.delegate = delegate
-        case .party:
-            partyAdLoader = GADAdLoader(adUnitID: partyAdUnitId,
-                rootViewController: viewController,
-                adTypes: [ .unifiedNative ],
-                options: nil)
-            partyAdLoader?.delegate = delegate
-            
-        }
+//    #if DEBUG // 네이티브 테스트
+//    let adUnitId = "ca-app-pub-3940256099942544/3986624511"
+//    #else   // 네이티브 광고 ID
+    let adUnitId = "ca-app-pub-6176394344908792/5156701876"
+//    #endif
+    
+    func createAd(delegate: GADAdLoaderDelegate, viewController: UIViewController) {
+        adLoader = GADAdLoader(adUnitID: adUnitId,
+            rootViewController: viewController,
+            adTypes: [ .unifiedNative ],
+            options: nil)
+        adLoader?.delegate = delegate
     }
     
-    func showAd(type: AdType) {
-        switch type {
-        case .candidate:
-            candidateAdLoader?.load(GADRequest())
-        case .search:
-            searchAdLoader?.load(GADRequest())
-        case .party:
-            partyAdLoader?.load(GADRequest())
-        }
+    func showAd() {
+        adLoader?.load(GADRequest())
     }
 }

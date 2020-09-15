@@ -25,8 +25,6 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     @IBOutlet weak var proportionalLabel: UILabel!
     @IBOutlet weak var candidateViewTopContraint: NSLayoutConstraint!
-    var adHeight: CGFloat = 0.0
-    var adFlag = true
     
     var electionType: ElectionType?
     var electionName: LocationElectionName?
@@ -82,6 +80,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     func setupUI() {
         setShadowViewUnderNavigationController()
+       
         locationLabel.text = viewModel!.electionName.getElectionName(electionType: viewModel!.electionType).replacingOccurrences(of: "_", with: " ")
         
         if let source = sourceResult {
@@ -104,8 +103,8 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         
         districtLabel.text = districtString
         
-//        candidateTableView.rowHeight = UITableView.automaticDimension
-//        candidateTableView.estimatedRowHeight = 130
+        candidateTableView.rowHeight = UITableView.automaticDimension
+        candidateTableView.estimatedRowHeight = 130
     }
     
     func bindRx() {
@@ -170,59 +169,25 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
 }
 
 extension CandidateSearchListResultViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
-        return viewModel!.congressCandidateList.count
+        return viewModel!.congressCandidateList.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0, let cell = tableView.dequeueReusableCell(withIdentifier: AdCandidateCell.className, for: indexPath) as? AdCandidateCell {
-                
-            if adFlag {
-                cell.heightObservable
-                    .subscribe(onNext: { [weak self] height in
-                        self?.adHeight = height
-                        cell.adViewHeightConstraint.constant = height
-                        cell.layoutIfNeeded()
-                        
-                        if height != 0 {
-                            tableView.reloadData()
-                        }
-                        
-                    }).disposed(by: rx.disposeBag)
-                NativeAdMobManager.share.createAd(delegate: cell, viewController: self, type: .candidate)
-                NativeAdMobManager.share.showAd(type: .candidate)
-                adFlag = false
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AdCandidateCell.className, for: indexPath) as? AdCandidateCell,
+            indexPath.row == 0 {
+
+            if cell.setupFlag {
+                NativeAdMobManager.share.createAd(delegate: cell, viewController: self)
+                NativeAdMobManager.share.showAd()
+                cell.setupFlag = false
             }
             
             return cell
         }
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: AdCandidateCell.className, for: indexPath) as? AdCandidateCell,
-//            indexPath.row == 0 {
-//
-//            if adFlag {
-//                cell.heightObservable
-//                    .subscribe(onNext: { [weak self] height in
-//                        self?.adHeight = height
-////                        tableView.reloadRows(at: [indexPath], with: .none)
-//                        tableView.deleteRows(at: [indexPath], with: .fade)
-//                    }).disposed(by: rx.disposeBag)
-//                NativeAdMobManager.share.createAd(delegate: cell, viewController: self)
-//                NativeAdMobManager.share.showAd()
-//                adFlag = false
-//            }
-//
-//            return cell
-//        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateCell.className, for: indexPath) as? CandidateCell else { return UITableViewCell() }
         
-        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row], sourceResult: sourceResult)
+        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row - 1], sourceResult: sourceResult)
         
         return cell
     }
@@ -233,27 +198,22 @@ extension CandidateSearchListResultViewController: UITableViewDataSource {
 extension CandidateSearchListResultViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 0 { return }
+        if indexPath.row == 0 { return }
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController {
             
-            vc.candidate = viewModel!.congressCandidateList[indexPath.row]
+            vc.candidate = viewModel!.congressCandidateList[indexPath.row - 1]
             vc.districtString = viewModel!.districtString
             vc.sourceResult = sourceResult
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return adHeight
-        } else {
-        return 130
-        }
-    }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 130
+        }
+        
         return UITableView.automaticDimension
     }
-    
-    
+
 }
