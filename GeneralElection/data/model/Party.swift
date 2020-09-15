@@ -12,14 +12,12 @@ class Party {
     var name: String?
     var logoImg: URL?
     var websiteUrl: String?
-    var number: Int?
     var proportional: [Candidate]?
     
-    init(name: String?, logoImg: URL?, websiteUrl: String?, number: Int?, proportional: [Candidate]?) {
+    init(name: String?, logoImg: URL?, websiteUrl: String?, proportional: [Candidate]?) {
         self.name = name
         self.logoImg = logoImg
         self.websiteUrl = websiteUrl
-        self.number = number
         self.proportional = proportional
     }
 }
@@ -38,12 +36,11 @@ class PartyMemory {
             guard let candidates = PartyMemory.partyDict?.value(forKey: partyName) as? [NSDictionary],
                 let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else { continue }
             if let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) {
-                let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, number: PartySource.getPartyNumber(party: partyName), proportional: candidateList)
+                let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, proportional: candidateList)
 
                 partyList.append(party)
             }
         }
-        partyList.sort { ($0.number ?? 99) < ($1.number ?? 99) }
         
         return partyList
     }
@@ -158,59 +155,6 @@ class PartySource {
         "한반도미래연합": "https://ww.namu.la/s/a972d419fbacfa881cec8a11f8de70faeb5f765aec4a6902ba696da9ee9255a635bb97ed704aec3ece8816b0f647ba5c04032a1108af886b3166cf26774ad66d50a011b3a8e0d9e685d6c2da16f6927c76a89d438c6225dd40826e02509ddc28a07ac40b6e9c62d5da46f65272f2a7b2",
         "홍익당": "https://w.namu.la/s/57256c814b6f3da93b84253a78b8d3ca8c586be6437ea5c36e3d8c5ba60ed3baf24a119b5b21d043b8de137c7ddc1c01af703ca3cec733afe27435d751c7bfe885fc37ef251ef28b5a2adf14de79e2d4c5424749e1934179b4e38e1ce90524d8"
     ]
-    static let partyNumbers: [String: Int] = [
-        "더불어민주당": 1,
-        "미래통합당": 2,
-        "민생당": 3,
-        "미래한국당": 4,
-        "더불어시민당": 5,
-        "정의당": 6,
-        "우리공화당": 7,
-        "민중당": 8,
-        "한국경제당": 9,
-        "국민의당":10,
-        "친박신당":11,
-        "열린민주당":12,
-        "코리아":13,
-        "가자!평화인권당":14,
-        "가자환경당":15,
-        "공화당":16,
-        "국가혁명배당금당":17,
-        "국민새정당":18,
-        "국민참여신당":19,
-        "기독당":20,
-        "기독자유통일당":21,
-        "기본소득당":22,
-        "깨어있는시민연대당":23,
-        "남북통일당":24,
-        "노동당":25,
-        "녹색당":26,
-        "대한당":27,
-        "대한민국당":28,
-        "미래당":29,
-        "미래민주당":30,
-        "미래자영업당":31,
-        "민중민주당":32,
-        "사이버모바일국민정책당":33,
-        "새누리당":34,
-        "시대전환":35,
-        "여성의당":36,
-        "우리당":37,
-        "자유당":38,
-        "새벽당":39,
-        "정치개혁연합":40,
-        "자영업당":41,
-        "직능자영업당":42,
-        "충청의미래당":43,
-        "친박연대":44,
-        "통일민주당":45,
-        "통합민주당":46,
-        "한국국민당":47,
-        "한국복지당":48,
-        "한나라당":49,
-        "한반도미래연합":50,
-        "홍익당": 51
-    ]
 
     static let partyWebsites = [String: String]()
     
@@ -224,11 +168,5 @@ class PartySource {
         guard let logoUrl = partyLogos[party] else { return nil }
         
         return URL(string: logoUrl)
-    }
-    
-    static func getPartyNumber(party: String) -> Int {
-        guard let number = partyNumbers[party] else { return 0 }
-        
-        return number
     }
 }
