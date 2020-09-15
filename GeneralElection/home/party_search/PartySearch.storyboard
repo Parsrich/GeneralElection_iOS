@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GmarketSansMedium.otf">
-            <string>GmarketSansMedium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Party Search View Controller-->
         <scene sceneID="dGH-8h-p7F">
@@ -20,56 +15,11 @@
                     <view key="view" contentMode="scaleToFill" id="Qva-RV-TcZ" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seP-PH-1J7" customClass="ShadowView" customModule="GeneralElection" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="10"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="GZW-WW-310"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHR-cc-v05">
-                                <rect key="frame" x="20" y="118" width="374" height="675"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="seP-PH-1J7" firstAttribute="leading" secondItem="5dS-Um-ayZ" secondAttribute="leading" id="1G7-sW-CKx"/>
-                            <constraint firstItem="seP-PH-1J7" firstAttribute="top" secondItem="5dS-Um-ayZ" secondAttribute="top" id="5HE-f7-cm1"/>
-                            <constraint firstItem="5dS-Um-ayZ" firstAttribute="trailing" secondItem="seP-PH-1J7" secondAttribute="trailing" id="7hF-5G-vyp"/>
-                            <constraint firstItem="sHR-cc-v05" firstAttribute="leading" secondItem="5dS-Um-ayZ" secondAttribute="leading" constant="20" id="KZu-Ai-cuK"/>
-                            <constraint firstItem="sHR-cc-v05" firstAttribute="top" secondItem="seP-PH-1J7" secondAttribute="bottom" constant="20" id="Wyn-Sv-gj8"/>
-                            <constraint firstItem="5dS-Um-ayZ" firstAttribute="bottom" secondItem="sHR-cc-v05" secondAttribute="bottom" constant="20" id="ZsD-qy-FO3"/>
-                            <constraint firstItem="5dS-Um-ayZ" firstAttribute="trailing" secondItem="sHR-cc-v05" secondAttribute="trailing" constant="20" id="oQz-fb-xR2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5dS-Um-ayZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_home" selectedImage="tab_home_select" id="BoF-2L-XPr"/>
-                    <navigationItem key="navigationItem" id="UXc-Zd-Xl0">
-                        <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="4oE-mf-z16">
-                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정당 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjg-1y-gt5">
-                                    <rect key="frame" x="-50" y="-12" width="100" height="24"/>
-                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="24"/>
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstItem="Tjg-1y-gt5" firstAttribute="centerX" secondItem="4oE-mf-z16" secondAttribute="centerX" id="VTA-Gn-pKe"/>
-                                <constraint firstItem="Tjg-1y-gt5" firstAttribute="centerY" secondItem="4oE-mf-z16" secondAttribute="centerY" id="t8j-oI-ZE0"/>
-                            </constraints>
-                        </view>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="PDZ-i0-Bn1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URq-dL-fVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_home" width="48" height="48"/>
-        <image name="tab_home_select" width="48" height="48"/>
+        <image name="tab_home" width="50" height="50"/>
+        <image name="tab_home_select" width="50" height="50"/>
     </resources>
 </document>

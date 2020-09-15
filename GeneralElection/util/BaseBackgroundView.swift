@@ -22,11 +22,10 @@ class BaseBackgroundView: UIView {
     }
     
     func setup() {
-        let backgroundImageView = UIImageView(frame: self.frame)
-        backgroundImageView.image = UIImage(named: "img_background")
-        backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.clipsToBounds = false
-        addSubViewWithFullAutoLayout(subview: backgroundImageView, bottom: nil)
-        sendSubviewToBack(backgroundImageView)
+        let imageView = UIImageView(frame: self.frame)
+        imageView.image = UIImage(named: "img_background")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = false
+        addSubViewWithFullAutoLayout(subview: imageView, bottom: nil)
     }
 }

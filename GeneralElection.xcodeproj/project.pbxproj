@@ -12,7 +12,6 @@
 		CA2DCE24241DF085006A304D /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2DCE21241DF084006A304D /* GmarketSansMedium.otf */; };
 		CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2DCE22241DF084006A304D /* GmarketSansBold.otf */; };
 		CA2DCE26241DF085006A304D /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2DCE23241DF085006A304D /* GmarketSansLight.otf */; };
-		CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2DCE27241E7931006A304D /* ShadowView.swift */; };
 		CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F982241369FD00C76E2E /* AppDelegate.swift */; };
 		CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F986241369FD00C76E2E /* HomeViewController.swift */; };
 		CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA46F988241369FD00C76E2E /* Main.storyboard */; };
@@ -54,7 +53,6 @@
 		CA2DCE21241DF084006A304D /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
 		CA2DCE22241DF084006A304D /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		CA2DCE23241DF085006A304D /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
-		CA2DCE27241E7931006A304D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		CA46F97F241369FD00C76E2E /* GeneralElection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneralElection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46F982241369FD00C76E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA46F986241369FD00C76E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				CA46F9C0241387F500C76E2E /* BaseViewControllerWithViewModel.swift */,
 				CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */,
 				CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */,
-				CA2DCE27241E7931006A304D /* ShadowView.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -509,7 +506,6 @@
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
 				CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */,
 				CA46F9A52413742500C76E2E /* ArrayExtension.swift in Sources */,
-				CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */,
 				CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */,
 				CA46F9C1241387F500C76E2E /* BaseViewControllerWithViewModel.swift in Sources */,
 				CA46F9BD2413873800C76E2E /* BaseViewController.swift in Sources */,
