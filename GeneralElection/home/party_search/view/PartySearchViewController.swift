@@ -9,9 +9,6 @@
 import UIKit
 
 class PartySearchViewController: BaseViewControllerWithViewModel<PartySearchViewModel> {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,20 +18,4 @@ class PartySearchViewController: BaseViewControllerWithViewModel<PartySearchView
     func setupUI() {
         setShadowViewUnderNavigationController()
     }
-}
-
-extension PartySearchViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    
-}
-
-extension PartySearchViewController: UICollectionViewDelegateFlowLayout {
-    
 }

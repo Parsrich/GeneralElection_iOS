@@ -15,10 +15,6 @@ class Party: Decodable {
     var birye: [Int]?
 }
 
-class PartyMemory {
-    static var list = [Party]()
-}
-
 class PartySource {
     
     static let partyColors: [String: String] = [
