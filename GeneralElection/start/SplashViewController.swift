@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import RxSwift
 
 class SplashViewController: UIViewController {
     
@@ -48,15 +47,5 @@ class SplashViewController: UIViewController {
                 }
             }
         }
-        
-        if CandidateMemory.candidateDict == nil {
-            FirebaseHelper.fetchDatas(path: .candidateName)
-                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-                .subscribe(onNext: { candidateDict in
-                    CandidateMemory.candidateDict = candidateDict
-                }).dispose()
-            return
-        }
-
     }
 }
