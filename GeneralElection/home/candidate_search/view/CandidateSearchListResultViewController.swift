@@ -30,22 +30,21 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     var adHeight: CGFloat = 0.0
     var adFlag = true
     
-//    var electionType: ElectionType?
-//    var electionName: LocationElectionName?
+    var electionType: ElectionType?
+    var electionName: LocationElectionName?
     var districtString: String?
     
     var sourceResult: SourceResult?
-    
-//    var candidates: [Candidate]?
+    var candidates: [Candidate]?
     var partyName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let candidates = candidates {
-//            viewModel!.congressCandidateList.removeAll()
-//            viewModel!.congressCandidateList = candidates.sorted { Int($0.recommend ?? "0") ?? 0 < Int($1.recommend ?? "0") ?? 0 }
-//        }
+        if let candidates = candidates {
+            viewModel!.congressCandidateList.removeAll()
+            viewModel!.congressCandidateList = candidates.sorted { Int($0.recommend ?? "0") ?? 0 < Int($1.recommend ?? "0") ?? 0 }
+        }
         if let districtString = districtString {
             viewModel!.districtString = districtString
         }
@@ -63,7 +62,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
         case .candidateSearch:
             districtLabel.isHidden = false
             proportionalLabel.isHidden = true
-            districtLabel.text = "\(viewModel!.congressCandidateList.first?.name ?? "")에 대한 검색 결과입니다."
+            districtLabel.text = "\(candidates?.first?.name ?? "")에 대한 검색 결과입니다."
             fallthrough
         case .partySearch:
             candidateViewTopContraint.priority = UILayoutPriority.defaultHigh
@@ -88,7 +87,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
                 districtLabel.isHidden = true
                 mapIconView.isHidden = true
                 proportionalLabel.isHidden = false
-                emptyView.isHidden = (viewModel!.congressCandidateList.count ?? 0) != 0
+                emptyView.isHidden = (candidates?.count ?? 0) != 0
 //            case .candidateSearch:
 //                districtLabelLeadingConstraint.priority = .defaultHigh
 //                emptyView.isHidden = (candidates?.count ?? 0) != 0
