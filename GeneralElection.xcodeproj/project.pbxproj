@@ -64,9 +64,6 @@
 		CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */; };
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
 		CAABF64C2435B1F5000F5172 /* CandidateNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */; };
-		CAAC705C24384CA300C4A837 /* PartyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705B24384CA300C4A837 /* PartyDetailViewController.swift */; };
-		CAAC705E24384CD400C4A837 /* PartyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705D24384CD400C4A837 /* PartyDetailViewModel.swift */; };
-		CAAC706024385C0C00C4A837 /* PartyPromiseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705F24385C0C00C4A837 /* PartyPromiseCell.swift */; };
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
 		CAD575532436E06200FF8E8D /* PartyPromiseBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */; };
@@ -142,9 +139,6 @@
 		CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewModel.swift; sourceTree = "<group>"; };
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateNameCell.swift; sourceTree = "<group>"; };
-		CAAC705B24384CA300C4A837 /* PartyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailViewController.swift; sourceTree = "<group>"; };
-		CAAC705D24384CD400C4A837 /* PartyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailViewModel.swift; sourceTree = "<group>"; };
-		CAAC705F24385C0C00C4A837 /* PartyPromiseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromiseCell.swift; sourceTree = "<group>"; };
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromiseBaseResponse.swift; sourceTree = "<group>"; };
@@ -457,7 +451,6 @@
 			isa = PBXGroup;
 			children = (
 				CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */,
-				CAAC705D24384CD400C4A837 /* PartyDetailViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -467,8 +460,6 @@
 			children = (
 				CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */,
 				CA74EFFB2433929C00775A56 /* PartyItemCell.swift */,
-				CAAC705B24384CA300C4A837 /* PartyDetailViewController.swift */,
-				CAAC705F24385C0C00C4A837 /* PartyPromiseCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -703,7 +694,6 @@
 				CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */,
 				CAF613322421E7C200D26D31 /* Party.swift in Sources */,
 				CA46F9C1241387F500C76E2E /* BaseViewControllerWithViewModel.swift in Sources */,
-				CAAC705C24384CA300C4A837 /* PartyDetailViewController.swift in Sources */,
 				CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */,
 				CAF613342421E99B00D26D31 /* CityCell.swift in Sources */,
 				CAD575532436E06200FF8E8D /* PartyPromiseBaseResponse.swift in Sources */,
@@ -713,11 +703,9 @@
 				CA46F9BD2413873800C76E2E /* BaseViewController.swift in Sources */,
 				CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */,
 				CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */,
-				CAAC706024385C0C00C4A837 /* PartyPromiseCell.swift in Sources */,
 				CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */,
 				CA3D865D2425E38D00872223 /* District.swift in Sources */,
 				CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */,
-				CAAC705E24384CD400C4A837 /* PartyDetailViewModel.swift in Sources */,
 				CA46F9B824137DCF00C76E2E /* SplashSegue.swift in Sources */,
 				CA65EF862433465B0016ACBD /* CandidateDetailCell.swift in Sources */,
 				CA46F9B624137AD400C76E2E /* SplashViewController.swift in Sources */,

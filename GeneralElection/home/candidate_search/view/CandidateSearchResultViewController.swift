@@ -57,7 +57,6 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
         
         setupUI()
         setup()
-        bindRx()
     }
     
     func setupUI() {
@@ -119,10 +118,6 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
                           placeholder: UIImage(named: "ic_user_empty"))
         }
         
-    }
-    
-    func bindRx() {
-        
         imageExpandButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
@@ -137,7 +132,6 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
                 if let vc = self?.storyboard?.instantiateViewController(withIdentifier: CandidateDetailWebViewController.className) as? CandidateDetailWebViewController {
                    
                     vc.url = self?.candidate?.getPersonalInfoUrl()
-                    vc.navigationTitle = "후보자 상세"
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
             })
