@@ -75,6 +75,7 @@ extension PartySearchViewController: UICollectionViewDelegateFlowLayout, UIColle
             vc.partyName = viewModel!.partyList[indexPath.row].name
             vc.candidateList = viewModel!.partyList[indexPath.row].proportional
                         
+            vc.partyImageUrl = viewModel!.partyList[indexPath.row].logoImg
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

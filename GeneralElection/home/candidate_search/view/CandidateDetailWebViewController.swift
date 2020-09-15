@@ -30,18 +30,5 @@ class CandidateDetailWebViewController: BaseViewController {
         
         navigationTitleLabel.text = navigationTitle
         setTransparentNavigationController(false)
-        webView.uiDelegate = self
-    }
-    
-    
-}
-
-extension CandidateDetailWebViewController: WKUIDelegate {
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        
-        if navigationAction.targetFrame == nil, navigationAction.request.url != nil {
-            UIApplication.shared.open(navigationAction.request.url!, options: [:], completionHandler: nil)
-        }
-        return nil
     }
 }
