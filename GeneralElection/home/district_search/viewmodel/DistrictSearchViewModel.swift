@@ -19,6 +19,12 @@ enum ElectionType: String {
     case guCouncil = "구∙시∙군의회의원선거"
 }
 
+enum DescriptionLabelText: String {
+    case si = "* 시∙도를 선택하세요."
+    case gu = "* 구∙시∙군을 선택하세요."
+    case dong = "* 동∙면∙읍을 선택하세요."
+}
+
 enum LocationType: String {
     case si
     case gu
@@ -35,6 +41,19 @@ class DistrictSearchViewModel: BaseViewModel {
     
     var locationType: LocationType = .si
     var electionType: ElectionType = .nationalAssembly
+    
+    var locationText: DescriptionLabelText {
+        switch self.locationType {
+        case .si:
+            return DescriptionLabelText.si
+        case .gu:
+            return DescriptionLabelText.gu
+        case .dong:
+            return DescriptionLabelText.dong
+        default:
+            return DescriptionLabelText.dong
+        }
+    }
             
     required init() {
         locationSiList = [LocationSi]()
@@ -108,29 +127,28 @@ class DistrictSearchViewModel: BaseViewModel {
     /// # 지역 누르면 현재 보여지는 TableView의 지역 단위를 설정해줌
     /// ## Parameters
     /// - isBack: 상위 지역을 선택해야할 경우 true, 하위로 가면 false
-    func switchLocationType(_ locationType: LocationType) {
-        self.locationType = locationType
-//        switch self.locationType {
-//        case .si:
-//            if isBack { break }
-//            locationType = .gu
-//        case .gu:
-//            if isBack {
-//                locationType = .si
-//                break
-//            }
-//            locationType = .dong
-//        case .dong:
-//            if isBack {
-//                locationType = .gu
-//                break
-//            }
-//            locationType = .selectedDone
-//        case .selectedDone:
-//            if isBack {
-//                locationType = .dong
-//            }
-//        }
+    func switchLocationType(_ isBack: Bool) {
+        switch locationType {
+        case .si:
+            if isBack { break }
+            locationType = .gu
+        case .gu:
+            if isBack {
+                locationType = .si
+                break
+            }
+            locationType = .dong
+        case .dong:
+            if isBack {
+                locationType = .gu
+                break
+            }
+            locationType = .selectedDone
+        case .selectedDone:
+            if isBack {
+                locationType = .dong
+            }
+        }
     }
     
     func switchElectionType(electionType: ElectionType) {
