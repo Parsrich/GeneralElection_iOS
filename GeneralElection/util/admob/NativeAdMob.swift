@@ -12,6 +12,7 @@ import RxSwift
 enum AdType {
     case candidate
     case search
+//    case party
 }
 class NativeAdMobManager: NSObject {
     
