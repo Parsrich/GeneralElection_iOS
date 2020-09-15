@@ -857,8 +857,7 @@
 			baseConfigurationReference = 83AFF34B5AE768ED5C7CDFED /* Pods-GeneralElection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -867,9 +866,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
+				PRODUCT_BUNDLE_IDENTIFIER = lets.vote.GeneralElection;
 				PRODUCT_NAME = "총선";
-				PROVISIONING_PROFILE_SPECIFIER = "Minki Chung profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -880,8 +878,7 @@
 			baseConfigurationReference = 93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -890,9 +887,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
+				PRODUCT_BUNDLE_IDENTIFIER = lets.vote.GeneralElection;
 				PRODUCT_NAME = "총선";
-				PROVISIONING_PROFILE_SPECIFIER = "Minki Chung profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

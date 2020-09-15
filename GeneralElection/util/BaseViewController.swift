@@ -73,7 +73,7 @@ class BaseViewController: UIViewController {
         
         let color = UIColor(red: 127.toRgb, green: 111.toRgb, blue: 237.toRgb, alpha: 1.0)
         activityIndicator.color = color
-        activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
+        activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         view.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true

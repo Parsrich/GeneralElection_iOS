@@ -25,7 +25,5 @@ class CandidateDetailWebViewController: BaseViewController {
             let urlRequest = URLRequest(url: url)
             webView.load(urlRequest)
         }
-        
-        setTransparentNavigationController(false)
     }
 }
