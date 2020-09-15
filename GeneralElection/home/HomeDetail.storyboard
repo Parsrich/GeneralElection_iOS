@@ -414,125 +414,12 @@
                                                     <constraint firstAttribute="width" secondItem="d4a-XS-dAW" secondAttribute="height" multiplier="4:5" id="5rm-jG-FKd"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-SD-eIg">
-                                                <rect key="frame" x="122" y="0.0" width="226" height="140"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-Pi-WRv">
-                                                        <rect key="frame" x="8" y="0.0" width="49" height="26"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="기호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8w-kI-bmf">
-                                                                <rect key="frame" x="10" y="5" width="29" height="16"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="j8w-kI-bmf" secondAttribute="bottom" constant="5" id="2iN-H3-HyD"/>
-                                                            <constraint firstItem="j8w-kI-bmf" firstAttribute="top" secondItem="EFb-Pi-WRv" secondAttribute="top" constant="5" id="CxH-wK-Zsk"/>
-                                                            <constraint firstItem="j8w-kI-bmf" firstAttribute="leading" secondItem="EFb-Pi-WRv" secondAttribute="leading" constant="10" id="Iwh-DY-9VV"/>
-                                                            <constraint firstAttribute="height" constant="26" id="n9N-Ws-a24"/>
-                                                            <constraint firstAttribute="trailing" secondItem="j8w-kI-bmf" secondAttribute="trailing" constant="10" id="oma-HO-Gag"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRA-YT-aFm">
-                                                        <rect key="frame" x="8" y="41" width="37" height="19"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="19"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1s-TO-5WC">
-                                                        <rect key="frame" x="8" y="68" width="54" height="14.5"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
-                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소록" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCm-cH-hsz">
-                                                        <rect key="frame" x="8" y="88" width="40.5" height="17"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Qce-WM-dzU"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
-                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuQ-23-dcI">
-                                                        <rect key="frame" x="8" y="113" width="101" height="27"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
-                                                        <state key="normal" title="제출 자료 보기 &gt;">
-                                                            <color key="titleColor" red="0.38665050270000001" green="0.35038790110000001" blue="0.79567140339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-Oe-DU9">
-                                                        <rect key="frame" x="65" y="0.0" width="53.5" height="26"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="당 명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NP-fG-F2G">
-                                                                <rect key="frame" x="10" y="5" width="33.5" height="16"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="4NP-fG-F2G" secondAttribute="trailing" constant="10" id="LzM-lU-BOZ"/>
-                                                            <constraint firstItem="4NP-fG-F2G" firstAttribute="leading" secondItem="fd7-Oe-DU9" secondAttribute="leading" constant="10" id="Mtt-gJ-A0W"/>
-                                                            <constraint firstAttribute="height" constant="26" id="Uv4-Hn-lln"/>
-                                                            <constraint firstItem="4NP-fG-F2G" firstAttribute="top" secondItem="fd7-Oe-DU9" secondAttribute="top" constant="5" id="gjJ-Gz-kP0"/>
-                                                            <constraint firstAttribute="bottom" secondItem="4NP-fG-F2G" secondAttribute="bottom" constant="5" id="wBW-Ga-i3V"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="q1s-TO-5WC" firstAttribute="leading" secondItem="FRA-YT-aFm" secondAttribute="leading" id="1kI-NJ-vNe"/>
-                                                    <constraint firstItem="q1s-TO-5WC" firstAttribute="top" secondItem="FRA-YT-aFm" secondAttribute="bottom" constant="8" id="B08-wD-Vde"/>
-                                                    <constraint firstItem="fd7-Oe-DU9" firstAttribute="top" secondItem="c5e-SD-eIg" secondAttribute="top" id="Cds-Tv-Pw2"/>
-                                                    <constraint firstItem="JuQ-23-dcI" firstAttribute="top" secondItem="FCm-cH-hsz" secondAttribute="bottom" constant="8" id="DlQ-CF-BDF"/>
-                                                    <constraint firstItem="FRA-YT-aFm" firstAttribute="top" secondItem="j8w-kI-bmf" secondAttribute="bottom" constant="20" id="Hgo-8G-bVV"/>
-                                                    <constraint firstItem="FRA-YT-aFm" firstAttribute="leading" secondItem="c5e-SD-eIg" secondAttribute="leading" constant="8" id="K0x-OO-lot"/>
-                                                    <constraint firstItem="FCm-cH-hsz" firstAttribute="top" secondItem="q1s-TO-5WC" secondAttribute="bottom" constant="5.5" id="d94-xj-7EM"/>
-                                                    <constraint firstItem="fd7-Oe-DU9" firstAttribute="leading" secondItem="EFb-Pi-WRv" secondAttribute="trailing" constant="8" id="h0t-d7-LvX"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fd7-Oe-DU9" secondAttribute="trailing" constant="10" id="hDG-ko-IiI"/>
-                                                    <constraint firstItem="JuQ-23-dcI" firstAttribute="leading" secondItem="FRA-YT-aFm" secondAttribute="leading" id="lCg-51-sCN"/>
-                                                    <constraint firstItem="EFb-Pi-WRv" firstAttribute="top" secondItem="c5e-SD-eIg" secondAttribute="top" id="o21-VJ-Whh"/>
-                                                    <constraint firstItem="EFb-Pi-WRv" firstAttribute="leading" secondItem="c5e-SD-eIg" secondAttribute="leading" constant="8" id="pX1-wr-mOT"/>
-                                                    <constraint firstItem="FCm-cH-hsz" firstAttribute="leading" secondItem="FRA-YT-aFm" secondAttribute="leading" id="tAt-wx-oYd"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="c5e-SD-eIg" firstAttribute="leading" secondItem="d4a-XS-dAW" secondAttribute="trailing" constant="10" id="3qE-BM-aEF"/>
                                             <constraint firstItem="d4a-XS-dAW" firstAttribute="top" secondItem="Sar-uk-7tS" secondAttribute="top" id="4QP-aA-v2E"/>
-                                            <constraint firstAttribute="bottom" secondItem="c5e-SD-eIg" secondAttribute="bottom" id="9hf-a8-AFW"/>
-                                            <constraint firstItem="c5e-SD-eIg" firstAttribute="top" secondItem="Sar-uk-7tS" secondAttribute="top" id="O6H-8N-fMD"/>
                                             <constraint firstAttribute="bottom" secondItem="d4a-XS-dAW" secondAttribute="bottom" id="QMD-Js-Oc9"/>
                                             <constraint firstAttribute="height" constant="140" id="T06-hD-7ff"/>
-                                            <constraint firstAttribute="trailing" secondItem="c5e-SD-eIg" secondAttribute="trailing" constant="10" id="X5R-gM-SSu"/>
                                             <constraint firstItem="d4a-XS-dAW" firstAttribute="leading" secondItem="Sar-uk-7tS" secondAttribute="leading" id="YcV-Dk-gmg"/>
                                         </constraints>
                                     </view>
@@ -592,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1l-jC-GCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828.985507246377" y="926.78571428571422"/>
+            <point key="canvasLocation" x="2830" y="927"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KLt-hV-pIz">
@@ -719,7 +606,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후보자 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-sY-Iuy">
-                                    <rect key="frame" x="-61.5" y="-12" width="123" height="24"/>
+                                    <rect key="frame" x="-55.5" y="-14" width="111" height="28"/>
                                     <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="24"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
