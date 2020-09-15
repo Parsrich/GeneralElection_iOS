@@ -21,121 +21,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-wS-NBg">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pb-xW-WCu">
                                 <rect key="frame" x="20" y="108" width="374" height="685"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pb-xW-WCu">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="750"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYn-2J-fO6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="411"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYn-2J-fO6">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="450"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 방법" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-De-hmX">
-                                                        <rect key="frame" x="10" y="20" width="354" height="21"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="21"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-3B-iOp">
-                                                        <rect key="frame" x="0.0" y="61" width="374" height="379"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-wl-6AZ">
-                                                        <rect key="frame" x="0.0" y="449" width="374" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="h2Y-Qc-hWS"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 방법" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-De-hmX">
+                                                <rect key="frame" x="10" y="10" width="354" height="21"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-3B-iOp">
+                                                <rect key="frame" x="0.0" y="41" width="374" height="369"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="XiI-De-hmX" secondAttribute="trailing" constant="10" id="2Uv-fN-1Uj"/>
-                                                    <constraint firstItem="XiI-De-hmX" firstAttribute="top" secondItem="MYn-2J-fO6" secondAttribute="top" constant="20" id="GAF-zh-zPx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rKY-wl-6AZ" secondAttribute="trailing" id="GjD-oe-Kp1"/>
-                                                    <constraint firstItem="p4H-3B-iOp" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" id="Hqg-sM-iCf"/>
-                                                    <constraint firstItem="XiI-De-hmX" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" constant="10" id="N7E-dQ-6Dm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="p4H-3B-iOp" secondAttribute="trailing" id="ULo-8O-01x"/>
-                                                    <constraint firstAttribute="bottom" secondItem="rKY-wl-6AZ" secondAttribute="bottom" id="YqL-0J-iHS"/>
-                                                    <constraint firstItem="rKY-wl-6AZ" firstAttribute="top" secondItem="p4H-3B-iOp" secondAttribute="bottom" constant="9" id="cz5-RS-3hE"/>
-                                                    <constraint firstItem="p4H-3B-iOp" firstAttribute="top" secondItem="XiI-De-hmX" secondAttribute="bottom" constant="20" id="k6y-EC-K47"/>
-                                                    <constraint firstItem="rKY-wl-6AZ" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" id="lTF-59-zt4"/>
-                                                    <constraint firstAttribute="height" constant="450" id="wI2-Bw-Adk"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-rE-Uan">
-                                                <rect key="frame" x="0.0" y="450" width="374" height="300"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 21대 국회의원 선출 안내" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG2-SA-8ne">
-                                                        <rect key="frame" x="10" y="20" width="354" height="21"/>
-                                                        <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="21"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-Tt-9z6" customClass="YTPlayerView">
-                                                        <rect key="frame" x="10" y="61" width="354" height="229"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-wl-6AZ">
+                                                <rect key="frame" x="0.0" y="410" width="374" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Of9-Tt-9z6" secondAttribute="trailing" constant="10" id="9VG-Dh-gcI"/>
-                                                    <constraint firstItem="oG2-SA-8ne" firstAttribute="top" secondItem="vi7-rE-Uan" secondAttribute="top" constant="20" id="AK2-oU-mXv"/>
-                                                    <constraint firstItem="Of9-Tt-9z6" firstAttribute="leading" secondItem="vi7-rE-Uan" secondAttribute="leading" constant="10" id="FkE-34-7Wh"/>
-                                                    <constraint firstAttribute="height" constant="300" id="Hf9-as-VQo"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Of9-Tt-9z6" secondAttribute="bottom" constant="10" id="V3Y-Id-QfP"/>
-                                                    <constraint firstItem="oG2-SA-8ne" firstAttribute="leading" secondItem="vi7-rE-Uan" secondAttribute="leading" constant="10" id="kiO-Ie-UAc"/>
-                                                    <constraint firstAttribute="trailing" secondItem="oG2-SA-8ne" secondAttribute="trailing" constant="10" id="nPe-1a-wlg"/>
-                                                    <constraint firstItem="Of9-Tt-9z6" firstAttribute="top" secondItem="oG2-SA-8ne" secondAttribute="bottom" constant="20" id="t27-om-bOh"/>
+                                                    <constraint firstAttribute="height" constant="1" id="h2Y-Qc-hWS"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="vi7-rE-Uan" firstAttribute="top" secondItem="MYn-2J-fO6" secondAttribute="bottom" id="3Ca-aF-COi"/>
-                                            <constraint firstItem="MYn-2J-fO6" firstAttribute="leading" secondItem="4Pb-xW-WCu" secondAttribute="leading" id="8ea-BE-AYn"/>
-                                            <constraint firstAttribute="bottom" secondItem="vi7-rE-Uan" secondAttribute="bottom" id="AZs-n3-bhV"/>
-                                            <constraint firstAttribute="trailing" secondItem="MYn-2J-fO6" secondAttribute="trailing" id="M1H-Br-ddZ"/>
-                                            <constraint firstItem="vi7-rE-Uan" firstAttribute="leading" secondItem="4Pb-xW-WCu" secondAttribute="leading" id="Z4p-wp-JQ1"/>
-                                            <constraint firstAttribute="trailing" secondItem="vi7-rE-Uan" secondAttribute="trailing" id="gTY-NA-7Zg"/>
-                                            <constraint firstItem="MYn-2J-fO6" firstAttribute="top" secondItem="4Pb-xW-WCu" secondAttribute="top" id="u4i-Q8-mmK"/>
+                                            <constraint firstAttribute="trailing" secondItem="XiI-De-hmX" secondAttribute="trailing" constant="10" id="2Uv-fN-1Uj"/>
+                                            <constraint firstItem="XiI-De-hmX" firstAttribute="top" secondItem="MYn-2J-fO6" secondAttribute="top" constant="10" id="GAF-zh-zPx"/>
+                                            <constraint firstAttribute="trailing" secondItem="rKY-wl-6AZ" secondAttribute="trailing" id="GjD-oe-Kp1"/>
+                                            <constraint firstItem="p4H-3B-iOp" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" id="Hqg-sM-iCf"/>
+                                            <constraint firstItem="XiI-De-hmX" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" constant="10" id="N7E-dQ-6Dm"/>
+                                            <constraint firstAttribute="trailing" secondItem="p4H-3B-iOp" secondAttribute="trailing" id="ULo-8O-01x"/>
+                                            <constraint firstAttribute="bottom" secondItem="rKY-wl-6AZ" secondAttribute="bottom" id="YqL-0J-iHS"/>
+                                            <constraint firstItem="rKY-wl-6AZ" firstAttribute="top" secondItem="p4H-3B-iOp" secondAttribute="bottom" id="cz5-RS-3hE"/>
+                                            <constraint firstItem="p4H-3B-iOp" firstAttribute="top" secondItem="XiI-De-hmX" secondAttribute="bottom" constant="10" id="k6y-EC-K47"/>
+                                            <constraint firstItem="rKY-wl-6AZ" firstAttribute="leading" secondItem="MYn-2J-fO6" secondAttribute="leading" id="lTF-59-zt4"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadow">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-rE-Uan">
+                                        <rect key="frame" x="0.0" y="411" width="374" height="274"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 21대 국회의원 선출 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG2-SA-8ne">
+                                                <rect key="frame" x="10" y="10" width="354" height="21"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-Tt-9z6" customClass="YTPlayerView">
+                                                <rect key="frame" x="0.0" y="41" width="374" height="233"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Of9-Tt-9z6" secondAttribute="trailing" id="9VG-Dh-gcI"/>
+                                            <constraint firstItem="oG2-SA-8ne" firstAttribute="top" secondItem="vi7-rE-Uan" secondAttribute="top" constant="10" id="AK2-oU-mXv"/>
+                                            <constraint firstItem="Of9-Tt-9z6" firstAttribute="leading" secondItem="vi7-rE-Uan" secondAttribute="leading" id="FkE-34-7Wh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Of9-Tt-9z6" secondAttribute="bottom" id="V3Y-Id-QfP"/>
+                                            <constraint firstItem="oG2-SA-8ne" firstAttribute="leading" secondItem="vi7-rE-Uan" secondAttribute="leading" constant="10" id="kiO-Ie-UAc"/>
+                                            <constraint firstAttribute="trailing" secondItem="oG2-SA-8ne" secondAttribute="trailing" constant="10" id="nPe-1a-wlg"/>
+                                            <constraint firstItem="Of9-Tt-9z6" firstAttribute="top" secondItem="oG2-SA-8ne" secondAttribute="bottom" constant="10" id="t27-om-bOh"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="4Pb-xW-WCu" firstAttribute="centerX" secondItem="Vp7-wS-NBg" secondAttribute="centerX" id="0fM-28-XBr"/>
-                                    <constraint firstAttribute="bottom" secondItem="4Pb-xW-WCu" secondAttribute="bottom" id="D08-Jo-5RS"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Pb-xW-WCu" secondAttribute="trailing" id="HxA-za-L1Z"/>
-                                    <constraint firstItem="4Pb-xW-WCu" firstAttribute="top" secondItem="Vp7-wS-NBg" secondAttribute="top" id="RcQ-Xd-aYO"/>
-                                    <constraint firstItem="4Pb-xW-WCu" firstAttribute="leading" secondItem="Vp7-wS-NBg" secondAttribute="leading" id="uWR-ui-n51"/>
+                                    <constraint firstItem="vi7-rE-Uan" firstAttribute="top" secondItem="MYn-2J-fO6" secondAttribute="bottom" id="3Ca-aF-COi"/>
+                                    <constraint firstItem="MYn-2J-fO6" firstAttribute="leading" secondItem="4Pb-xW-WCu" secondAttribute="leading" id="8ea-BE-AYn"/>
+                                    <constraint firstAttribute="bottom" secondItem="vi7-rE-Uan" secondAttribute="bottom" id="AZs-n3-bhV"/>
+                                    <constraint firstAttribute="trailing" secondItem="MYn-2J-fO6" secondAttribute="trailing" id="M1H-Br-ddZ"/>
+                                    <constraint firstItem="vi7-rE-Uan" firstAttribute="leading" secondItem="4Pb-xW-WCu" secondAttribute="leading" id="Z4p-wp-JQ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="vi7-rE-Uan" secondAttribute="trailing" id="gTY-NA-7Zg"/>
+                                    <constraint firstItem="MYn-2J-fO6" firstAttribute="height" secondItem="4Pb-xW-WCu" secondAttribute="height" multiplier="0.6" id="qRg-cj-ChN"/>
+                                    <constraint firstItem="MYn-2J-fO6" firstAttribute="top" secondItem="4Pb-xW-WCu" secondAttribute="top" id="u4i-Q8-mmK"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="yA6-gl-Xcg"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="gD7-dn-l9z"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadow">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vIb-BC-MP0" firstAttribute="trailing" secondItem="Vp7-wS-NBg" secondAttribute="trailing" constant="20" id="5gu-XN-ect"/>
-                            <constraint firstItem="vIb-BC-MP0" firstAttribute="bottom" secondItem="Vp7-wS-NBg" secondAttribute="bottom" constant="20" id="HfS-3w-lxX"/>
-                            <constraint firstItem="Vp7-wS-NBg" firstAttribute="top" secondItem="vIb-BC-MP0" secondAttribute="top" constant="20" id="bRh-hg-HeS"/>
-                            <constraint firstItem="Vp7-wS-NBg" firstAttribute="leading" secondItem="vIb-BC-MP0" secondAttribute="leading" constant="20" id="ftS-vw-tIO"/>
+                            <constraint firstItem="4Pb-xW-WCu" firstAttribute="top" secondItem="vIb-BC-MP0" secondAttribute="top" constant="20" id="VPg-9Z-tRh"/>
+                            <constraint firstItem="4Pb-xW-WCu" firstAttribute="leading" secondItem="vIb-BC-MP0" secondAttribute="leading" constant="20" id="Xss-ZG-125"/>
+                            <constraint firstItem="vIb-BC-MP0" firstAttribute="bottom" secondItem="4Pb-xW-WCu" secondAttribute="bottom" constant="20" id="qu9-fH-NH3"/>
+                            <constraint firstItem="vIb-BC-MP0" firstAttribute="trailing" secondItem="4Pb-xW-WCu" secondAttribute="trailing" constant="20" id="soj-vZ-0XE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>
                     </view>
@@ -147,7 +123,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-Qq-Gmx">
-                                    <rect key="frame" x="-50" y="-12" width="100" height="24"/>
+                                    <rect key="frame" x="-45" y="-14" width="90" height="28"/>
                                     <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="24"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -163,7 +139,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="electionVideoView" destination="Of9-Tt-9z6" id="kKX-DQ-0i1"/>
-                        <outlet property="scrollView" destination="Vp7-wS-NBg" id="5Gm-44-N19"/>
                         <outlet property="voteMethodView" destination="p4H-3B-iOp" id="Ytd-b5-G9T"/>
                         <outlet property="voteMethodViewContainer" destination="MYn-2J-fO6" id="Te8-Nd-zs2"/>
                         <outlet property="youtubePlayerView" destination="Of9-Tt-9z6" id="JIE-27-Aea"/>

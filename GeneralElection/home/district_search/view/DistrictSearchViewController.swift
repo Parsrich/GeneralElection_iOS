@@ -29,14 +29,6 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
         setup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if viewModel!.locationType == .selectedDone {
-            viewModel!.switchLocationType(true)
-        }
-    }
-    
     func setup() {
         fetchLocation()
     }

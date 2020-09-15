@@ -15,7 +15,6 @@ import youtube_ios_player_helper
 
 class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
 
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var voteMethodViewContainer: UIView!
     @IBOutlet weak var voteMethodView: UIView!
     
@@ -39,6 +38,7 @@ class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
     func setVoteMethodView() {
         let slideShow = ImageSlideshow(frame: voteMethodView.frame)
         slideShow.setImageInputs(viewModel!.votingImageSources)
+        slideShow.cornerRadius = 5.0
         voteMethodView.addSubViewWithFullAutoLayout(subview: slideShow)
         
         let pageIndicator = UIPageControl()
