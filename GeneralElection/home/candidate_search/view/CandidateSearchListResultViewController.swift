@@ -40,6 +40,13 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+//        Congress.reset()
+        if let type = electionType, let name = electionName, let districtString = districtString {
+            viewModel!.electionType = type
+            viewModel!.electionName = name
+            viewModel!.districtString = districtString
+        }
         
         if let candidates = candidates {
             viewModel!.congressCandidateList.removeAll()

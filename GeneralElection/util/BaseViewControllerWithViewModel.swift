@@ -16,19 +16,9 @@ class BaseViewControllerWithViewModel<T: BaseViewModel>: BaseViewController {
     
     var viewModel: T?
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         viewModel = T()
     }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        viewModel = T()
-    }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        viewModel = T()
-//    }
 }

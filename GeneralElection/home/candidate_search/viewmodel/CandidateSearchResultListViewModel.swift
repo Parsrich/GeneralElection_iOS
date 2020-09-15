@@ -160,14 +160,4 @@ class CandidateSearchListResultViewModel: BaseViewModel {
     func switchElectionType(electionType: ElectionType) {
         self.electionType = electionType
     }
-    
-    func setDataInDistrictVC(type: ElectionType,
-                             name: LocationElectionName,
-                             districtString: String) {
-        self.electionType = type
-        self.electionName = name
-        self.districtString = districtString
-    }
-    
-    
 }

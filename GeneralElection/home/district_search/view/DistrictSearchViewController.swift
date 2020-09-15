@@ -213,14 +213,10 @@ extension DistrictSearchViewController: UITableViewDelegate {
             self.viewModel!.switchLocationType(.selectedDone)
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
                 
-                vc.viewModel?.setDataInDistrictVC(type: self.viewModel!.electionType,
-                                                  name: self.viewModel!.electionName,
-                                                  districtString: "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)")
-                
-//                vc.electionType = self.viewModel!.electionType
-//                vc.electionName = self.viewModel!.electionName
-//                let district = "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)"
-//                vc.districtString = district
+                vc.electionType = self.viewModel!.electionType
+                vc.electionName = self.viewModel!.electionName
+                let district = "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)"
+                vc.districtString = district
                 vc.sourceResult = .districtSearch
                 self.navigationController?.pushViewController(vc, animated: true)
             }
