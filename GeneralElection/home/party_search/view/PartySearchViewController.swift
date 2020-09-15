@@ -65,7 +65,7 @@ extension PartySearchViewController: UICollectionViewDelegateFlowLayout, UIColle
             
             let topText = "\(viewModel!.partyList[indexPath.row].name ?? "") 비례대표 명단"
             vc.districtString = topText
-            vc.partyName = viewModel!.partyList[indexPath.row].name
+            
             vc.candidates = viewModel!.partyList[indexPath.row].proportional
                         
             vc.sourceResult = .partySearch

@@ -12,7 +12,6 @@ import FirebaseDatabase
 
 enum DatabasePath: String {
     case root = "/"
-    case partyPromise = "/partyPromise"
     case congress = "/congress"
     case district = "/district"
     case guCouncil = "/guCouncil"

@@ -14,13 +14,12 @@ class PartyItemCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var partyLogoImageView: UIImageView!
-    @IBOutlet weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        containerView.layer.borderWidth = 2.0
+        partyLogoImageView.layer.borderColor = UIColor.lightGray.cgColor
+        partyLogoImageView.layer.borderWidth = 2.0
     }
     
     func setData(info: Party) {

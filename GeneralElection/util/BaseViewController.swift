@@ -31,9 +31,9 @@ class BaseViewController: UIViewController {
         makeAcitivityIndicator()
     }
     
-    func setTransparentNavigationController(_ isTransparent: Bool) {
+    func setTransparentNavigationController() {
     
-        navigationController?.navigationBar.setBackgroundImage(isTransparent ? UIImage() : UIImage(named: "img_background"), for: .default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "img_background"), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .clear

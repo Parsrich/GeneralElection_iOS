@@ -33,7 +33,6 @@ target 'GeneralElection' do
   pod 'Kingfisher'
   pod 'ImageSlideshow', '~> 1.8.3'
   pod 'youtube-ios-player-helper', '~> 0.1.4'  
-  pod 'SwiftyJSON'
 end
 
 post_install do |installer|

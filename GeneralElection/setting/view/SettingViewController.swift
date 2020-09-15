@@ -16,16 +16,28 @@ import MessageUI
 class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        setup()
     }
     
     func setupUI() {
-        setTransparentNavigationController(true)
+        setTransparentNavigationController()
         setShadowViewUnderNavigationController()
+        
+        if let backgroundView = self.view as? BaseBackgroundView,
+            let height = backgroundView.backgroundImageView?.frame.height {
+            topConstraint.constant = height
+            backgroundView.layoutIfNeeded()
+        }
+    }
+    
+    func setup() {
+        
     }
 }
 

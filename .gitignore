@@ -109,7 +109,7 @@ iOSInjectionProject/
 .runtimeconfig.json
 .firebase/
 /GeneralElection/resources/GoogleService-Info.plist
-/GeneralElection/resources/apikey.json
+
 
 
 
@@ -185,5 +185,3 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/git,xcode,swift,swiftpm,carthage,cocoapods,objective-c,swiftpackagemanager
-
-

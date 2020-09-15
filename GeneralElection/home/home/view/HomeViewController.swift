@@ -26,7 +26,7 @@ class HomeViewController: BaseViewControllerWithViewModel<HomeViewModel> {
     }
     
     func setupUI() {
-        setTransparentNavigationController(true)
+        setTransparentNavigationController()
     }
     
     func bindRx() {
