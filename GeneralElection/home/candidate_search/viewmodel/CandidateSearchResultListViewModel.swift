@@ -11,13 +11,13 @@ import RxSwift
 class CandidateSearchListResultViewModel: BaseViewModel {
     
     var electionType: ElectionType
-    var electionName: LocationElectionName
+    var electionName: String
     
     var congressCandidateList: [Candidate]
     
     required init() {
         electionType = .nationalAssembly
-        electionName = LocationElectionName(dictionary: nil)
+        electionName = ""
         
         congressCandidateList = [Candidate]()
         
@@ -128,9 +128,9 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         default:
             break
         }
-        /// # TODO: - electionName이 동대문아선거구로 돼서 이상함. candidate페이지에서 버튼 눌러도 "동대문구을"에서 안바뀜
+        /// # TODO: - dong 이름이 동대문아선거구로 돼서 이상함. candidate페이지에서 버튼 눌러도 "동대문구을"에서 안바뀜
         guard let electionDict = congresses,
-            let candidates = electionDict.value(forKey: self.electionName.getElectionName(electionType: electionType)) as? [NSDictionary],
+            let candidates = electionDict.value(forKey: self.electionName) as? [NSDictionary],
             let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else { return }
 //        let data = NSKeyedArchiver.archivedData(withRootObject: candidates)
 //        let data = Data(candidates)

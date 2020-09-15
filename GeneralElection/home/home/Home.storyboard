@@ -163,7 +163,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-L9-Pxk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한민국 총선" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-lO-94E">
@@ -178,14 +178,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="R8d-Cg-dHK" firstAttribute="bottom" secondItem="jbp-Ru-Ll0" secondAttribute="bottom" constant="100" id="5qc-eP-TSC"/>
                             <constraint firstItem="OUB-L9-Pxk" firstAttribute="top" secondItem="4Ui-2v-hcn" secondAttribute="top" id="8x0-TK-k0t"/>
                             <constraint firstItem="3Qb-lO-94E" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" id="BJr-La-h9W"/>
                             <constraint firstItem="jbp-Ru-Ll0" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" constant="20" id="KeS-FO-1iY"/>
                             <constraint firstItem="3Qb-lO-94E" firstAttribute="top" secondItem="R8d-Cg-dHK" secondAttribute="top" id="MOJ-7f-e7m"/>
                             <constraint firstItem="R8d-Cg-dHK" firstAttribute="trailing" secondItem="jbp-Ru-Ll0" secondAttribute="trailing" constant="20" id="Pf5-4h-GE5"/>
                             <constraint firstItem="OUB-L9-Pxk" firstAttribute="trailing" secondItem="R8d-Cg-dHK" secondAttribute="trailing" id="YgR-xU-XMs"/>
-                            <constraint firstItem="R8d-Cg-dHK" firstAttribute="bottom" secondItem="jbp-Ru-Ll0" secondAttribute="bottom" constant="100" id="gEg-SD-N5g"/>
-                            <constraint firstItem="jbp-Ru-Ll0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OUB-L9-Pxk" secondAttribute="bottom" constant="30" id="j7n-sz-xA3"/>
                             <constraint firstItem="R8d-Cg-dHK" firstAttribute="trailing" secondItem="3Qb-lO-94E" secondAttribute="trailing" id="pJo-EM-AIL"/>
                             <constraint firstItem="OUB-L9-Pxk" firstAttribute="leading" secondItem="R8d-Cg-dHK" secondAttribute="leading" id="vFL-Yy-WWz"/>
                         </constraints>
@@ -228,9 +227,9 @@
     </scenes>
     <resources>
         <image name="ic_home_candidate" width="48" height="48"/>
-        <image name="ic_home_district" width="92.5" height="96.5"/>
-        <image name="ic_home_notice" width="96.5" height="99.5"/>
-        <image name="ic_home_party" width="96.5" height="90"/>
+        <image name="ic_home_district" width="93" height="97"/>
+        <image name="ic_home_notice" width="97" height="99"/>
+        <image name="ic_home_party" width="97" height="90"/>
         <image name="img_background" width="414.5" height="300.5"/>
         <image name="tab_home" width="48" height="48"/>
         <image name="tab_home_select" width="48" height="48"/>

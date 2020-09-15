@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseBackgroundView: UIView {
-    var backgroundImageView: UIImageView?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -23,12 +22,11 @@ class BaseBackgroundView: UIView {
     }
     
     func setup() {
-        backgroundImageView = UIImageView(frame: self.frame)
-        backgroundImageView!.image = UIImage(named: "img_background")
-        backgroundImageView!.contentMode = .scaleAspectFill
-        backgroundImageView!.clipsToBounds = false
-        backgroundImageView!.sizeToFit()
-        addSubViewWithFullAutoLayout(subview: backgroundImageView!, bottom: nil)
-        sendSubviewToBack(backgroundImageView!)
+        let backgroundImageView = UIImageView(frame: self.frame)
+        backgroundImageView.image = UIImage(named: "img_background")
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.clipsToBounds = false
+        addSubViewWithFullAutoLayout(subview: backgroundImageView, bottom: nil)
+        sendSubviewToBack(backgroundImageView)
     }
 }

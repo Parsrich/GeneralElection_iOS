@@ -290,9 +290,6 @@ PODS:
     - gRPC-Core/Interface (= 1.21.0)
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
-  - ImageSlideshow (1.8.3):
-    - ImageSlideshow/Core (= 1.8.3)
-  - ImageSlideshow/Core (1.8.3)
   - Kingfisher (5.13.2):
     - Kingfisher/Core (= 5.13.2)
   - Kingfisher/Core (5.13.2)
@@ -333,7 +330,6 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/RemoteConfig
   - FirebaseFirestoreSwift
-  - ImageSlideshow (~> 1.8.3)
   - Kingfisher
   - "NSObject+Rx"
   - RxAlamofire
@@ -370,7 +366,6 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
-    - ImageSlideshow
     - Kingfisher
     - leveldb-library
     - nanopb
@@ -411,7 +406,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
-  ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -425,6 +419,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
 
-PODFILE CHECKSUM: dd26dea86477cd614d8f66f578ad928246c94f25
+PODFILE CHECKSUM: 59661281acbf5d766788611edaf9b642fc567dc2
 
 COCOAPODS: 1.8.4

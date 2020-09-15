@@ -19,19 +19,19 @@
         <!--Setting View Controller-->
         <scene sceneID="nQx-Rk-rTs">
             <objects>
-                <viewController id="jFD-uE-Xve" customClass="SettingViewController" customModule="총선" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e3t-kw-qlZ" customClass="BaseBackgroundView" customModule="총선" customModuleProvider="target">
+                <viewController id="jFD-uE-Xve" customClass="SettingViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3t-kw-qlZ" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-0V-fGU">
-                                <rect key="frame" x="50" y="88" width="314" height="245"/>
+                                <rect key="frame" x="50" y="325.5" width="314" height="245"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ev1-PX-XUp">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="245"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="80" id="7sO-iO-f3S" customClass="SettingCell" customModule="총선" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="80" id="7sO-iO-f3S" customClass="SettingCell" customModule="GeneralElection" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="314" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7sO-iO-f3S" id="WBB-7q-Nse">
@@ -94,9 +94,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lmQ-0V-fGU" firstAttribute="centerY" secondItem="e3t-kw-qlZ" secondAttribute="centerY" id="AfC-fn-qpJ"/>
                             <constraint firstItem="lmQ-0V-fGU" firstAttribute="leading" secondItem="R9A-zi-w2S" secondAttribute="leading" constant="50" id="UCr-RA-Ndx"/>
                             <constraint firstItem="R9A-zi-w2S" firstAttribute="trailing" secondItem="lmQ-0V-fGU" secondAttribute="trailing" constant="50" id="u7y-nR-5uY"/>
-                            <constraint firstItem="Ev1-PX-XUp" firstAttribute="top" secondItem="R9A-zi-w2S" secondAttribute="top" id="vtB-ql-Kzl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R9A-zi-w2S"/>
                     </view>
@@ -124,47 +124,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Ev1-PX-XUp" id="pSz-Ip-VKg"/>
-                        <outlet property="topConstraint" destination="vtB-ql-Kzl" id="FlK-MA-10r"/>
-                        <segue destination="8nj-uu-sNm" kind="show" id="flE-GA-z1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUP-P5-jkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4Lm-SB-Pge">
-            <objects>
-                <viewController id="8nj-uu-sNm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CQD-HR-xyW" customClass="BaseBackgroundView" customModule="총선" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="4HZ-L8-AsC"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5ae-0m-4mN">
-                        <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="yv9-nS-EiO">
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후원하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmB-Fs-5P6">
-                                    <rect key="frame" x="-42" y="-14" width="84" height="28"/>
-                                    <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="24"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="QmB-Fs-5P6" firstAttribute="centerX" secondItem="yv9-nS-EiO" secondAttribute="centerX" id="L42-FT-Whe"/>
-                                <constraint firstItem="QmB-Fs-5P6" firstAttribute="centerY" secondItem="yv9-nS-EiO" secondAttribute="centerY" id="xYe-x4-5a0"/>
-                            </constraints>
-                        </view>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRJ-p5-xrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2386" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vf9-cK-er5">

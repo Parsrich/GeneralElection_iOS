@@ -16,7 +16,6 @@ import MessageUI
 class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +26,6 @@ class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
     func setupUI() {
         setTransparentNavigationController()
         setShadowViewUnderNavigationController()
-        
-        if let backgroundView = self.view as? BaseBackgroundView,
-            let height = backgroundView.backgroundImageView?.frame.height {
-            topConstraint.constant = height
-            backgroundView.layoutIfNeeded()
-        }
     }
 }
 
@@ -50,7 +43,7 @@ extension SettingViewController: UITableViewDataSource {
     }
 }
 
-extension SettingViewController: UITableViewDelegate {
+extension SettingViewController: UITableViewDelegate, MFMailComposeViewControllerDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
@@ -59,13 +52,11 @@ extension SettingViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == 2 {
-//            UIApplication.shared.open(URL(string: "mailto:cmk330@naver.com")!, options: [:])
-
             if MFMailComposeViewController.canSendMail() {
                 let mail = MFMailComposeViewController()
                 mail.mailComposeDelegate = self
                 mail.setToRecipients(["cmk330@naver.com"])
-                mail.setMessageBody("[문의내용을 사진과 함께 첨부해주시면 더 쉽게 도움을 드릴 수 있습니다.]", isHTML: true)
+                mail.setMessageBody("문의 사항을 보내주세요.", isHTML: true)
 
                 present(mail, animated: true)
             }
@@ -73,11 +64,5 @@ extension SettingViewController: UITableViewDelegate {
             let carteViewController = CarteViewController()
             present(carteViewController, animated: true)
         }
-    }
-}
-
-extension SettingViewController: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
     }
 }

@@ -30,7 +30,6 @@ target 'GeneralElection' do
 #  pod 'Alamofire'
   pod 'Carte'
   pod 'Kingfisher'
-  pod 'ImageSlideshow', '~> 1.8.3'
   
 end
 
