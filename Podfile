@@ -14,8 +14,7 @@ target 'GeneralElection' do
   pod 'RxWebKit'
   pod 'RxAlamofire'
   pod 'NSObject+Rx'
-  pod 'Action'
-  
+
   # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'

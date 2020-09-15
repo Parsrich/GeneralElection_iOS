@@ -68,7 +68,7 @@
 		CA2DCE23241DF085006A304D /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
 		CA2DCE27241E7931006A304D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		CA3D865C2425E38D00872223 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
-		CA46F97F241369FD00C76E2E /* 총선.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "총선.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA46F97F241369FD00C76E2E /* GeneralElection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneralElection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA46F982241369FD00C76E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA46F986241369FD00C76E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CA46F989241369FD00C76E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		CA46F980241369FD00C76E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA46F97F241369FD00C76E2E /* 총선.app */,
+				CA46F97F241369FD00C76E2E /* GeneralElection.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -440,7 +440,7 @@
 			);
 			name = GeneralElection;
 			productName = GeneralElection;
-			productReference = CA46F97F241369FD00C76E2E /* 총선.app */;
+			productReference = CA46F97F241369FD00C76E2E /* GeneralElection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -769,9 +769,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = lets.vote.GeneralElection;
-				PRODUCT_NAME = "총선";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -790,9 +789,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = lets.vote.GeneralElection;
-				PRODUCT_NAME = "총선";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
