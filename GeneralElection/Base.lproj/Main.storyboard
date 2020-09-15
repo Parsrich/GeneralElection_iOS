@@ -1,93 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VdG-os-3EQ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NoticeNavigationController-->
-        <scene sceneID="hIY-Nt-ERz">
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notice" referencedIdentifier="NoticeNavigationController" id="ekg-vC-fRh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notice" id="icA-GR-szj"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MT8-zr-vJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="937" y="58"/>
-        </scene>
-        <!--Splash View Controller-->
-        <scene sceneID="OeT-Ci-Il9">
-            <objects>
-                <viewController id="VdG-os-3EQ" customClass="SplashViewController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rqD-C9-bVC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSplash" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-qn-sZX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3GZ-qn-sZX" secondAttribute="bottom" id="GQf-dh-Yqm"/>
-                            <constraint firstItem="3GZ-qn-sZX" firstAttribute="leading" secondItem="gVW-ov-5Ea" secondAttribute="leading" id="U0T-9M-VPs"/>
-                            <constraint firstItem="3GZ-qn-sZX" firstAttribute="trailing" secondItem="gVW-ov-5Ea" secondAttribute="trailing" id="gXK-7a-XDC"/>
-                            <constraint firstItem="3GZ-qn-sZX" firstAttribute="top" secondItem="rqD-C9-bVC" secondAttribute="top" id="oXi-mB-aTn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gVW-ov-5Ea"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="dvm-7O-w9f" kind="presentation" identifier="main" customClass="SplashSegue" customModule="GeneralElection" customModuleProvider="target" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oSJ-RM-jYf"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdA-xc-Bnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-694" y="138"/>
-        </scene>
-        <!--Main Tab Bar Controller-->
-        <scene sceneID="Gtj-GU-0CE">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dvm-7O-w9f" customClass="MainTabBarController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgM-5Q-mxi">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ekg-vC-fRh" kind="relationship" relationship="viewControllers" id="9d9-LV-1FP"/>
-                        <segue destination="OkO-Su-ihb" kind="relationship" relationship="viewControllers" id="Y0n-9f-8cC"/>
-                        <segue destination="bzF-oy-p3y" kind="relationship" relationship="viewControllers" id="x3p-C0-6Ik"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5cR-ky-lNq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
-        </scene>
-        <!--HomeNavigationController-->
-        <scene sceneID="dVH-q9-CQl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeNavigationController" id="OkO-Su-ihb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="N0P-bS-44r"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp6-Uk-hQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="934" y="138"/>
-        </scene>
-        <!--SettingNavigationController-->
-        <scene sceneID="XVx-Rd-wUZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Setting" referencedIdentifier="SettingNavigationController" id="bzF-oy-p3y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="YqH-eX-QRB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aWH-jU-qEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="941" y="229"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="tempSplash" width="1512" height="2016"/>
-    </resources>
 </document>

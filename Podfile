@@ -6,20 +6,5 @@ target 'GeneralElection' do
   use_frameworks!
 
   # Pods for GeneralElection
-  
-  # Rx
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
-  pod 'RxWebKit'
-  pod 'RxAlamofire'
-  pod 'NSObject+Rx'
 
-  # Firebase
-#  pod 'Firebase/Analytics'
-#  pod 'Firebase/AdMob'
-  
-  # Others
-#  pod 'Alamofire'
-  
 end
