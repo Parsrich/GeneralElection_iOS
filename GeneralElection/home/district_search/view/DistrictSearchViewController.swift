@@ -12,14 +12,20 @@ import RxCocoa
 import RxDataSources
 import NSObject_Rx
 
+enum ElectionType: String {
+    case nationalAssembly = "국회의원선거"
+    case siMayor = "시∙도의 장선거"
+    case guMayor = "구∙시∙군의 장선거"
+    case siCouncil = "시∙도의회의원선거"
+    case guCouncil = "구∙시∙군의회의원선거"
+}
+
 class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSearchViewModel> {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var siTableView: UITableView!
     @IBOutlet weak var guTableView: UITableView!
     @IBOutlet weak var dongTableView: UITableView!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var locationTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,19 +52,6 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
                 guard let `self` = self else { return }
                 self.presentActionSheet(title: "정당선택", actions: self.getActions())
             }).disposed(by: rx.disposeBag)
-        
-        backButton.rx.tap
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                guard let `self` = self else { return }
-                if self.viewModel!.locationType == .gu {
-                    self.switchTableView(nextTableView: self.siTableView)
-                    self.backButton.isEnabled = false
-                } else if self.viewModel!.locationType == .dong {
-                    self.switchTableView(nextTableView: self.guTableView)
-                }
-                self.viewModel!.switchLocationType(true)
-            }).disposed(by: rx.disposeBag)
     }
     
     func switchTableView(nextTableView: UITableView) {
@@ -67,10 +60,9 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
             self?.guTableView.alpha = 0.0
             self?.dongTableView.alpha = 0.0
         }) { _ in
-            UIView.animate(withDuration: 0.3) { [weak self] in
+            UIView.animate(withDuration: 0.3) {
                 nextTableView.alpha = 1.0
                 nextTableView.reloadData()
-                self?.locationTitleLabel.text = self?.viewModel!.locationText.rawValue
             }
         }
     }
@@ -145,27 +137,23 @@ extension DistrictSearchViewController: UITableViewDataSource {
 extension DistrictSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.backButton.isEnabled = true
         
         switch tableView {
         case siTableView:
             self.viewModel!.setLocationGuList(selectedIndex: indexPath.row)
-            switchTableView(nextTableView: self.guTableView)
+            self.switchTableView(nextTableView: self.guTableView)
         case guTableView:
             self.viewModel!.setLocationDongList(selectedIndex: indexPath.row)
-            switchTableView(nextTableView: self.dongTableView)
+            self.switchTableView(nextTableView: self.dongTableView)
         case dongTableView:
             self.viewModel!.setCongress(selectedIndex: indexPath.row)
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
-                
-                vc.electionType = self.viewModel!.electionType
-                vc.electionName = self.viewModel!.electionName.getElectionName(electionType: self.viewModel!.electionType)
-                self.navigationController?.pushViewController(vc, animated: true)
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.dongTableView.alpha = 1.0
             }
         default:
             break
         }
 
-        self.viewModel!.switchLocationType(false)
+        viewModel!.switchLocationType()
     }
 }

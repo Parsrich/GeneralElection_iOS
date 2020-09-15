@@ -17,13 +17,9 @@ class SettingViewModel: BaseViewModel {
         
         super.init()
         
-        settingList.append(contentsOf: ["파슬리치 소개",
+        settingList.append(contentsOf: ["알림 설정",
+                                        "파슬리치 소개",
                                         "후원하기",
-                                        "오류 문의",
-                                        "오픈소스 라이선스"])
-//        settingList.append(contentsOf: ["알림 설정",
-//                                        "파슬리치 소개",
-//                                        "후원하기",
-//                                        "오류 문의"])
+                                        "오류 문의"])
     }
 }

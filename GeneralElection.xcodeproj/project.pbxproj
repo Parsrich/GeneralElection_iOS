@@ -41,14 +41,9 @@
 		CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C42413886400C76E2E /* HomeViewModel.swift */; };
 		CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C62413887000C76E2E /* SettingViewModel.swift */; };
 		CA46F9CA2413923F00C76E2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */; };
-		CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */; };
-		CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */; };
-		CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA472469242B2026000A3C10 /* CandidateCell.swift */; };
 		CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3B24235EA700FECFCD /* SettingCell.swift */; };
 		CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */; };
 		CA59EF412423947500FECFCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59EF402423947500FECFCD /* FirebaseHelper.swift */; };
-		CA89034B242B2619006D7F42 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034A242B2619006D7F42 /* Candidate.swift */; };
-		CA89034D242B30A0006D7F42 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034C242B30A0006D7F42 /* Congress.swift */; };
 		CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */; };
 		CA9AEAC0241A1F710022A2C8 /* CandidateSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */; };
 		CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAC1241A1F990022A2C8 /* DistrictSearchViewController.swift */; };
@@ -99,14 +94,9 @@
 		CA46F9C42413886400C76E2E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C62413887000C76E2E /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C92413923F00C76E2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchListResultViewController.swift; sourceTree = "<group>"; };
-		CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchResultListViewModel.swift; sourceTree = "<group>"; };
-		CA472469242B2026000A3C10 /* CandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
 		CA59EF3B24235EA700FECFCD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		CA59EF3D24238EF000FECFCD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CA59EF402423947500FECFCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
-		CA89034A242B2619006D7F42 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
-		CA89034C242B30A0006D7F42 /* Congress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
 		CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
 		CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAC1241A1F990022A2C8 /* DistrictSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictSearchViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +144,6 @@
 			children = (
 				CAF613312421E7C200D26D31 /* Party.swift */,
 				CA3D865C2425E38D00872223 /* District.swift */,
-				CA89034A242B2619006D7F42 /* Candidate.swift */,
-				CA89034C242B30A0006D7F42 /* Congress.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -347,7 +335,7 @@
 		CA9AEAC4241A1FE20022A2C8 /* candidate_search */ = {
 			isa = PBXGroup;
 			children = (
-				CA9AEAC8241A20140022A2C8 /* view */,
+				CA9AEAC8241A20140022A2C8 /* viewcontroller */,
 				CA9AEAC7241A200E0022A2C8 /* viewmodel */,
 			);
 			path = candidate_search;
@@ -375,20 +363,17 @@
 			children = (
 				CA9AEAC9241A20280022A2C8 /* CandidateSearchViewModel.swift */,
 				CA2811BD24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift */,
-				CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
-		CA9AEAC8241A20140022A2C8 /* view */ = {
+		CA9AEAC8241A20140022A2C8 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
 				CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */,
 				CA2811BB24249FAC00DCF8AA /* CandidateSearchResultViewController.swift */,
-				CA472465242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift */,
-				CA472469242B2026000A3C10 /* CandidateCell.swift */,
 			);
-			path = view;
+			path = viewcontroller;
 			sourceTree = "<group>";
 		};
 		CA9AEACC241B0F420022A2C8 /* party_search */ = {
@@ -606,14 +591,10 @@
 				CA46F9BF2413874500C76E2E /* BaseViewModel.swift in Sources */,
 				CA46F99F2413729B00C76E2E /* UIViewExtension.swift in Sources */,
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
-				CA89034B242B2619006D7F42 /* Candidate.swift in Sources */,
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
 				CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */,
 				CA9AEACA241A20280022A2C8 /* CandidateSearchViewModel.swift in Sources */,
-				CA89034D242B30A0006D7F42 /* Congress.swift in Sources */,
-				CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */,
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
-				CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */,
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
 				CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */,
 				CA46F9A52413742500C76E2E /* ArrayExtension.swift in Sources */,
@@ -628,7 +609,6 @@
 				CA46F9BD2413873800C76E2E /* BaseViewController.swift in Sources */,
 				CA46F9C52413886400C76E2E /* HomeViewModel.swift in Sources */,
 				CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */,
-				CA47246A242B2026000A3C10 /* CandidateCell.swift in Sources */,
 				CA3D865D2425E38D00872223 /* District.swift in Sources */,
 				CA46F983241369FD00C76E2E /* AppDelegate.swift in Sources */,
 				CA46F9B824137DCF00C76E2E /* SplashSegue.swift in Sources */,

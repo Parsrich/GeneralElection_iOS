@@ -10,8 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
-import Carte
-import MessageUI
 
 class SettingViewController: BaseViewControllerWithViewModel<SettingViewModel> {
     
@@ -43,26 +41,12 @@ extension SettingViewController: UITableViewDataSource {
     }
 }
 
-extension SettingViewController: UITableViewDelegate, MFMailComposeViewControllerDelegate {
+extension SettingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        if indexPath.row == 2 {
-            if MFMailComposeViewController.canSendMail() {
-                let mail = MFMailComposeViewController()
-                mail.mailComposeDelegate = self
-                mail.setToRecipients(["cmk330@naver.com"])
-                mail.setMessageBody("문의 사항을 보내주세요.", isHTML: true)
-
-                present(mail, animated: true)
-            }
-        } else if indexPath.row == 3 {
-            let carteViewController = CarteViewController()
-            present(carteViewController, animated: true)
-        }
     }
 }
