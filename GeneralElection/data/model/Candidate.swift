@@ -56,9 +56,4 @@ struct Candidate: Decodable {
         case taxArrears5 = "TaxArrears5"
         case taxPayment = "TaxPayment"
     }
-    
-    func getPersonalInfoUrl() -> URL? {
-        guard let id = self.id else { return nil }
-        return URL(string: "http://info.nec.go.kr/electioninfo/candidate_detail_info.xhtml?electionId=0020200415&huboId=\(id)")
-    }
 }
