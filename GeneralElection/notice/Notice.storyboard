@@ -68,7 +68,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-Tt-9z6" customClass="YTPlayerView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-Tt-9z6">
                                                 <rect key="frame" x="0.0" y="41" width="374" height="233"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -141,7 +141,6 @@
                         <outlet property="electionVideoView" destination="Of9-Tt-9z6" id="kKX-DQ-0i1"/>
                         <outlet property="voteMethodView" destination="p4H-3B-iOp" id="Ytd-b5-G9T"/>
                         <outlet property="voteMethodViewContainer" destination="MYn-2J-fO6" id="Te8-Nd-zs2"/>
-                        <outlet property="youtubePlayerView" destination="Of9-Tt-9z6" id="JIE-27-Aea"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcX-PN-9XC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

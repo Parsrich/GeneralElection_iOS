@@ -31,7 +31,7 @@ target 'GeneralElection' do
   pod 'Carte'
   pod 'Kingfisher'
   pod 'ImageSlideshow', '~> 1.8.3'
-  pod 'youtube-ios-player-helper', '~> 0.1.4'  
+  
 end
 
 post_install do |installer|

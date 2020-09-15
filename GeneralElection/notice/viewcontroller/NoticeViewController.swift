@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 import ImageSlideshow
-import youtube_ios_player_helper
 
 class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
 
@@ -19,7 +18,6 @@ class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
     @IBOutlet weak var voteMethodView: UIView!
     
     @IBOutlet weak var electionVideoView: UIView!
-    @IBOutlet weak var youtubePlayerView: YTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +49,7 @@ class NoticeViewController: BaseViewControllerWithViewModel<NoticeViewModel> {
     }
     
     func setElectionVideoView() {
-        let playerVars: [AnyHashable : Any] = [
-            "playsinline": 1
-        ]
-        youtubePlayerView.load(withVideoId: "swt1LrfFxL8", playerVars: playerVars)
+        
     }
 }
 
