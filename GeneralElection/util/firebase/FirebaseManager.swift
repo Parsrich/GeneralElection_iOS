@@ -22,16 +22,14 @@ enum DatabasePath: String {
 class FirebaseManager {
     static let share = FirebaseManager()
     
-    var remoteConfig: RemoteConfig = RemoteConfig.remoteConfig()
-    #if DEBUG
-    let expirationDutation:TimeInterval = 0
-    #else
-    let expirationDutation:TimeInterval = 3000
-    #endif
+//    var remoteConfig: RemoteConfig = RemoteConfig.remoteConfig()
+//    #if DEBUG
+//    let expirationDutation:TimeInterval = 0
+//    #else
+//    let expirationDutation:TimeInterval = 3000
+//    #endif
     
-    private init() {
-        initRemoteConfig()
-    }
+    private init() { }
     
     /// # Firebase Realtime DB
     func firebaseDB(path: DatabasePath) -> DatabaseReference  {
@@ -39,51 +37,37 @@ class FirebaseManager {
     }
     
     /// # Firebase RemoteConfig
-    func initRemoteConfig() {
-        
-        let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = expirationDutation
-        remoteConfig.configSettings = settings
-        // [END enable_dev_mode]
-        // Set default Remote Config parameter values. An app uses the in-app default values, and
-        // when you need to adjust those defaults, you set an updated value for only the values you
-        // want to change in the Firebase console. See Best Practices in the README for more
-        // information.
-        // [START set_default_values]
-        remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
-    }
-    
-    func setRemoteConfigDefaults(defaults: [String : NSObject]) {
-        self.remoteConfig.setDefaults(defaults)
-    }
-
-    func setRemoteConfigDefaults(fromPlist plist: String) {
-        self.remoteConfig.setDefaults(fromPlist: plist)
-    }
-
-    func fetch(completion: @escaping ((Bool)->())) {
-        self.remoteConfig.fetchAndActivate { (status, error) in
-            switch status {
-            case .successFetchedFromRemote: fallthrough
-            case .successUsingPreFetchedData:
-                // ReadME!!!!. 항상 firebase 관련 로직은 activateFetched 이후에 진행 할 것.
-                completion(true)
-
-            case .error:
-                if let error = (error as NSError?) {
-                    print(error)
-                }
-
-                completion(false)
-
-            @unknown default:
-                completion(false)
-            }
-        }
-    }
+//    func setRemoteConfigDefaults(defaults:[String : NSObject]) {
+//        self.remoteConfig.setDefaults(defaults)
+//    }
+//
+//    func setRemoteConfigDefaults(fromPlist plist:String) {
+//        self.remoteConfig.setDefaults(fromPlist: plist)
+//    }
+//
+//    func fetch(completion:@escaping ((Bool)->())) {
+//        self.remoteConfig.fetchAndActivate { (status, error) in
+//            switch status {
+//            case .successFetchedFromRemote: fallthrough
+//            case .successUsingPreFetchedData:
+//                // ReadME!!!!. 항상 firebase 관련 로직은 activateFetched 이후에 진행 할 것.
+//                completion(true)
+//
+//            case .error:
+//                if let error = (error as NSError?) {
+//                    print(error)
+//                }
+//
+//                completion(false)
+//
+//            @unknown default:
+//                completion(false)
+//            }
+//        }
+//    }
 }
 //
-extension FirebaseManager {
+//extension FirebaseManager {
 //    func intValue(key: RemoteConfigKey) -> Int {
 //        if let number = self.remoteConfig.configValue(forKey: key.rawValue).numberValue {
 //            return number.intValue
@@ -93,9 +77,9 @@ extension FirebaseManager {
 //        }
 //    }
 //
-    func stringValue(key: RemoteConfigKey) -> String {
-        return remoteConfig.configValue(forKey: key.rawValue).stringValue ?? ""
-    }
+//    func stringValue(key: RemoteConfigKey) -> String {
+//        return remoteConfig.configValue(forKey: key.rawValue).stringValue ?? ""
+//    }
 //
 //    func boolValue(key: RemoteConfigKey) -> Bool {
 //        return remoteConfig.configValue(forKey: key.rawValue).boolValue
@@ -123,4 +107,4 @@ extension FirebaseManager {
 //            return nil
 //        }
 //    }
-}
+//}
