@@ -69,86 +69,46 @@ class PartyPromise: Decodable {
     var promiseList: [Promise] {
         var promises = [Promise]()
         
-        let promise1 = Promise(ord: prmsOrd1,
-                               realmName: prmsRealmName1,
-                               title: prmsTitle1,
-                               content: prmmCont1)
-        if promise1.isExist {
-            promises.append(promise1)
-        }
-        
-        let promise2 = Promise(ord: prmsOrd2,
-                               realmName: prmsRealmName2,
-                               title: prmsTitle2,
-                               content: prmmCont2)
-        if promise2.isExist {
-            promises.append(promise2)
-        }
-        
-        let promise3 = Promise(ord: prmsOrd3,
-                               realmName: prmsRealmName3,
-                               title: prmsTitle3,
-                               content: prmmCont3)
-        if promise3.isExist {
-            promises.append(promise3)
-        }
-        
-        let promise4 = Promise(ord: prmsOrd4,
-                               realmName: prmsRealmName4,
-                               title: prmsTitle4,
-                               content: prmmCont4)
-        if promise4.isExist {
-            promises.append(promise4)
-        }
-        
-        let promise5 = Promise(ord: prmsOrd5,
-                               realmName: prmsRealmName5,
-                               title: prmsTitle5,
-                               content: prmmCont5)
-        if promise5.isExist {
-            promises.append(promise5)
-        }
-        
-        let promise6 = Promise(ord: prmsOrd6,
-                               realmName: prmsRealmName6,
-                               title: prmsTitle6,
-                               content: prmmCont6)
-        if promise6.isExist {
-            promises.append(promise6)
-        }
-        
-        let promise7 = Promise(ord: prmsOrd7,
-                               realmName: prmsRealmName7,
-                               title: prmsTitle7,
-                               content: prmmCont7)
-        if promise7.isExist {
-            promises.append(promise7)
-        }
-        
-        let promise8 = Promise(ord: prmsOrd8,
-                               realmName: prmsRealmName8,
-                               title: prmsTitle8,
-                               content: prmmCont8)
-        if promise8.isExist {
-            promises.append(promise8)
-        }
-        
-        let promise9 = Promise(ord: prmsOrd9,
-                               realmName: prmsRealmName9,
-                               title: prmsTitle9,
-                               content: prmmCont9)
-        if promise9.isExist {
-            promises.append(promise9)
-        }
-        
-        let promise10 = Promise(ord: prmsOrd10,
+        promises.append(Promise(ord: prmsOrd1,
+                                realmName: prmsRealmName1,
+                                title: prmsTitle1,
+                                content: prmmCont1))
+        promises.append(Promise(ord: prmsOrd2,
+                                realmName: prmsRealmName2,
+                                title: prmsTitle2,
+                                content: prmmCont2))
+        promises.append(Promise(ord: prmsOrd3,
+                                realmName: prmsRealmName3,
+                                title: prmsTitle3,
+                                content: prmmCont3))
+        promises.append(Promise(ord: prmsOrd4,
+                                realmName: prmsRealmName4,
+                                title: prmsTitle4,
+                                content: prmmCont4))
+        promises.append(Promise(ord: prmsOrd5,
+                                realmName: prmsRealmName5,
+                                title: prmsTitle5,
+                                content: prmmCont5))
+        promises.append(Promise(ord: prmsOrd6,
+                                realmName: prmsRealmName6,
+                                title: prmsTitle6,
+                                content: prmmCont6))
+        promises.append(Promise(ord: prmsOrd7,
+                                realmName: prmsRealmName7,
+                                title: prmsTitle7,
+                                content: prmmCont7))
+        promises.append(Promise(ord: prmsOrd8,
+                                realmName: prmsRealmName8,
+                                title: prmsTitle8,
+                                content: prmmCont8))
+        promises.append(Promise(ord: prmsOrd9,
+                                realmName: prmsRealmName9,
+                                title: prmsTitle9,
+                                content: prmmCont9))
+        promises.append(Promise(ord: prmsOrd10,
                                 realmName: prmsRealmName10,
                                 title: prmsTitle10,
-                                content: prmmCont10)
-        if promise10.isExist {
-            promises.append(promise10)
-        }
-        
+                                content: prmmCont10))
         return promises
     }
     
@@ -160,11 +120,6 @@ class Promise {
     var realmName: String?
     var title: String?
     var content: String?
-    
-    var isExist: Bool {
-        guard let ord = ord else { return false }
-        return !ord.isEmpty
-    }
     
     init(ord: String?, realmName: String?, title: String?, content: String?) {
         self.ord = ord
