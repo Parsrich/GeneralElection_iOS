@@ -25,7 +25,6 @@ class AdCandidateCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var installButton: UIButton!
-    @IBOutlet weak var adMarkLabel: UILabel!
     
     var setupFlag = true
     
@@ -75,7 +74,6 @@ extension AdCandidateCell: GADUnifiedNativeAdDelegate {
 extension AdCandidateCell: GADAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
         print("\(adLoader) failed with error: \(error.localizedDescription)")
-        adMarkLabel.isHidden = true
     }
 }
 

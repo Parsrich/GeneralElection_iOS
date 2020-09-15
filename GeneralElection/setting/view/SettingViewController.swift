@@ -38,7 +38,6 @@ extension SettingViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.className, for: indexPath) as? SettingCell else { return UITableViewCell() }
         
         cell.titleLabel?.text = viewModel!.settingList[indexPath.row]
-        cell.rightImage.isHidden = true               
         
         return cell
     }
@@ -78,6 +77,8 @@ extension SettingViewController: UITableViewDelegate {
         } else if indexPath.row == 2 {
             let carteViewController = CarteViewController()
             present(carteViewController, animated: true)
+        } else if indexPath.row == 3 {
+            (tableView.cellForRow(at: indexPath) as? SettingCell)?.rightImage.isHidden = true
         }
     }
 }

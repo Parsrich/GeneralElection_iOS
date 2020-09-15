@@ -74,7 +74,7 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
         partyLogoImageView
             .kf
             .setImage(with: partyImageUrl,
-                  placeholder: UIImage(named: "ic_loading"))
+                  placeholder: UIImage(named: "ic_button"))
         partyNameLabel.text = partyName
         partyNamePromiseLabel.text = "\(partyName ?? "") 공약"
         
