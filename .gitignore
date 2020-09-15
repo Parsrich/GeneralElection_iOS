@@ -109,8 +109,6 @@ iOSInjectionProject/
 .runtimeconfig.json
 .firebase/
 /GeneralElection/resources/GoogleService-Info.plist
-
-### Data API Key
 /GeneralElection/resources/apikey.json
 
 
