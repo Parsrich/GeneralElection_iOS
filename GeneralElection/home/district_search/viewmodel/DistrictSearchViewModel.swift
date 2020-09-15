@@ -54,10 +54,10 @@ class DistrictSearchViewModel: BaseViewModel {
     }
     
     func bindData() {
-        setLocationSiList()
+        setLocationData()
     }
     
-    func setLocationSiList() {
+    func setLocationData() {
         
         guard let data = District.districtDict,
             let keys = data.allKeys as? [String] else { return }

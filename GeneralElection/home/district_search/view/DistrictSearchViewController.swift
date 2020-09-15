@@ -62,7 +62,6 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
         }) { _ in
             UIView.animate(withDuration: 0.3) {
                 nextTableView.alpha = 1.0
-                nextTableView.reloadData()
             }
         }
     }
@@ -102,34 +101,16 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
 
 extension DistrictSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count = 0
-        switch tableView {
-        case siTableView:
-            count = viewModel!.locationSiList.count
-        case guTableView:
-            count = viewModel!.locationGuList.count
-        case dongTableView:
-            count = viewModel!.locationDongList.count
-        default:
-            break
-        }
-        return count
+        
+        return viewModel!.locationSiList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.className, for: indexPath) as? CityCell else { return UITableViewCell() }
         
-        switch tableView {
-        case siTableView:
-            cell.cityName.text = viewModel!.locationSiList[indexPath.row].key
-        case guTableView:
-            cell.cityName.text = viewModel!.locationGuList[indexPath.row].key
-        case dongTableView:
-            cell.cityName.text = viewModel!.locationDongList[indexPath.row].key
-        default:
-            break
-        }
-                
+        cell.cityName.text = viewModel!.locationSiList[indexPath.row].key
+        //        cell.cityName.text = viewModel!.locations[indexPath.row]?.
+        
         return cell
     }
 }
@@ -137,6 +118,8 @@ extension DistrictSearchViewController: UITableViewDataSource {
 extension DistrictSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        viewModel!.switchLocationType()
         
         switch tableView {
         case siTableView:
@@ -153,7 +136,5 @@ extension DistrictSearchViewController: UITableViewDelegate {
         default:
             break
         }
-
-        viewModel!.switchLocationType()
     }
 }
