@@ -12,7 +12,6 @@ class CandidateSearchListResultViewModel: BaseViewModel {
     
     var electionType: ElectionType
     var electionName: LocationElectionName
-    var districtString = ""
     
     var congressCandidateList: [Candidate]
     
@@ -129,7 +128,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         default:
             break
         }
-        
+        /// # TODO: - electionName이 동대문아선거구로 돼서 이상함. candidate페이지에서 버튼 눌러도 "동대문구을"에서 안바뀜
         guard let electionDict = congresses,
             let candidates = electionDict.value(forKey: self.electionName.getElectionName(electionType: electionType)) as? [NSDictionary],
             let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else {
@@ -142,12 +141,9 @@ class CandidateSearchListResultViewModel: BaseViewModel {
         
         if let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) {
             congressCandidateList.append(contentsOf: candidateList)
-            congressCandidateList.sort {
-                guard let first = $0.number, let second = $1.number,
-                let firstNumber = Int(first), let secondNumber = Int(second) else { return true }
-                return firstNumber < secondNumber
-            }
         }
+        
+        print("count: \(congressCandidateList.count)")
     }
     
     func switchElectionType(electionType: ElectionType) {

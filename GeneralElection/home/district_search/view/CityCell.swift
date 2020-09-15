@@ -12,5 +12,4 @@ class CityCell: UITableViewCell {
     
     @IBOutlet weak var cityName: UILabel!
     
-    
 }

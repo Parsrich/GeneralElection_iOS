@@ -14,9 +14,12 @@ import NSObject_Rx
 
 class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSearchViewModel> {
     @IBOutlet weak var backgroundView: UIView!
+//    @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var siTableView: UITableView!
     @IBOutlet weak var guTableView: UITableView!
     @IBOutlet weak var dongTableView: UITableView!
+//    @IBOutlet weak var backButton: UIButton!
+//    @IBOutlet weak var locationTitleLabel: UILabel!
     
     @IBOutlet weak var siButton: UIButton!
     @IBOutlet weak var siGuMid: UILabel!
@@ -69,13 +72,32 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
     }
     
     func bindRx() {
+//        categoryButton.rx.tap
+//            .asDriver()
+//            .drive(onNext: { [weak self] _ in
+//                guard let `self` = self else { return }
+//                self.presentActionSheet(title: "정당선택", actions: self.getActions())
+//            }).disposed(by: rx.disposeBag)
+        
+//        backButton.rx.tap
+//            .asDriver()
+//            .drive(onNext: { [weak self] _ in
+//                guard let `self` = self else { return }
+//                if self.viewModel!.locationType == .gu {
+//                    self.switchTableView(nextTableView: self.siTableView)
+//                    self.backButton.isEnabled = false
+//                } else if self.viewModel!.locationType == .dong {
+//                    self.switchTableView(nextTableView: self.guTableView)
+//                }
+//                self.viewModel!.switchLocationType(true)
+//            }).disposed(by: rx.disposeBag)
+        
         siButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 self.viewModel!.switchLocationType(.si)
                 self.siButton.setTitle("시・도", for: .normal)
-                self.viewModel!.currentDistrict.removeAll()
                 self.isLocationGuButtonOn(isOn: false)
                 self.switchTableView(nextTableView: self.siTableView)
                 self.setLocationBackgroundColor()
@@ -86,7 +108,6 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
             .drive(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 self.viewModel!.switchLocationType(.gu)
-                self.viewModel!.currentDistrict.removeSubrange(1...)
                 self.guButton.setTitle("구・시・군", for: .normal)
                 self.isLocationDongButtonOn(isOn: false)
                 self.switchTableView(nextTableView: self.guTableView)
@@ -100,9 +121,10 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
             self?.guTableView.alpha = 0.0
             self?.dongTableView.alpha = 0.0
         }) { _ in
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.3) { [weak self] in
                 nextTableView.alpha = 1.0
                 nextTableView.reloadData()
+//                self?.locationTitleLabel.text = self?.viewModel!.locationText.rawValue
             }
         }
     }
@@ -148,6 +170,30 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
             self.dongButton.backgroundColor = UIColor(hex: "#7269EA")
         }
     }
+    
+//    func getActions() -> [UIAlertAction] {
+//        let action1 = UIAlertAction(title: ElectionType.nationalAssembly.rawValue, style: .default) { [weak self] _ in
+//            self?.categoryButton.setTitle(ElectionType.nationalAssembly.rawValue, for: .normal)
+//            self?.fetchLocation()
+//            self?.viewModel!.switchElectionType(electionType: .nationalAssembly)
+//        }
+//        let action2 = UIAlertAction(title: ElectionType.guMayor.rawValue, style: .default) { [weak self] _ in
+//            self?.categoryButton.setTitle(ElectionType.guMayor.rawValue, for: .normal)
+//            self?.fetchLocation()
+//            self?.viewModel!.switchElectionType(electionType: .guMayor)
+//        }
+//        let action3 = UIAlertAction(title: ElectionType.siCouncil.rawValue, style: .default) { [weak self] _ in
+//            self?.categoryButton.setTitle(ElectionType.siCouncil.rawValue, for: .normal)
+//            self?.fetchLocation()
+//            self?.viewModel!.switchElectionType(electionType: .siCouncil)
+//        }
+//        let action4 = UIAlertAction(title: ElectionType.guCouncil.rawValue, style: .default) { [weak self] _ in
+//            self?.categoryButton.setTitle(ElectionType.guCouncil.rawValue, for: .normal)
+//            self?.fetchLocation()
+//            self?.viewModel!.switchElectionType(electionType: .guCouncil)
+//        }
+//        return [action1, action2, action3, action4]
+//    }
 }
 
 extension DistrictSearchViewController: UITableViewDataSource {
@@ -179,7 +225,7 @@ extension DistrictSearchViewController: UITableViewDataSource {
         default:
             break
         }
-        
+                
         return cell
     }
 }
@@ -209,9 +255,7 @@ extension DistrictSearchViewController: UITableViewDelegate {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchListResultViewController.className) as? CandidateSearchListResultViewController {
                 
                 vc.electionType = self.viewModel!.electionType
-                vc.electionName = self.viewModel!.electionName
-                let district = "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)"
-                vc.districtString = district
+                vc.electionName = self.viewModel!.electionName//.getElectionName(electionType: self.viewModel!.electionType)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         default:

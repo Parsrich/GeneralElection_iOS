@@ -98,20 +98,12 @@ class LocationDong: Equatable, IdentifiableType {
 }
 
 class LocationElectionName {
-    var siName: String = ""
+    
     var congress: String
 //    var siMayor: String
     var guMayor: String
     var siCouncil: String
     var guCouncil: String
-    
-    var isEmpty: Bool {
-        return congress.isEmpty && guMayor.isEmpty && siCouncil.isEmpty && guCouncil.isEmpty
-    }
-    
-//    var electionNameByFirebase: String {
-//        return "\(siName)_\(congress)"
-//    }
     
     init(dictionary: NSDictionary?) {
         self.congress = (dictionary?["congress"] as? String) ?? ""
@@ -120,31 +112,25 @@ class LocationElectionName {
         self.guCouncil = (dictionary?["guCouncil"] as? String) ?? ""
     }
     
-    func setValue(electionName: LocationElectionName, siName: String) {
+    func setValue(electionName: LocationElectionName) {
         self.congress = electionName.congress
         self.guMayor = electionName.guMayor
         self.siCouncil = electionName.siCouncil
         self.guCouncil = electionName.guCouncil
-        
-        self.siName = siName
     }
     
     func getElectionName(electionType: ElectionType) -> String {
         switch electionType {
         case .nationalAssembly:
-//            return self.congress
-            return "\(siName)_\(congress)"
+            return self.congress
         case .siMayor:
             break
         case .guMayor:
-//            return self.guMayor
-            return "\(siName)_\(guMayor)"
+            return self.guMayor
         case .siCouncil:
-//            return self.siCouncil
-            return "\(siName)_\(siCouncil)"
+            return self.siCouncil
         case .guCouncil:
-//            return self.guCouncil
-            return "\(siName)_\(guCouncil)"
+            return self.guCouncil
         }
         return ""
     }
