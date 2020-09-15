@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NSObject_Rx
-import Firebase
 
 class BaseViewControllerWithViewModel<T: BaseViewModel>: BaseViewController {
     

@@ -13,10 +13,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setSelectedIndex(index: 1)
-    }
-    
-    func setSelectedIndex(index: Int) {
-        self.selectedIndex = index
+        self.selectedIndex = 1
     }
 }

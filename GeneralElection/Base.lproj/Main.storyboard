@@ -12,7 +12,7 @@
         <scene sceneID="hIY-Nt-ERz">
             <objects>
                 <viewControllerPlaceholder storyboardName="Notice" referencedIdentifier="NoticeNavigationController" id="ekg-vC-fRh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_notice" selectedImage="tab_notice_select" id="icA-GR-szj"/>
+                    <tabBarItem key="tabBarItem" title="Notice" id="icA-GR-szj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT8-zr-vJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +53,6 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dvm-7O-w9f" customClass="MainTabBarController" customModule="GeneralElection" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgM-5Q-mxi">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -71,7 +70,7 @@
         <scene sceneID="dVH-q9-CQl">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeNavigationController" id="OkO-Su-ihb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_home" selectedImage="tab_home_select" id="N0P-bS-44r"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="N0P-bS-44r"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pp6-Uk-hQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +80,7 @@
         <scene sceneID="XVx-Rd-wUZ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Setting" referencedIdentifier="SettingNavigationController" id="bzF-oy-p3y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_setting" selectedImage="tab_setting_select" id="YqH-eX-QRB"/>
+                    <tabBarItem key="tabBarItem" title="Setting" id="YqH-eX-QRB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWH-jU-qEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,12 +88,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_home" width="50" height="50"/>
-        <image name="tab_home_select" width="50" height="50"/>
-        <image name="tab_notice" width="50" height="50"/>
-        <image name="tab_notice_select" width="50" height="50"/>
-        <image name="tab_setting" width="50" height="50"/>
-        <image name="tab_setting_select" width="50" height="50"/>
         <image name="tempSplash" width="1512" height="2016"/>
     </resources>
 </document>

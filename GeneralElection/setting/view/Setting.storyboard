@@ -12,13 +12,12 @@
         <scene sceneID="nQx-Rk-rTs">
             <objects>
                 <viewController id="jFD-uE-Xve" customClass="SettingViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e3t-kw-qlZ" customClass="BaseBackgroundView" customModule="GeneralElection" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="e3t-kw-qlZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="R9A-zi-w2S"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_setting" selectedImage="tab_setting_select" id="9Gg-nx-ABE"/>
                     <navigationItem key="navigationItem" id="bey-h6-d7k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -46,8 +45,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="tab_setting" width="50" height="50"/>
-        <image name="tab_setting_select" width="50" height="50"/>
-    </resources>
 </document>
