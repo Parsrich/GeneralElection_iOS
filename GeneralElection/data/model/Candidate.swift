@@ -25,7 +25,6 @@ struct Candidate: Decodable {
     var number: String?
     var party: String?
     var property: String?
-    var recommend: String?
     var regCount: String?
     var si: String?
     var status: String?
@@ -50,7 +49,6 @@ struct Candidate: Decodable {
         case number = "Number"
         case party = "Party"
         case property = "Property"
-        case recommend = "recommend"
         case regCount = "RegCount"
         case si = "Si"
         case status = "Status"
@@ -63,8 +61,4 @@ struct Candidate: Decodable {
         guard let id = self.id else { return nil }
         return URL(string: "http://info.nec.go.kr/electioninfo/candidate_detail_info.xhtml?electionId=0020200415&huboId=\(id)")
     }
-}
-
-class CandidateMemory {
-    static var candidateDict: NSDictionary?
 }

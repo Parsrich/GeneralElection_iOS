@@ -212,7 +212,6 @@ extension DistrictSearchViewController: UITableViewDelegate {
                 vc.electionName = self.viewModel!.electionName
                 let district = "\(siButton.currentTitle ?? "") > \(guButton.currentTitle ?? "") > \(viewModel!.locationDongList[indexPath.row].key)"
                 vc.districtString = district
-                vc.sourceResult = .districtSearch
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         default:

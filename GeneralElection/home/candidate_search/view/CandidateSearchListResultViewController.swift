@@ -18,17 +18,10 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
     @IBOutlet weak var candidateTableView: UITableView!
     @IBOutlet weak var districtLabel: UILabel!
     @IBOutlet weak var emptyView: UIImageView!
-    @IBOutlet weak var buttonClickLabel: UILabel!
-    @IBOutlet weak var categoryView: UIView!
-    
-    @IBOutlet weak var candidateViewTopContraint: NSLayoutConstraint!
     
     var electionType: ElectionType?
     var electionName: LocationElectionName?
     var districtString: String?
-    
-    var sourceResult: SourceResult?
-    var candidates: [Candidate]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,31 +33,13 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
             viewModel!.districtString = districtString
         }
         
-        if let candidates = candidates, let districtString = districtString {
-            viewModel!.congressCandidateList.removeAll()
-            viewModel!.congressCandidateList = candidates.sorted { Int($0.recommend ?? "0") ?? 0 < Int($1.recommend ?? "0") ?? 0 }
-            viewModel!.districtString = districtString
-        }
-        
         setupUI()
         bindRx()
         setup()
     }
     
     func setup() {
-        guard let source = self.sourceResult else { return }
-        switch source {
-        case .candidateSearch, .districtSearch:
-            fetchCandidates()
-        case .partySearch:
-            candidateViewTopContraint.priority = UILayoutPriority.defaultHigh
-            
-            locationLabel.isHidden = true
-            buttonClickLabel.isHidden = true
-            categoryView.isHidden = true
-            
-            candidateTableView.reloadData()
-        }
+        fetchCandidates()
     }
     
     func setupUI() {
@@ -72,14 +47,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
        
         locationLabel.text = viewModel!.electionName.getElectionName(electionType: viewModel!.electionType).replacingOccurrences(of: "_", with: " ")
         
-        if let source = sourceResult {
-            switch source {
-            case .candidateSearch, .districtSearch:
-                emptyView.isHidden = !viewModel!.electionName.isEmpty
-            case .partySearch:
-                emptyView.isHidden = candidates?.count != 0
-            }
-        }
+        emptyView.isHidden = !viewModel!.electionName.isEmpty
         categoryButton.setTitle(viewModel!.electionType.rawValue, for: .normal)
         
         districtLabel.text = districtString
@@ -152,7 +120,7 @@ extension CandidateSearchListResultViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateCell.className, for: indexPath) as? CandidateCell else { return UITableViewCell() }
         
-        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row], sourceResult: sourceResult)
+        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row])
         
         return cell
     }
@@ -167,7 +135,6 @@ extension CandidateSearchListResultViewController: UITableViewDelegate {
             
             vc.candidate = viewModel!.congressCandidateList[indexPath.row]
             vc.districtString = viewModel!.districtString
-            vc.source = sourceResult
             navigationController?.pushViewController(vc, animated: true)
         }
     }

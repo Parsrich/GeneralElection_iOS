@@ -8,42 +8,15 @@
 
 import UIKit
 
-class Party {
+class Party: Decodable {
     var name: String?
-    var logoImg: URL?
+    var logoImg: String?
     var websiteUrl: String?
-    var proportional: [Candidate]?
-    
-    init(name: String?, logoImg: URL?, websiteUrl: String?, proportional: [Candidate]?) {
-        self.name = name
-        self.logoImg = logoImg
-        self.websiteUrl = websiteUrl
-        self.proportional = proportional
-    }
+    var birye: [Int]?
 }
 
 class PartyMemory {
-    static var partyDict: NSDictionary?
-    static var partyList: [String]? {
-        return partyDict?.allKeys as? [String]
-    }
-    
-    static var partyDataList: [Party] {
-        guard let partyNames = PartyMemory.partyList else { return [Party]() }
-        var partyList = [Party]()
-        for partyName in partyNames {
-            
-            guard let candidates = PartyMemory.partyDict?.value(forKey: partyName) as? [NSDictionary],
-                let data = try? JSONSerialization.data(withJSONObject: candidates, options: .prettyPrinted) else { continue }
-            if let candidateList = try? JSONDecoder().decode([Candidate].self, from: data) {
-                let party = Party(name: partyName, logoImg: PartySource.getPartyLogoUrl(party: partyName), websiteUrl: nil, proportional: candidateList)
-
-                partyList.append(party)
-            }
-        }
-//        partyList.sort { $0.name! < $1.name! }
-        return partyList
-    }
+    static var list = [Party]()
 }
 
 class PartySource {
@@ -62,7 +35,7 @@ class PartySource {
     "민중당": "#F26623",
     "열린민주당": "#003E9B",
     "국가혁명배당금당": "#E8141A",
-    "코리아": "#603027",
+    "가자코리아": "#603027",
     "가자!평화인권당": "#0000FF",
     "가자환경당": "#007254",
     "국민새정당": "#1F6DDC",
@@ -86,9 +59,9 @@ class PartySource {
     "여성의당": "#44009A",
 //    "우리당": "#888888",
     "자유당": "#30318B",
-    "새벽당": "#101922",
+    "자유의새벽당": "#101922",
     "정치개혁연합": "#C78665",
-    "자영업당": "#56BA38",
+    "중소자영업당": "#56BA38",
     "직능자영업당": "#752B88",
     "충청의미래당": "#AE469F",
     "친박연대": "#0C449B",
@@ -116,7 +89,7 @@ class PartySource {
         "열린민주당": "https://w.namu.la/s/ee6bdb1ceb3e93317eb5ba1605e88117b16d43033e4920eca8d93c3a90251f55ec81160aa0d0af25b5ada8de25385fa8c32057e73e83b95e49c60d38bddbdad0dec9aec3265ce60671ee4b9286ae384ba3486095e86dbf8415d52d64cd835ce89c6d7732531361f1c9869656a34af2f9",
         "친박신당": "https://ww.namu.la/s/6da6e06887e4fd5a4334df672e6f0b85ba513658eccf0cedc98af85df3455e470c313f719f9bdace0bd5106bf14b97188c44225f1d58612e534aa5dca6ed095a999dda5da9e0854410c1a4bc8bd151717718634ac300b338c1eb9b7ca328b480",
         "국가혁명배당금당": "https://w.namu.la/s/fd400434e1dd7fc9eb6ea28f084b4b6861aaf8b0c2b4cd49279921583d4c2a5f5ef548dd68a1942fe811e09aac86fea8864395283cfac1e07e0a50dc88c7eebad74b9b3d96e1853b7b0ac2fb7477d092d64669158cfab9acba9736c049c4efeb5aa169937739638fc35324b36c69c631",
-        "코리아": "https://w.namu.la/s/4585b1556dbfa234dc0b6e14d638dbf9384916a9c1ba7a6a90605e07f1741a079a494523d395472dc03c1c7edb581956f8c2f0aa79d27959df2d1951e031727f5e23b193f65a0691b7c1de420f5e9cb7aa2598800028d554a26a460e6f159cf5",
+        "가자코리아": "https://w.namu.la/s/4585b1556dbfa234dc0b6e14d638dbf9384916a9c1ba7a6a90605e07f1741a079a494523d395472dc03c1c7edb581956f8c2f0aa79d27959df2d1951e031727f5e23b193f65a0691b7c1de420f5e9cb7aa2598800028d554a26a460e6f159cf5",
         "가자!평화인권당": "https://ww.namu.la/s/cb0a67314f19a462dd4945eed20cf62820ff40cf0f246d374869f36e2f43197cc8adb126e64a28fcc2aed79842372fdc66a565aeec7a60f939a1ef196b4e2c24e0bcc3100930b03e71aff765271d4799a38e235f2df55064461afa1e4bbede2c",
         "가자환경당": "https://w.namu.la/s/c3eb800578693ca09db3efc6166f43b39b0e38ad551825c93db425ddb847326531c1823450b59a86dc5b2ccb3a6af5cd458c7a254471c0f42c745c41389fc4d97403f0478d36c6388d4851795c1e9eb8674f59728265f3b9e8e5a728e578da0a",
         "공화당": "https://w.namu.la/s/c13fd3838f34637ed5fc421eb4d61f710d33818e51384fc960484ad9034d436b2a671d10ca0b01cc7096e3ac406a1330c2b35652c61172698365a86a59dcdb4b38efb6e512acb10b0f4153773df9fd34d4d4628a28d7e6d08f4c679b1e04780b5b3b06e446b043c03397b9595baa3b13",
@@ -140,9 +113,9 @@ class PartySource {
         "여성의당": "https://ww.namu.la/s/9a85a5ffd2d7214b7137e13c6ae1f6219f2dbecf481e4dad62ba52eacb9b8da6759e9aac58a66992663b9d0c4cd824995790e7db74f465d3ee89b3b1b4be4b26b2970be0691627111ae44b116138fd414747cbe1fc285043df6a5da622216f57",
         "우리당": "https://ww.namu.la/s/c4c21deafe799f2eeb422752815063e7f23eb531ef122fe8f103310c6a3082f2a98323c4246beb936aed53ff73eb2090af63de098014881729d388ded1b74ceeb6227cf57a1ec96163c206770f7b6c39e67946877f2766f4df4c85a57e7f9c0a",
         "자유당": "https://w.namu.la/s/143f82a6e9b868d781789d9a58cc3e8b0d4c5b98dc77137420a84db9e52f187191e72e51b0d18c48c328e68eb1a24bb7feebca8ccbfaa8c7190746aa5e3d872e6629094ff67125fe2d0365eaf717d7a2e3edd55af3f2f8a4d3693ffcabc21ab2",
-        "새벽당": "https://ww.namu.la/s/f9fd61107a8e1150f8040c2d330af00da40e920a57ce8f606bc534600a8e57bb82f630000872157e3771ace2ca001cf6a8fc07e7df86e5bed8b94fe0da44810eee3da78bc233fe3a0fd44a2e8309632bf5fb1bc9e1bf4b6e785380bc5d0aba61",
+        "자유의새벽당": "https://ww.namu.la/s/f9fd61107a8e1150f8040c2d330af00da40e920a57ce8f606bc534600a8e57bb82f630000872157e3771ace2ca001cf6a8fc07e7df86e5bed8b94fe0da44810eee3da78bc233fe3a0fd44a2e8309632bf5fb1bc9e1bf4b6e785380bc5d0aba61",
         "정치개혁연합": "https://ww.namu.la/s/ee674d8aa413f5e98772cc9cf564123117b311fd41ec9dbed4efec4078bf2eb520d0cfc9958f6bb46e458c2a210c746e533528d491724d77915fb5e69eefec7b5ac9dc71b7f82f0769c882d37ec7f8ee70d974e9eb3bf831a90f5497845044cf",
-        "자영업당": "https://w.namu.la/s/1bcf3b4132ce7ca199ca03b5f7f92e1101114e018b4ddc85eeaf8c669dd5400740135b9c4ce9ba3e554ca89b452f35044d3774f0a9ca13efe023d4e9242ed44012aa07744ab0761ecfbdc99ed3137a867ca58ca33b45f1ae7d0b10027f0befb8",
+        "중소자영업당": "https://w.namu.la/s/1bcf3b4132ce7ca199ca03b5f7f92e1101114e018b4ddc85eeaf8c669dd5400740135b9c4ce9ba3e554ca89b452f35044d3774f0a9ca13efe023d4e9242ed44012aa07744ab0761ecfbdc99ed3137a867ca58ca33b45f1ae7d0b10027f0befb8",
         "직능자영업당": "https://ww.namu.la/s/2e7be01db9fa2e09dc47d26f0dc75be33549ebebba11b6ed427a8ec23bab0962c9c4933078c02052dd3ac91d48f8720b569df03b5eb8126b574ab4ea110bd4c6506915e202c53571d2bf3453485af25638e23634fc9b60b039b1f797594da61f",
         "충청의미래당": "https://w.namu.la/s/11478dbaaababff1e057d97c6950f7c589bef427eb832a00a2ddbbdfcca3f3ece98110032b029da2d5ab8c2de6a30bf293fb8cefed1418184af488cd1bee04a8f53d119708b2536801f605958e5589e98afc3739b47ff17a2001d6b00f9ab3f2",
         "친박연대": "https://ww.namu.la/s/5aec70db12f60a9b3dafb515605a96b012aed3a8ce1f58b884214c1b13c9e60925549de4fc5e5c6350868261af6adc9d26add05520c82daaf1ebd80c3d508883e383c783255be252fee520761ebba794d4305737557c7a013d434527330c24db",
@@ -156,7 +129,6 @@ class PartySource {
         "홍익당": "https://w.namu.la/s/57256c814b6f3da93b84253a78b8d3ca8c586be6437ea5c36e3d8c5ba60ed3baf24a119b5b21d043b8de137c7ddc1c01af703ca3cec733afe27435d751c7bfe885fc37ef251ef28b5a2adf14de79e2d4c5424749e1934179b4e38e1ce90524d8"
     ]
 
-    static let partyWebsites = [String: String]()
     
     static func getPartyColor(party: String) -> UIColor {
         guard let colorHex = partyColors[party], let color = UIColor(hex: colorHex) else { return UIColor(white: 0.5, alpha: 0.8) }
