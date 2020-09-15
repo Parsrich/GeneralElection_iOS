@@ -70,8 +70,6 @@
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
 		CAD575532436E06200FF8E8D /* PartyPromiseBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */; };
-		CADAA5222438DD3E00A64268 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAA5212438DD3E00A64268 /* IAPHelper.swift */; };
-		CADAA5242438F87E00A64268 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAA5232438F87E00A64268 /* IntroduceViewController.swift */; };
 		CAE074DE243375E800174798 /* CandidateDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */; };
 		CAF0A480243661B4007CE930 /* ApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0A47F243661B4007CE930 /* ApiBase.swift */; };
 		CAF0A48224366229007CE930 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0A48124366229007CE930 /* ApiKeys.swift */; };
@@ -135,7 +133,6 @@
 		CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorItemCell.swift; sourceTree = "<group>"; };
 		CA89034A242B2619006D7F42 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		CA89034C242B30A0006D7F42 /* Congress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
-		CA8B750E2438B6FC00C1F2DB /* 총선.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "총선.entitlements"; sourceTree = "<group>"; };
 		CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
 		CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAC1241A1F990022A2C8 /* DistrictSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictSearchViewController.swift; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromiseBaseResponse.swift; sourceTree = "<group>"; };
-		CADAA5212438DD3E00A64268 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
-		CADAA5232438F87E00A64268 /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
 		CAE074DD243375E800174798 /* CandidateDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateDetailWebViewController.swift; sourceTree = "<group>"; };
 		CAF0A47F243661B4007CE930 /* ApiBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBase.swift; sourceTree = "<group>"; };
 		CAF0A48124366229007CE930 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
@@ -229,7 +224,6 @@
 		CA46F981241369FD00C76E2E /* GeneralElection */ = {
 			isa = PBXGroup;
 			children = (
-				CA8B750E2438B6FC00C1F2DB /* 총선.entitlements */,
 				CA46F9C82413921000C76E2E /* resources */,
 				CA46F9B92413857600C76E2E /* start */,
 				CA46F99C2413727B00C76E2E /* util */,
@@ -341,7 +335,6 @@
 		CA46F9B0241377DE00C76E2E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CADAA5232438F87E00A64268 /* IntroduceViewController.swift */,
 				CA46F9B2241377E500C76E2E /* SettingViewController.swift */,
 				CA7BCE0F24303B1900BE9778 /* SponsorViewController.swift */,
 				CA59EF3B24235EA700FECFCD /* SettingCell.swift */,
@@ -354,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				CA46F9C62413887000C76E2E /* SettingViewModel.swift */,
-				CADAA5212438DD3E00A64268 /* IAPHelper.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -702,11 +694,9 @@
 				CA472468242AE768000A3C10 /* CandidateSearchResultListViewModel.swift in Sources */,
 				CA7BCE1024303B1900BE9778 /* SponsorViewController.swift in Sources */,
 				CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */,
-				CADAA5222438DD3E00A64268 /* IAPHelper.swift in Sources */,
 				CA472466242AE6FC000A3C10 /* CandidateSearchListResultViewController.swift in Sources */,
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
 				CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */,
-				CADAA5242438F87E00A64268 /* IntroduceViewController.swift in Sources */,
 				CA46F9A52413742500C76E2E /* ArrayExtension.swift in Sources */,
 				CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */,
 				CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */,
@@ -879,9 +869,8 @@
 			baseConfigurationReference = 83AFF34B5AE768ED5C7CDFED /* Pods-GeneralElection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GeneralElection/총선.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -892,7 +881,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Minki Chung profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -903,9 +892,8 @@
 			baseConfigurationReference = 93F62ACEFD8BEBFE5CBFCA69 /* Pods-GeneralElection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GeneralElection/총선.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HGQ9YZ4HTR;
 				INFOPLIST_FILE = GeneralElection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -916,7 +904,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Minki Chung profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
