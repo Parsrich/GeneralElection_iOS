@@ -15,7 +15,6 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     
     @IBOutlet weak var searchFieldBorderView: UIView!
     @IBOutlet weak var candidateSearchField: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +34,15 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
     }
     
     func bindRx() {
-        searchButton.rx.tap
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                guard let `self` = self else { return }
-                if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController { self.navigationController?.pushViewController(vc, animated: true)
-                }
-            }).disposed(by: rx.disposeBag)
+//        candidateSearchField.rx.controlEvent(.valueChanged)
+//            .subscribe(onNext: { _ in
+//                print("input(valueChanged): \(self.candidateSearchField.text!)")
+//            }).disposed(by: rx.disposeBag)
+//        candidateSearchField.rx.textFieldShouldReturn
+//            .subscribe(onNext: { _ in
+//                self.candidateSearchField.resignFirstResponder()
+//                print("input(textFieldShouldReturn): \(self.candidateSearchField.text!)")
+//            }).disposed(by: rx.disposeBag)
     }
 }
 
@@ -52,10 +53,42 @@ extension CandidateSearchViewController: UITextFieldDelegate {
         
         
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: CandidateSearchResultViewController.className) as? CandidateSearchResultViewController {
-
+//            vc.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(vc, animated: true)
         }
         
         return true
     }
 }
+
+//extension UITextField: HasDelegate {
+//    public typealias Delegate = UITextFieldDelegate
+//}
+//
+//class RxUITextFieldDelegateProxy: DelegateProxy<UITextField, UITextFieldDelegate>, DelegateProxyType, UITextFieldDelegate {
+//
+//    weak private(set) var textField: UITextField?
+//
+//    init(textField: UITextField) {
+//        self.textField = textField
+//        super.init(parentObject: textField, delegateProxy: RxUITextFieldDelegateProxy.self)
+//    }
+//
+//    static func registerKnownImplementations() {
+//        self.register {
+//            RxUITextFieldDelegateProxy(textField: $0)
+//        }
+//    }
+//}
+//
+//extension Reactive where Base: UITextField {
+//    var delegate: DelegateProxy<UITextField, UITextFieldDelegate> {
+//        return RxUITextFieldDelegateProxy.proxy(for: base)
+//    }
+//
+//    var textFieldShouldReturn: Observable<Void> {
+//        return delegate.methodInvoked(#selector(UITextFieldDelegate.textFieldShouldReturn(_:)))
+//            .map { _ in return }
+//    }
+//}
+//

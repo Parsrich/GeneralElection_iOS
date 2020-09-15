@@ -188,7 +188,7 @@ extension DistrictSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         setLocationBackgroundColor()
-        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+        
         switch tableView {
         case siTableView:
             self.viewModel!.setLocationGuList(selectedIndex: indexPath.row)
