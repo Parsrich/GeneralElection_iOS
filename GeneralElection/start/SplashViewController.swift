@@ -16,7 +16,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setFirebase()
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { [weak self] in
@@ -47,6 +47,15 @@ class SplashViewController: UIViewController {
                     UIApplication.shared.open(url)
                 }
             }
+        }
+        
+        if CandidateMemory.candidateDict == nil {
+            FirebaseHelper.fetchDatas(path: .candidateName)
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .subscribe(onNext: { candidateDict in
+                    CandidateMemory.candidateDict = candidateDict
+                }).dispose()
+            return
         }
 
     }

@@ -318,9 +318,6 @@ PODS:
     - Differentiator (~> 4.0)
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxKeyboard (1.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
@@ -343,7 +340,6 @@ DEPENDENCIES:
   - RxAlamofire
   - RxCocoa
   - RxDataSources
-  - RxKeyboard
   - RxSwift
   - RxWebKit
   - youtube-ios-player-helper (~> 0.1.4)
@@ -386,7 +382,6 @@ SPEC REPOS:
     - RxAlamofire
     - RxCocoa
     - RxDataSources
-    - RxKeyboard
     - RxRelay
     - RxSwift
     - RxWebKit
@@ -429,12 +424,11 @@ SPEC CHECKSUMS:
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 0e79d839851a95baf6de61b179a6b0646d7dca8e
+PODFILE CHECKSUM: 10a5c487139c4cafd211f730c012931f68987f18
 
 COCOAPODS: 1.8.4

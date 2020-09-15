@@ -7,28 +7,16 @@
 //
 
 import UIKit
-import RxSwift
 
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setData()
         setSelectedIndex(index: 1)
     }
     
     func setSelectedIndex(index: Int) {
         self.selectedIndex = index
-    }
-    
-    func setData() {
-        if CandidateMemory.candidateDict == nil {
-            FirebaseHelper.fetchDatas(path: .candidateName)
-                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-                .subscribe(onNext: { candidateDict in
-                    CandidateMemory.candidateDict = candidateDict
-                }).disposed(by: rx.disposeBag)
-        }
     }
 }

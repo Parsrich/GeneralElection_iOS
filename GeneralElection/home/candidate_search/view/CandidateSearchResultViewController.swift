@@ -20,7 +20,6 @@ enum SourceResult {
 
 class CandidateSearchResultViewController: BaseViewControllerWithViewModel<CandidateSearchResultViewModel> {
     
-    @IBOutlet weak var mapIconView: UIImageView!
     @IBOutlet weak var districtLabel: UILabel!
     @IBOutlet weak var numberBackView: UIView!
     @IBOutlet weak var numberLabel: UILabel!
@@ -39,19 +38,15 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
     @IBOutlet weak var bigProfileImageView: UIImageView!
     @IBOutlet weak var bigProfileCloseButton: UIButton!
     
-    @IBOutlet weak var districtLabelLeadingConstraint: NSLayoutConstraint!
-    
     var candidate: Candidate?
     var districtString: String?
-    var sourceResult: SourceResult?
+    var source: SourceResult?    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let candidate = candidate {
+        if let candidate = candidate, let districtString = districtString {
             viewModel!.candidate = candidate
-        }
-        if let districtString = districtString {
             viewModel!.districtString = districtString
         }
         
@@ -67,37 +62,23 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
         backgroundShadowView.addGestureRecognizer(tapGesture)
         bigProfileImageView.layer.borderColor = UIColor.black.cgColor
         bigProfileImageView.layer.borderWidth = 3.0
-
-        if let sourceResult = self.sourceResult {
-            switch sourceResult {
-            case .partySearch, .candidateSearch:
-                if candidate?.recommend != nil {
-                    districtLabelLeadingConstraint.priority = .defaultHigh
-                }
-            default:
-                break
-            }
-        }
+//        tableView.estimatedRowHeight = UITableView.automaticDimension
+//        tableView.rowHeight = 70
     }
     
     func setup() {
         viewModel!.setDetailInfo()
-        districtLabel.text = "\(candidate?.si ?? "") \(candidate?.district ?? "")" //candidate?.recommend == nil ? districtString :
-//        candidate?.district
+        districtLabel.text = districtString
         
         numberBackView.backgroundColor = PartySource.getPartyColor(party: candidate?.party ?? "")
-//        if let sourceResult = sourceResult {
-//            switch sourceResult {
-//            case .candidateSearch, .districtSearch:
-//                numberLabel.text = "기호\(candidate?.number ?? "")"
-//            case .partySearch:
-//                numberLabel.text = candidate?.recommend
-//            }
-//        }
-        mapIconView.isHidden = (candidate?.recommend != nil)
-        
-
-        numberLabel.text = candidate?.recommend == nil ? "기호\(candidate?.number ?? "")" : "번호\(candidate?.recommend ?? "")"
+        if let sourceResult = source {
+            switch sourceResult {
+            case .candidateSearch, .districtSearch:
+                numberLabel.text = "기호\(candidate?.number ?? "")"
+            case .partySearch:
+                numberLabel.text = candidate?.recommend
+            }
+        }
         partyBackView.backgroundColor = PartySource.getPartyColor(party: candidate?.party ?? "")
         partyLabel.text = candidate?.party
         nameLabel.text = candidate?.name

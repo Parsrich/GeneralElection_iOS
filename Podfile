@@ -15,7 +15,6 @@ target 'GeneralElection' do
   pod 'RxAlamofire'
   pod 'NSObject+Rx'
   pod 'Action'
-  pod 'RxKeyboard'
   
   # Firebase
   pod 'Firebase/Core'
