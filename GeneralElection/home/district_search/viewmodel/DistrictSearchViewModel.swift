@@ -7,8 +7,13 @@
 //
 
 import RxSwift
+import Action
 import RxDataSources
 import NSObject_Rx
+
+typealias SiSectionModel = AnimatableSectionModel<Int, LocationSi>
+typealias GuSectionModel = AnimatableSectionModel<Int, LocationGu>
+typealias DongSectionModel = AnimatableSectionModel<Int, LocationDong>
 
 enum LocationType: String {
     case si
@@ -18,7 +23,20 @@ enum LocationType: String {
 }
 
 class DistrictSearchViewModel: BaseViewModel {
-        
+    
+    var siListObservable: Observable<[SiSectionModel]> {
+        return Observable.just([SiSectionModel(model: 0, items: locationSiList)])
+    }
+    var guListObservable: Observable<[GuSectionModel]> {
+        return Observable.just([GuSectionModel(model: 0, items: locationGuList)])
+    }
+    var dongListObservable: Observable<[DongSectionModel]> {
+        return Observable.just([DongSectionModel(model: 0, items: locationDongList)])
+    }
+    var electionNameObservable: Observable<LocationElectionName> {
+        return Observable.just(electionName)
+    }
+    
     var locationSiList: [LocationSi]
     var locationGuList: [LocationGu]
     var locationDongList: [LocationDong]
@@ -26,7 +44,40 @@ class DistrictSearchViewModel: BaseViewModel {
     
     var locationType: LocationType = .si
     var electionType: ElectionType = .nationalAssembly
-            
+    
+    let siDataSource: RxTableViewSectionedAnimatedDataSource<SiSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<SiSectionModel>(configureCell: { (dataSource, tableView, indexPath, locationSi) -> UITableViewCell in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.className, for: indexPath) as? CityCell else { return UITableViewCell() }
+            cell.cityName.text = locationSi.key
+            return cell
+        })
+        
+        ds.canEditRowAtIndexPath = { _, _ in return true }
+        return ds
+    }()
+    
+    let guDataSource: RxTableViewSectionedAnimatedDataSource<GuSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<GuSectionModel>(configureCell: {(dataSource, tableView, indexPath, locationGu) -> UITableViewCell in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.className, for: indexPath) as? CityCell else { return UITableViewCell() }
+            cell.cityName.text = locationGu.key
+            return cell
+        })
+        
+        ds.canEditRowAtIndexPath = { _, _ in return true }
+        return ds
+    }()
+    
+    let dongDataSource: RxTableViewSectionedAnimatedDataSource<DongSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<DongSectionModel>(configureCell: {(dataSource, tableView, indexPath, locationDong) -> UITableViewCell in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.className, for: indexPath) as? CityCell else { return UITableViewCell() }
+            cell.cityName.text = locationDong.key
+            return cell
+        })
+        
+        ds.canEditRowAtIndexPath = { _, _ in return true }
+        return ds
+    }()
+        
     required init() {
         locationSiList = [LocationSi]()
         locationGuList = [LocationGu]()
