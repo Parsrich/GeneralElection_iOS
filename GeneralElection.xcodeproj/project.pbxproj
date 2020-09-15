@@ -91,7 +91,6 @@
 		CAF0A48A2436C3E8007CE930 /* PartyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0A4892436C3E8007CE930 /* PartyPromise.swift */; };
 		CAF613322421E7C200D26D31 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613312421E7C200D26D31 /* Party.swift */; };
 		CAF613342421E99B00D26D31 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF613332421E99B00D26D31 /* CityCell.swift */; };
-		CAF7C6A924431D6900D80915 /* VoteResultApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7C6A824431D6900D80915 /* VoteResultApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,7 +186,6 @@
 		CAF0A4892436C3E8007CE930 /* PartyPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromise.swift; sourceTree = "<group>"; };
 		CAF613312421E7C200D26D31 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		CAF613332421E99B00D26D31 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
-		CAF7C6A824431D6900D80915 /* VoteResultApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultApi.swift; sourceTree = "<group>"; };
 		ECB1464823663FCE36FE862D /* Pods_GeneralElection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneralElection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -552,7 +550,6 @@
 				CAF0A47F243661B4007CE930 /* ApiBase.swift */,
 				CAF0A48124366229007CE930 /* ApiKeys.swift */,
 				CAF0A4852436B119007CE930 /* PartyPromiseApi.swift */,
-				CAF7C6A824431D6900D80915 /* VoteResultApi.swift */,
 				CAF0A4872436B1B9007CE930 /* BaseNetwork.swift */,
 				CA36C7272436CD23007B2605 /* ApiService.swift */,
 			);
@@ -752,7 +749,6 @@
 				CA36C7282436CD23007B2605 /* ApiService.swift in Sources */,
 				CAF0A48224366229007CE930 /* ApiKeys.swift in Sources */,
 				CA89034B242B2619006D7F42 /* Candidate.swift in Sources */,
-				CAF7C6A924431D6900D80915 /* VoteResultApi.swift in Sources */,
 				CA2811BE24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift in Sources */,
 				CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */,
 				CA74EFFC2433929C00775A56 /* PartyItemCell.swift in Sources */,

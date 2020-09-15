@@ -9,12 +9,12 @@
 import Foundation
 
 enum ApiKey: String {
-    case key
+    case partyPromise
 }
 
 class ApiKeys {
     
-    static var getKey: String {
+    static var partyPromise: String {
         
         guard let file = Bundle.main.url(forResource: "apikey", withExtension: "json") else { return "" }
         do {
@@ -22,7 +22,7 @@ class ApiKeys {
             let json = try JSONSerialization.jsonObject(with: data, options: [])
             
             guard let object = json as? NSDictionary,
-                let promiseKey = object.value(forKey: ApiKey.key.rawValue) as? String else {
+                let promiseKey = object.value(forKey: ApiKey.partyPromise.rawValue) as? String else {
                 return "" }
             
             return promiseKey
