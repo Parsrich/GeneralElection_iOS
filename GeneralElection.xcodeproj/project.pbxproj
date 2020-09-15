@@ -68,7 +68,6 @@
 		CA7BCE12243052DC00BE9778 /* SponsorItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BCE11243052DC00BE9778 /* SponsorItemCell.swift */; };
 		CA89034B242B2619006D7F42 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034A242B2619006D7F42 /* Candidate.swift */; };
 		CA89034D242B30A0006D7F42 /* Congress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89034C242B30A0006D7F42 /* Congress.swift */; };
-		CA8DFC23244C2B18000BF780 /* CandidateCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DFC22244C2B18000BF780 /* CandidateCellViewModel.swift */; };
 		CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */; };
 		CA9AEAC0241A1F710022A2C8 /* CandidateSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */; };
 		CA9AEAC2241A1F990022A2C8 /* DistrictSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAC1241A1F990022A2C8 /* DistrictSearchViewController.swift */; };
@@ -168,7 +167,6 @@
 		CA89034A242B2619006D7F42 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		CA89034C242B30A0006D7F42 /* Congress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congress.swift; sourceTree = "<group>"; };
 		CA8B750E2438B6FC00C1F2DB /* 총선.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "총선.entitlements"; sourceTree = "<group>"; };
-		CA8DFC22244C2B18000BF780 /* CandidateCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CandidateCellViewModel.swift; path = GeneralElection/home/candidate_search/viewmodel/CandidateCellViewModel.swift; sourceTree = SOURCE_ROOT; };
 		CA9AEAB9241A17780022A2C8 /* HomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDetail.storyboard; sourceTree = "<group>"; };
 		CA9AEABF241A1F710022A2C8 /* CandidateSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAC1241A1F990022A2C8 /* DistrictSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictSearchViewController.swift; sourceTree = "<group>"; };
@@ -509,7 +507,6 @@
 				CA9AEAC9241A20280022A2C8 /* CandidateSearchViewModel.swift */,
 				CA2811BD24249FDF00DCF8AA /* CandidateSearchResultViewModel.swift */,
 				CA472467242AE768000A3C10 /* CandidateSearchResultListViewModel.swift */,
-				CA8DFC22244C2B18000BF780 /* CandidateCellViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -791,7 +788,6 @@
 				CA59EF3E24238EF000FECFCD /* FirebaseManager.swift in Sources */,
 				CA46F987241369FD00C76E2E /* HomeViewController.swift in Sources */,
 				CADAA5242438F87E00A64268 /* IntroduceViewController.swift in Sources */,
-				CA8DFC23244C2B18000BF780 /* CandidateCellViewModel.swift in Sources */,
 				CA46F9A52413742500C76E2E /* ArrayExtension.swift in Sources */,
 				CA59EF3C24235EA700FECFCD /* SettingCell.swift in Sources */,
 				CA2DCE28241E7931006A304D /* ShadowView.swift in Sources */,

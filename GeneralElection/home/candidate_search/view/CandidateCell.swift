@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class CandidateCell: BaseTableViewCellWithViewModel<CandidateCellViewModel> {
+class CandidateCell: UITableViewCell {
     
     @IBOutlet weak var thumbnailImageView: UIImageView! {
         didSet {
@@ -27,26 +27,32 @@ class CandidateCell: BaseTableViewCellWithViewModel<CandidateCellViewModel> {
     
     @IBOutlet weak var resignView: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        if let imgUrl = viewModel!.candidate?.imageUrl {
+    func setCandidate(candidateInfo: Candidate, sourceResult: SourceResult?) {
+        if let imgUrl = candidateInfo.imageUrl {
             let url = URL(string: imgUrl)
             thumbnailImageView
                 .kf
                 .setImage(with: url,
                           placeholder: UIImage(named: "ic_profile"))
         }
-        numberColorView.backgroundColor = PartySource.getPartyColor(party: viewModel!.candidate?.party ?? "")
+        numberColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
+//        if let sourceResult = sourceResult {
+//            switch sourceResult {
+//            case .candidateSearch, .districtSearch:
+//                numberLabel.text = "기호\(candidateInfo.number ?? "")"
+//            case .partySearch:
+//                numberLabel.text = candidateInfo.recommend
+//            }
+//        }
         
-        numberLabel.text = viewModel!.candidate?.recommend == nil ? "기호\(viewModel!.candidate?.number ?? "")" : "번호\(viewModel!.candidate?.recommend ?? "")"
-        partyColorView.backgroundColor = PartySource.getPartyColor(party: viewModel!.candidate?.party ?? "")
-        partyNameLabel.text = viewModel!.candidate?.party
-        candidateNameLabel.text = viewModel!.candidate?.name
-        birthLabel.text = "\(viewModel!.candidate?.age ?? "")/\(viewModel!.candidate?.gender ?? "")"
-        addressLabel.text = viewModel!.candidate?.address
+        numberLabel.text = candidateInfo.recommend == nil ? "기호\(candidateInfo.number ?? "")" : "번호\(candidateInfo.recommend ?? "")"
+        partyColorView.backgroundColor = PartySource.getPartyColor(party: candidateInfo.party ?? "")
+        partyNameLabel.text = candidateInfo.party
+        candidateNameLabel.text = candidateInfo.name
+        birthLabel.text = "\(candidateInfo.age ?? "")/\(candidateInfo.gender ?? "")"
+        addressLabel.text = candidateInfo.address
         
-        resignView.isHidden = viewModel!.candidate?.status != "resign"
-        self.isUserInteractionEnabled = viewModel!.candidate?.status != "resign"
+        resignView.isHidden = candidateInfo.status != "resign"
+        self.isUserInteractionEnabled = candidateInfo.status != "resign"
     }
 }
