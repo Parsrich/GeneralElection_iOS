@@ -18,7 +18,7 @@ class FullScreenAdMobManager: NSObject {
     #if DEBUG   // 전면 테스트
     let adUnitId = "ca-app-pub-3940256099942544/4411468910"
     #else   // 전면 광고 ID
-    let adUnitId = FirebaseManager.share.stringValue(key: .fullAdId, defaultValue: "ca-app-pub-6176394344908792/1135650097")
+    let adUnitId = "ca-app-pub-6176394344908792/1135650097"
     #endif
     
     func createAd() {

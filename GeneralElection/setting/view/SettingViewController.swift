@@ -38,9 +38,7 @@ extension SettingViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingCell.className, for: indexPath) as? SettingCell else { return UITableViewCell() }
         
         cell.titleLabel?.text = viewModel!.settingList[indexPath.row]
-        if indexPath.row == 3 {
-            cell.rightImage.isHidden = true
-        }
+        cell.rightImage.isHidden = true               
         
         return cell
     }
