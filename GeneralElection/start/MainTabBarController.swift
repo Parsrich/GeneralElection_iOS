@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import GoogleMobileAds
 
 class MainTabBarController: UITabBarController {
     

@@ -6,11 +6,4 @@
 //  Copyright © 2020 Parsrich. All rights reserved.
 //
 
-import UIKit
-
-class IntroduceViewController: BaseViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+import Foundation

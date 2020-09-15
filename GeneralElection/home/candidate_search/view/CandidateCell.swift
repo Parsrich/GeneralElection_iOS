@@ -25,7 +25,6 @@ class CandidateCell: UITableViewCell {
     @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
-    @IBOutlet weak var resignView: UIView!
     
     func setCandidate(candidateInfo: Candidate, sourceResult: SourceResult?) {
         if let imgUrl = candidateInfo.imageUrl {
@@ -51,8 +50,5 @@ class CandidateCell: UITableViewCell {
         candidateNameLabel.text = candidateInfo.name
         birthLabel.text = "\(candidateInfo.age ?? "")/\(candidateInfo.gender ?? "")"
         addressLabel.text = candidateInfo.address
-        
-        resignView.isHidden = candidateInfo.status != "resign"
-        self.isUserInteractionEnabled = candidateInfo.status != "resign"
     }
 }
