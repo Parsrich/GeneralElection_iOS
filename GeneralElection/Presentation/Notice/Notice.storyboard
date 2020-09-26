@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ad1-xl-9Q3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ad1-xl-9Q3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,6 +130,7 @@
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vIb-BC-MP0" firstAttribute="trailing" secondItem="Vp7-wS-NBg" secondAttribute="trailing" constant="20" id="5gu-XN-ect"/>
@@ -137,7 +138,6 @@
                             <constraint firstItem="Vp7-wS-NBg" firstAttribute="top" secondItem="vIb-BC-MP0" secondAttribute="top" constant="30" id="bRh-hg-HeS"/>
                             <constraint firstItem="Vp7-wS-NBg" firstAttribute="leading" secondItem="vIb-BC-MP0" secondAttribute="leading" constant="20" id="ftS-vw-tIO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vIb-BC-MP0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_notice" selectedImage="tab_notice_select" id="N6X-as-CdL"/>
                     <navigationItem key="navigationItem" id="EJ3-YX-l6j">
@@ -165,7 +165,6 @@
                         <outlet property="electionVideoView" destination="Of9-Tt-9z6" id="kKX-DQ-0i1"/>
                         <outlet property="scrollView" destination="Vp7-wS-NBg" id="5Gm-44-N19"/>
                         <outlet property="voteMethodView" destination="p4H-3B-iOp" id="Ytd-b5-G9T"/>
-                        <outlet property="voteMethodViewContainer" destination="MYn-2J-fO6" id="Te8-Nd-zs2"/>
                         <outlet property="youtubePlayerView" destination="Of9-Tt-9z6" id="JIE-27-Aea"/>
                     </connections>
                 </viewController>
