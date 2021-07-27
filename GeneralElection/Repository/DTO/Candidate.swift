@@ -65,7 +65,7 @@ struct Candidate: Decodable {
     }
 }
 
-class CandidateMemory {
+struct CandidateMemory {
     static var candidateDict: NSDictionary?
     static var candidateNameList: [String]? {
         return candidateDict?.allKeys as? [String]

@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import ImageSlideshow
 import youtube_ios_player_helper
 

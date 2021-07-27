@@ -16,7 +16,7 @@ class CandidateSearchResultViewModel: BaseViewModel {
     var districtString: String?
     var detailInfo: [DetailInfo]?
     
-    required init() {
+    override init() {
         super.init()
         
     }

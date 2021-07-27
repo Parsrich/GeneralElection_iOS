@@ -7,17 +7,12 @@
 //
 
 import RxSwift
-import NSObject_Rx
 
 class PartyDetailViewModel: BaseViewModel {
     
     // 정당 공약 볼때만 사용할 데이터
     var partyPromiseList: [Promise]?
     var partyName: String = ""
-    
-    required init() {
-        super.init()
-    }
     
     func fetchPartyPromise(location: String? = nil, errorHandler: @escaping (Error) -> Void, completion: @escaping () -> Void) {
         if PartyMemory.partyPromiseDict == nil {
@@ -30,7 +25,7 @@ class PartyDetailViewModel: BaseViewModel {
                 }, onCompleted: { [weak self] in
                         self?.bindPartyPromise()
                         completion()
-                }).disposed(by: rx.disposeBag)
+                }).disposed(by: disposeBag)
             return
         }
         

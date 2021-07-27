@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
-import NSObject_Rx
 
 class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSearchViewModel> {
     @IBOutlet weak var backgroundView: UIView!
@@ -79,7 +78,7 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
                 self.isLocationGuButtonOn(isOn: false)
                 self.switchTableView(nextTableView: self.siTableView)
                 self.setLocationBackgroundColor()
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
             
         guButton.rx.tap
             .asDriver()
@@ -91,7 +90,7 @@ class DistrictSearchViewController: BaseViewControllerWithViewModel<DistrictSear
                 self.isLocationDongButtonOn(isOn: false)
                 self.switchTableView(nextTableView: self.guTableView)
                 self.setLocationBackgroundColor()
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func switchTableView(nextTableView: UITableView) {

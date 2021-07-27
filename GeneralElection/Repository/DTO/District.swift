@@ -44,7 +44,7 @@ struct LocationSi: Equatable, IdentifiableType {
     }
 }
 
-class LocationGu: Equatable, IdentifiableType {
+struct LocationGu: Equatable, IdentifiableType {
     var identity: String
     var guValues: [String: [LocationDong]]
     
@@ -75,7 +75,7 @@ class LocationGu: Equatable, IdentifiableType {
     }
 }
 
-class LocationDong: Equatable, IdentifiableType {
+struct LocationDong: Equatable, IdentifiableType {
     var identity: String
     var dongValues: [String: LocationElectionName]
     
@@ -97,7 +97,7 @@ class LocationDong: Equatable, IdentifiableType {
     }
 }
 
-class LocationElectionName {
+struct LocationElectionName {
     var siName: String = ""
     var congress: String
 //    var siMayor: String
@@ -120,7 +120,7 @@ class LocationElectionName {
         self.guCouncil = (dictionary?["guCouncil"] as? String) ?? ""
     }
     
-    func setValue(electionName: LocationElectionName, siName: String) {
+    mutating func setValue(electionName: LocationElectionName, siName: String) {
         self.congress = electionName.congress
         self.guMayor = electionName.guMayor
         self.siCouncil = electionName.siCouncil

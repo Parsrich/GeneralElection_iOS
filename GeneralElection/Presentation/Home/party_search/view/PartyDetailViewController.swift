@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import Kingfisher
 
 class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailViewModel> {
@@ -30,12 +29,6 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
     @IBOutlet weak var popupTitleLabel: UILabel!
     @IBOutlet weak var popupContentTextView: UITextView!
     @IBOutlet weak var emptyPromiseView: UIImageView!
-//    var isPopupShow: Bool = false {
-//        didSet {
-//            self.popupShadowView.isHidden = !self.isPopupShow
-//            self.popupView.isHidden = !self.isPopupShow
-//        }
-//    }
     
     var sourceResult: SourceResult?
     var partyName: String?
@@ -111,7 +104,7 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
         
         partyIssueButton.rx.tap
             .asDriver()
@@ -133,7 +126,7 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                     vc.navigationTitle = "정당 정보 위키"
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
         
         popupCloseButton.rx.tap
             .asDriver()
@@ -147,7 +140,7 @@ class PartyDetailViewController: BaseViewControllerWithViewModel<PartyDetailView
                     self?.popupContentTextView.text = ""
                 }
                 
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func setPopupData(promise: Promise?) {

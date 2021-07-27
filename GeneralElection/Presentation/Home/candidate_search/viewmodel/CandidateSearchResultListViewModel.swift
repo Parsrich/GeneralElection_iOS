@@ -15,7 +15,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
     var districtString = ""
     var congressCandidateList: [Candidate]
     
-    required init() {
+    override init() {
         electionType = .nationalAssembly
         electionName = LocationElectionName(dictionary: nil)
         
@@ -42,7 +42,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                    }).disposed(by: rx.disposeBag)
+                    }).disposed(by: disposeBag)
                 return
             }
         case .guMayor:
@@ -59,7 +59,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                    }).disposed(by: rx.disposeBag)
+                    }).disposed(by: disposeBag)
                 return
             }
         case .siCouncil:
@@ -76,7 +76,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                    }).disposed(by: rx.disposeBag)
+                    }).disposed(by: disposeBag)
                 return
             }
         case .guCouncil:
@@ -93,7 +93,7 @@ class CandidateSearchListResultViewModel: BaseViewModel {
                     }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                    }).disposed(by: rx.disposeBag)
+                    }).disposed(by: disposeBag)
                 return
             }
         default:

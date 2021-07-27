@@ -7,13 +7,12 @@
 //
 
 import RxSwift
-import NSObject_Rx
 
 class SettingViewModel: BaseViewModel {
     var settingList: [String]
     var appVersion = "0.0.0"
     
-    required init() {
+    override init() {
         settingList = [String]()
         
         super.init()

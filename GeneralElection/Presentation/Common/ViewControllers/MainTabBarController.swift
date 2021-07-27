@@ -12,6 +12,8 @@ import GoogleMobileAds
 
 class MainTabBarController: UITabBarController {
     
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +39,7 @@ class MainTabBarController: UITabBarController {
                     self?.showNetworkErrorView {
                         self?.setData()
                     }
-                }).disposed(by: rx.disposeBag)
+                }).disposed(by: disposeBag)
         }
     }
     

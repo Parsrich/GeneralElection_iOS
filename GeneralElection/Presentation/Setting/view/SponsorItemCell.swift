@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import StoreKit
 
 class SponsorItemCell: UITableViewCell {
@@ -19,6 +18,7 @@ class SponsorItemCell: UITableViewCell {
     @IBOutlet weak var priceButton: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
     
+    var disposeBag = DisposeBag()
     var price = 1000
     var buySubject = PublishSubject<SKProduct?>()
     var sponsorItem: SponsorItem?
@@ -38,7 +38,7 @@ class SponsorItemCell: UITableViewCell {
                 
                 /// 완료시 수행
                 self.buySubject.onNext(self.sponsorItem?.product)
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func setData(sponsorItem: SponsorItem) {

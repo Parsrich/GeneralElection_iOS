@@ -8,10 +8,10 @@
 
 import Foundation
 
-class PartyPromiseBaseResponse: Decodable {
+struct PartyPromiseBaseResponse: Decodable {
     var getPartyPlcInfoInqire: PartyPlcInfoInqire?
 
-    class PartyPlcInfoInqire: Decodable {
+    struct PartyPlcInfoInqire: Decodable {
         var header: Header?
         var item: [PartyPromise]?
         var numOfRows: Int?

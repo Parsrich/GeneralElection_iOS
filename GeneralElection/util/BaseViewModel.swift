@@ -7,12 +7,13 @@
 //
 
 import RxSwift
-import NSObject_Rx
 import Firebase
 
 class BaseViewModel: NSObject {
     
-    required override init() {
+    var disposeBag = DisposeBag()
+    
+    override init() {
         super.init()
     }
 }

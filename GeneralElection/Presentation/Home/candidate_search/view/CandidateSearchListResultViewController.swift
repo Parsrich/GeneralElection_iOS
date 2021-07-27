@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import GoogleMobileAds
 
 class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<CandidateSearchListResultViewModel> {
@@ -105,7 +104,7 @@ class CandidateSearchListResultViewController: BaseViewControllerWithViewModel<C
             .drive(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 self.presentActionSheet(title: "선거 종류", actions: self.getActions())
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func fetchCandidates() {
@@ -186,7 +185,7 @@ extension CandidateSearchListResultViewController: UITableViewDataSource {
                             tableView.reloadData()
                         }
                         
-                    }).disposed(by: rx.disposeBag)
+                    }).disposed(by: disposeBag)
 
                 nativeAdView = GADTSmallTemplateView(frame: cell.contentView.frame)
                 cell.contentView.addSubViewWithFullAutoLayout(subview: nativeAdView)
@@ -201,7 +200,7 @@ extension CandidateSearchListResultViewController: UITableViewDataSource {
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateCell.className, for: indexPath) as? CandidateCell else { return UITableViewCell() }
         
-        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row], sourceResult: sourceResult)
+//        cell.setCandidate(candidateInfo: viewModel!.congressCandidateList[indexPath.row], sourceResult: sourceResult)
         
         return cell
     }

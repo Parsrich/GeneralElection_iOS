@@ -8,13 +8,17 @@
 
 import Foundation
 
-struct Congress {
-    static var congressDict: NSDictionary?
-    static var guMayorDict: NSDictionary?
-    static var siCouncilDict: NSDictionary?
-    static var guCouncilDict: NSDictionary?
+class Congress {
+    static let shared = Congress()
     
-    static func reset() {
+    private init() { }
+    
+    var congressDict: NSDictionary?
+    var guMayorDict: NSDictionary?
+    var siCouncilDict: NSDictionary?
+    var guCouncilDict: NSDictionary?
+    
+    func reset() {
         congressDict = nil
         guMayorDict = nil
         siCouncilDict = nil

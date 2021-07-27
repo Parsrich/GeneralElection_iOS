@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PartyPromise: Decodable {
+struct PartyPromise: Decodable {
     
     var num: String?
     var sgId: String?

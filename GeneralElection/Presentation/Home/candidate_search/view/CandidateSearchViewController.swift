@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import RxKeyboard
 
 class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSearchViewModel> {
@@ -72,7 +71,7 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
 //                self.candidateSearchField.text
                 // 검색 결과가 2이상이면
                 self.nextViewController(name: self.candidateSearchField.text ?? "")
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
         
         RxKeyboard.instance.visibleHeight
             .drive(onNext: { [weak self] height in
@@ -88,7 +87,7 @@ class CandidateSearchViewController: BaseViewControllerWithViewModel<CandidateSe
                     
                     self.backgroundImageView.alpha = height == 0 ? 1.0 : 0.0
                 }
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func nextViewController(name: String) {

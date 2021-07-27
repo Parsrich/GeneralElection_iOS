@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 
 
 enum StoryboardName: String {
@@ -23,6 +22,7 @@ enum StoryboardName: String {
 class BaseViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView!
+    var disposeBag = DisposeBag()
         
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NoticeContents: Decodable {
+struct NoticeContents: Decodable {
     var contents: String?
     var underbarContents: String?
 }

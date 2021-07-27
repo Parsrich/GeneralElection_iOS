@@ -7,13 +7,12 @@
 //
 
 import RxSwift
-import NSObject_Rx
 
 class PartySearchViewModel: BaseViewModel {
     
     var partyList: [Party]
     
-    required init() {
+    override init() {
         self.partyList = [Party]()
         super.init()
     }
@@ -30,7 +29,7 @@ class PartySearchViewModel: BaseViewModel {
                 }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                }).disposed(by: rx.disposeBag)
+                }).disposed(by: disposeBag)
             return
         }
         

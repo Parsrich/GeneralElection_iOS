@@ -9,15 +9,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import GoogleMobileAds
 
 class HomeViewController: BaseViewController {
-
-    @IBOutlet weak var noticeButton: UIButton!
-    @IBOutlet weak var partySearchButton: UIButton!
-    @IBOutlet weak var districtSearchButton: UIButton!
-    @IBOutlet weak var candidateSearchButton: UIButton!
+    
+    @IBOutlet private weak var noticeButton: UIButton!
+    @IBOutlet private weak var partySearchButton: UIButton!
+    @IBOutlet private weak var districtSearchButton: UIButton!
+    @IBOutlet private weak var candidateSearchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class HomeViewController: BaseViewController {
             .map { 0 }
             .asDriver(onErrorJustReturn: 0)
             .drive(onNext: mainTabBar?.setSelectedIndex(index:))
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         partySearchButton.rx.tap
             .asDriver()
@@ -45,30 +44,30 @@ class HomeViewController: BaseViewController {
                 if let vc = self.selectViewController(.homeDetail, viewControllerName: PartySearchViewController.className) as? PartySearchViewController {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
         
         districtSearchButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-            guard let `self` = self else { return }
-            FullScreenAdMobManager.share.showAd(from: self)
-            if let vc = self.selectViewController(.homeDetail, viewControllerName: DistrictSearchViewController.className) as? DistrictSearchViewController {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-            }).disposed(by: rx.disposeBag)
+                guard let `self` = self else { return }
+                FullScreenAdMobManager.share.showAd(from: self)
+                if let vc = self.selectViewController(.homeDetail, viewControllerName: DistrictSearchViewController.className) as? DistrictSearchViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }).disposed(by: disposeBag)
         
         candidateSearchButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-            guard let `self` = self else { return }
-            FullScreenAdMobManager.share.showAd(from: self)
-            if let vc = self.selectViewController(.homeDetail, viewControllerName: CandidateSearchViewController.className) as? CandidateSearchViewController {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-            }).disposed(by: rx.disposeBag)
+                guard let `self` = self else { return }
+                FullScreenAdMobManager.share.showAd(from: self)
+                if let vc = self.selectViewController(.homeDetail, viewControllerName: CandidateSearchViewController.className) as? CandidateSearchViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }).disposed(by: disposeBag)
     }
     
-
+    
 }
 
 

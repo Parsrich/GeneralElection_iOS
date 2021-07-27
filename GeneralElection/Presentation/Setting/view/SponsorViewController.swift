@@ -104,7 +104,7 @@ extension SponsorViewController: UITableViewDataSource {
                 
                 SponsorProducts.store.buyProduct(product)
 
-            }).disposed(by: rx.disposeBag)
+            }).disposed(by: disposeBag)
         return cell
     }
 }

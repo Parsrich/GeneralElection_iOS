@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Party {
+struct Party {
     var name: String?
     var websiteUrl: String?
     var number: Int?
@@ -23,7 +23,7 @@ class Party {
     }
 }
 
-class PartyMemory {
+struct PartyMemory {
     static var partyPromiseDict: NSDictionary?
     static var partyDict: NSDictionary?
     static var partyList: [String]? {
@@ -69,16 +69,16 @@ class PartyMemory {
 class PartySource {
     
     static let partyColors: [String: String] = [
-    "더불어민주당": "#53779E",//"#004FA2",
-    "미래통합당": "#FF5B63",//"#F0426F",
-    "민생당": "#4C7354",//"#0AA95F",
-    "미래한국당": "#F2959F",//"#B01B64",
-    "더불어시민당": "#5F9EAF",//"#0089D3",
-    "정의당": "#FFBC2C",//"#FFCC01",
-    "우리공화당": "#51957A",//"#009944",
-    "국민의당": "#FF8F3C",//"#EA5504",
-    "기독자유통일당": "#DA4D40",//"#0075C3",
-    "친박신당": "#708E4B",//"#E30010",
+    "더불어민주당": "#53779E",
+    "미래통합당": "#FF5B63",
+    "민생당": "#4C7354",
+    "미래한국당": "#F2959F",
+    "더불어시민당": "#5F9EAF",
+    "정의당": "#FFBC2C",
+    "우리공화당": "#51957A",
+    "국민의당": "#FF8F3C",
+    "기독자유통일당": "#DA4D40",
+    "친박신당": "#708E4B",
     "민중당": "#F26623",
     "열린민주당": "#003E9B",
     "국가혁명배당금당": "#E8141A",

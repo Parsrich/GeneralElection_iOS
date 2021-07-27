@@ -13,7 +13,6 @@ target 'GeneralElection' do
   pod 'RxDataSources'
   pod 'RxWebKit'
   pod 'RxAlamofire'
-  pod 'NSObject+Rx'
   pod 'Action'
   pod 'RxKeyboard'
   

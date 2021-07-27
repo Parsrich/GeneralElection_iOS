@@ -75,12 +75,14 @@
 		CA9AEAD2241B0FA20022A2C8 /* PartySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */; };
 		CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */; };
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
+		CAAADF6326A3DB6500BBB2A9 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF6226A3DB6500BBB2A9 /* Localization.strings */; };
 		CAABF64C2435B1F5000F5172 /* CandidateNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */; };
 		CAAC705C24384CA300C4A837 /* PartyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705B24384CA300C4A837 /* PartyDetailViewController.swift */; };
 		CAAC705E24384CD400C4A837 /* PartyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705D24384CD400C4A837 /* PartyDetailViewModel.swift */; };
 		CAAC706024385C0C00C4A837 /* PartyPromiseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC705F24385C0C00C4A837 /* PartyPromiseCell.swift */; };
 		CAB2E509242C84EB00095502 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2E508242C84EB00095502 /* UIColorExtension.swift */; };
 		CABDCEA8242FAE93003A8EF7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDCEA7242FAE93003A8EF7 /* Config.swift */; };
+		CAC303BB25B06F8400DFC4EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAC303BA25B06F8400DFC4EA /* GoogleService-Info.plist */; };
 		CAD575532436E06200FF8E8D /* PartyPromiseBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */; };
 		CADAA5222438DD3E00A64268 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAA5212438DD3E00A64268 /* IAPHelper.swift */; };
 		CADAA5242438F87E00A64268 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAA5232438F87E00A64268 /* IntroduceViewController.swift */; };
@@ -172,12 +174,14 @@
 		CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewModel.swift; sourceTree = "<group>"; };
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
+		CAAADF6226A3DB6500BBB2A9 /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateNameCell.swift; sourceTree = "<group>"; };
 		CAAC705B24384CA300C4A837 /* PartyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailViewController.swift; sourceTree = "<group>"; };
 		CAAC705D24384CD400C4A837 /* PartyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDetailViewModel.swift; sourceTree = "<group>"; };
 		CAAC705F24385C0C00C4A837 /* PartyPromiseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromiseCell.swift; sourceTree = "<group>"; };
 		CAB2E508242C84EB00095502 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CABDCEA7242FAE93003A8EF7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CAC303BA25B06F8400DFC4EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPromiseBaseResponse.swift; sourceTree = "<group>"; };
 		CADAA5212438DD3E00A64268 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		CADAA5232438F87E00A64268 /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
@@ -242,7 +246,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CA3D865B2425CA9800872223 /* model */ = {
+		CA3D865B2425CA9800872223 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				CAF613312421E7C200D26D31 /* Party.swift */,
@@ -254,7 +258,7 @@
 				CAD575522436E06200FF8E8D /* PartyPromiseBaseResponse.swift */,
 				CA5DBD82243A11C300C3C2B8 /* NoticeContents.swift */,
 			);
-			path = model;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		CA4509AE243F32DD0009E348 /* nativetemplates */ = {
@@ -297,7 +301,7 @@
 				CA46F9C82413921000C76E2E /* Resources */,
 				CA46F9B92413857600C76E2E /* App */,
 				CA46F99C2413727B00C76E2E /* Util */,
-				CAF613302421E7A700D26D31 /* Data */,
+				CAF613302421E7A700D26D31 /* Repository */,
 				CA811F4825125FE0009C5E8D /* Presentation */,
 				CA46F99024136A0000C76E2E /* Info.plist */,
 			);
@@ -354,6 +358,7 @@
 				CA46F9BE2413874500C76E2E /* BaseViewModel.swift */,
 				CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */,
 				CA2D0C8924498B2F0051C5E7 /* BaseCellViewModel.swift */,
+				CAAADF6226A3DB6500BBB2A9 /* Localization.strings */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 		CA46F9C82413921000C76E2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAC303BA25B06F8400DFC4EA /* GoogleService-Info.plist */,
 				CA8B750E2438B6FC00C1F2DB /* 총선.entitlements */,
 				CA2DCE22241DF084006A304D /* GmarketSansBold.otf */,
 				CA2DCE23241DF085006A304D /* GmarketSansLight.otf */,
@@ -593,13 +599,13 @@
 			path = api;
 			sourceTree = "<group>";
 		};
-		CAF613302421E7A700D26D31 /* Data */ = {
+		CAF613302421E7A700D26D31 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				CAF0A47E2436618A007CE930 /* api */,
-				CA3D865B2425CA9800872223 /* model */,
+				CA3D865B2425CA9800872223 /* DTO */,
 			);
-			path = Data;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +670,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC303BB25B06F8400DFC4EA /* GoogleService-Info.plist in Resources */,
 				CA4509B9243F32DD0009E348 /* GADTSmallTemplateView.xib in Resources */,
 				CA46F98F24136A0000C76E2E /* LaunchScreen.storyboard in Resources */,
 				CA46F98C24136A0000C76E2E /* Assets.xcassets in Resources */,
@@ -672,6 +679,7 @@
 				CA46F98A241369FD00C76E2E /* Main.storyboard in Resources */,
 				CA9AEABA241A17780022A2C8 /* HomeDetail.storyboard in Resources */,
 				CA46F9A72413778D00C76E2E /* Home.storyboard in Resources */,
+				CAAADF6326A3DB6500BBB2A9 /* Localization.strings in Resources */,
 				CA2DCE24241DF085006A304D /* GmarketSansMedium.otf in Resources */,
 				CA2DCE25241DF085006A304D /* GmarketSansBold.otf in Resources */,
 				CA46F9B4241377EA00C76E2E /* Setting.storyboard in Resources */,
@@ -998,7 +1006,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Swift-Project/GeneralElection/GeneralElection/util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Projects/GeneralElection_iOS/GeneralElection/Util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1024,7 +1032,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parslich.GeneralElection;
 				PRODUCT_NAME = "총선";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Swift-Project/GeneralElection/GeneralElection/util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/devming/Projects/GeneralElection_iOS/GeneralElection/Util/admob/nativetemplates/GeneralElection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -8,7 +8,6 @@
 
 import RxSwift
 import RxDataSources
-import NSObject_Rx
 
 
 enum ElectionType: String {
@@ -38,7 +37,7 @@ class DistrictSearchViewModel: BaseViewModel {
     var locationType: LocationType = .si
     var electionType: ElectionType = .nationalAssembly
             
-    required init() {
+    override init() {
         currentDistrict = [String]()
         locationSiList = [LocationSi]()
         locationGuList = [LocationGu]()
@@ -60,7 +59,7 @@ class DistrictSearchViewModel: BaseViewModel {
                 }, onCompleted: { [weak self] in
                         self?.bindData()
                         completion()
-                }).disposed(by: rx.disposeBag)
+                }).disposed(by: disposeBag)
             return
         }
 

@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import Kingfisher
 
 enum SourceResult {
@@ -128,7 +127,7 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
             .drive(onNext: { [weak self] _ in
                 self?.showBigImage(true)
             })
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         detailDocumentButton.rx.tap
             .asDriver()
@@ -141,14 +140,14 @@ class CandidateSearchResultViewController: BaseViewControllerWithViewModel<Candi
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
             })
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         bigProfileCloseButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
                 self?.showBigImage(false)
             })
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
             
     }
     

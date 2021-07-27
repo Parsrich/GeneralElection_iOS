@@ -304,8 +304,6 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - "NSObject+Rx (5.0.2)":
-    - RxSwift (~> 5.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.2)
   - RxAlamofire (5.1.0):
@@ -343,7 +341,6 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - ImageSlideshow (~> 1.8.3)
   - Kingfisher
-  - "NSObject+Rx"
   - RxAlamofire
   - RxCocoa
   - RxDataSources
@@ -386,7 +383,6 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
-    - "NSObject+Rx"
     - PromisesObjC
     - Protobuf
     - RxAlamofire
@@ -431,7 +427,6 @@ SPEC CHECKSUMS:
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  "NSObject+Rx": 2eb2cf51fd1c554118449a7fbc36e4cd620b9e94
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
@@ -444,6 +439,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 7e31f5c009513be818d1f13df10864269ba6218b
+PODFILE CHECKSUM: 2e4050d2e8e153ec0e97cadca888e7943e86e84f
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.10.1

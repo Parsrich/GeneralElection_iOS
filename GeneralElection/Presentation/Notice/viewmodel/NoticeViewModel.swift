@@ -8,7 +8,6 @@
 
 import RxSwift
 import RxCocoa
-import NSObject_Rx
 import ImageSlideshow
 
 class NoticeViewModel: BaseViewModel {
@@ -30,7 +29,7 @@ class NoticeViewModel: BaseViewModel {
         let imagesObservable = input.initialSetting
             .flatMap {
                 Observable
-                    .from(makeImages())
+                    .from(optional: self.makeImages())
                     .asDriver(onErrorJustReturn: [ImageSource]())
             }
         
@@ -38,7 +37,7 @@ class NoticeViewModel: BaseViewModel {
     }
     
     private func makeImages() -> [ImageSource] {
-        let list = [ImageSource]()
+        var list = [ImageSource]()
         for i in 0...9 {
             list.append(ImageSource(image: UIImage(named: "img_vote_\(i)")!))
         }
