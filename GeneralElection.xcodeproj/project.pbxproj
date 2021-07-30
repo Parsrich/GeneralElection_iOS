@@ -73,6 +73,7 @@
 		CA9AEAD0241B0F840022A2C8 /* PartySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */; };
 		CA9AEAD2241B0FA20022A2C8 /* PartySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */; };
 		CA9AEAD5241B27FB0022A2C8 /* DistrictSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */; };
+		CA9FD5DD26B4C85B001FCAB0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FD5DC26B4C85B001FCAB0 /* BaseViewModel.swift */; };
 		CAA33CC7241CDFF50072FCBA /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */; };
 		CAAADF6326A3DB6500BBB2A9 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF6226A3DB6500BBB2A9 /* Localization.strings */; };
 		CAABF64C2435B1F5000F5172 /* CandidateNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */; };
@@ -171,6 +172,7 @@
 		CA9AEACB241A202D0022A2C8 /* DistrictSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictSearchViewModel.swift; sourceTree = "<group>"; };
 		CA9AEACF241B0F840022A2C8 /* PartySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewController.swift; sourceTree = "<group>"; };
 		CA9AEAD1241B0FA20022A2C8 /* PartySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySearchViewModel.swift; sourceTree = "<group>"; };
+		CA9FD5DC26B4C85B001FCAB0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CAA33CC6241CDFF50072FCBA /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		CAAADF6226A3DB6500BBB2A9 /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		CAABF64B2435B1F5000F5172 /* CandidateNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateNameCell.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				CA46F99D2413728100C76E2E /* extension */,
 				CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */,
 				CA2D0C8924498B2F0051C5E7 /* BaseCellViewModel.swift */,
+				CA9FD5DC26B4C85B001FCAB0 /* BaseViewModel.swift */,
 				CAAADF6226A3DB6500BBB2A9 /* Localization.strings */,
 			);
 			path = Util;
@@ -781,6 +784,7 @@
 				CA0DE8CF241CA7C6009FBD03 /* Utilities.swift in Sources */,
 				CA46F9A12413733B00C76E2E /* UIViewControllerExtension.swift in Sources */,
 				CAF0A480243661B4007CE930 /* ApiBase.swift in Sources */,
+				CA9FD5DD26B4C85B001FCAB0 /* BaseViewModel.swift in Sources */,
 				CAF0A48A2436C3E8007CE930 /* PartyPromise.swift in Sources */,
 				CA46F99F2413729B00C76E2E /* UIViewExtension.swift in Sources */,
 				CA5DBD85243A156E00C3C2B8 /* SettingNoticeCell.swift in Sources */,
