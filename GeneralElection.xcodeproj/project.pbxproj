@@ -47,7 +47,6 @@
 		CA46F9B824137DCF00C76E2E /* SplashSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9B724137DCF00C76E2E /* SplashSegue.swift */; };
 		CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9BA2413858B00C76E2E /* MainTabBarController.swift */; };
 		CA46F9BD2413873800C76E2E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9BC2413873800C76E2E /* BaseViewController.swift */; };
-		CA46F9BF2413874500C76E2E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9BE2413874500C76E2E /* BaseViewModel.swift */; };
 		CA46F9C1241387F500C76E2E /* BaseViewControllerWithViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C0241387F500C76E2E /* BaseViewControllerWithViewModel.swift */; };
 		CA46F9C32413884A00C76E2E /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */; };
 		CA46F9C72413887000C76E2E /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46F9C62413887000C76E2E /* SettingViewModel.swift */; };
@@ -144,7 +143,6 @@
 		CA46F9B724137DCF00C76E2E /* SplashSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSegue.swift; sourceTree = "<group>"; };
 		CA46F9BA2413858B00C76E2E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CA46F9BC2413873800C76E2E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CA46F9BE2413874500C76E2E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C0241387F500C76E2E /* BaseViewControllerWithViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerWithViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C22413884A00C76E2E /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		CA46F9C62413887000C76E2E /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 				CA19016A2439894400C8FD29 /* admob */,
 				CA59EF3F2423946600FECFCD /* firebase */,
 				CA46F99D2413728100C76E2E /* extension */,
-				CA46F9BE2413874500C76E2E /* BaseViewModel.swift */,
 				CA0DE8CE241CA7C6009FBD03 /* Utilities.swift */,
 				CA2D0C8924498B2F0051C5E7 /* BaseCellViewModel.swift */,
 				CAAADF6226A3DB6500BBB2A9 /* Localization.strings */,
@@ -785,7 +782,6 @@
 				CA46F9A12413733B00C76E2E /* UIViewControllerExtension.swift in Sources */,
 				CAF0A480243661B4007CE930 /* ApiBase.swift in Sources */,
 				CAF0A48A2436C3E8007CE930 /* PartyPromise.swift in Sources */,
-				CA46F9BF2413874500C76E2E /* BaseViewModel.swift in Sources */,
 				CA46F99F2413729B00C76E2E /* UIViewExtension.swift in Sources */,
 				CA5DBD85243A156E00C3C2B8 /* SettingNoticeCell.swift in Sources */,
 				CA46F9BB2413858B00C76E2E /* MainTabBarController.swift in Sources */,
