@@ -54,7 +54,7 @@ class IntroduceViewController: BaseViewController {
         guard let data = messageJson?.data(using: .utf8),
             let notices = try? JSONDecoder().decode(data: data, dataType: [NoticeContents].self) else {
             
-            let contents = NoticeContents()
+            var contents = NoticeContents()
             contents.contents = "공지사항이 없습니다."
             noticeList?.append(contents)
             tableView.reloadData()
